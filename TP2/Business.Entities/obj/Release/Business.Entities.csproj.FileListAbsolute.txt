@@ -1,0 +1,25 @@
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.pdb
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.pdb

@@ -1,0 +1,213 @@
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe.config
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.pdb
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.pdb
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.pdb
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.pdb
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.UsuarioDesktop.resources
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Usuarios.resources
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Properties.Resources.resources
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.exe
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe.config
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.exe
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.UsuarioDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Usuarios.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Properties.Resources.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe.config
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.exe
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnoInscripcionesDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnoInscripciones.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnoInscripcionesDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.UsuarioDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Usuarios.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Properties.Resources.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.EspecialidadDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Especialidades.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ComisionDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Comisiones.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PlanDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ComisionDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Comisiones.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.EspecialidadDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Especialidades.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Modulos.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PlanDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Planes.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.CursoDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Curso.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.CursoDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCurso.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCursoDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Materia.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.MateriaDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Modulo.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloUsuario.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloUsuarioDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Persona.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PersonaDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Plan.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnosInscripciones.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Cursos.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocentesCursos.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCursoDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Materias.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.MateriaDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModulosUsuarios.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloUsuarioDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Personas.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PersonaDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Util.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Util.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Login.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe.config
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.exe
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnosInscripciones.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnoInscripcionesDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ComisionDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Comisiones.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Cursos.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.CursoDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocentesCursos.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCursoDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.EspecialidadDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Especialidades.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Login.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Materias.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.MateriaDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Modulos.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModulosUsuarios.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloUsuarioDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Personas.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PersonaDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PlanDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Planes.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.UsuarioDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Usuarios.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Properties.Resources.resources
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.dll
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Util.dll
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.dll
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.pdb
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Util.pdb
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe.config
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.exe
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.dll
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Util.dll
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Util.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnosInscripciones.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnoInscripcionesDesktop.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ComisionDesktop.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Comisiones.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Cursos.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.CursoDesktop.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocentesCursos.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCursoDesktop.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.EspecialidadDesktop.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Especialidades.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Login.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Materias.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.MateriaDesktop.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Modulos.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloDesktop.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModulosUsuarios.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloUsuarioDesktop.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Personas.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PersonaDesktop.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PlanDesktop.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Planes.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.UsuarioDesktop.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Usuarios.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Properties.Resources.resources
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Inicio.resources
+C:\Users\Marti\Documents\GitHub\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe.config
+C:\Users\Marti\Documents\GitHub\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.exe
+C:\Users\Marti\Documents\GitHub\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe.config
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.exe
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnosInscripciones.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnoInscripcionesDesktop.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ComisionDesktop.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Comisiones.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Cursos.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.CursoDesktop.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocentesCursos.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCursoDesktop.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.EspecialidadDesktop.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Especialidades.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Inicio.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Login.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Materias.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.MateriaDesktop.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Modulos.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloDesktop.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModulosUsuarios.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloUsuarioDesktop.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Personas.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PersonaDesktop.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PlanDesktop.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Planes.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.UsuarioDesktop.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Usuarios.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Properties.Resources.resources
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.dll
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\Util.dll
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.dll
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.pdb
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\Util.pdb
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.pdb

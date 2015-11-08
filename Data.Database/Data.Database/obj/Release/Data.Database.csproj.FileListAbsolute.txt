@@ -1,0 +1,42 @@
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.pdb
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.pdb
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.dll
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.pdb
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.dll
+C:\Users\Marti\Documents\GitHub\TP2_Net ese no\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.pdb
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.dll
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\Data.Database\Data.Database\bin\Release\Data.Database.pdb
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\Data.Database\Data.Database\bin\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.dll
+C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.pdb

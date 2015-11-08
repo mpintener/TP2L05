@@ -211,3 +211,43 @@ C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bi
 C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.pdb
 C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\Util.pdb
 C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe.config
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.exe
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\bin\Release\Util.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\bin\Release\Business.Entities.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\bin\Release\Business.Logic.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\bin\Release\Util.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\bin\Release\Data.Database.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnosInscripciones.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnoInscripcionesDesktop.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ComisionDesktop.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Comisiones.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Cursos.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.CursoDesktop.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocentesCursos.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCursoDesktop.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.EspecialidadDesktop.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Especialidades.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Inicio.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Login.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Materias.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.MateriaDesktop.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Modulos.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloDesktop.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModulosUsuarios.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloUsuarioDesktop.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Personas.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PersonaDesktop.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PlanDesktop.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Planes.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.UsuarioDesktop.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Usuarios.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Properties.Resources.resources
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csproj.GenerateResource.Cache

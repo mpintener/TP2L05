@@ -13,3 +13,8 @@ C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\Util\bin\Release\Util.
 C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\Util\obj\Release\Util.csprojResolveAssemblyReference.cache
 C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\Util\obj\Release\Util.dll
 C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\Util\obj\Release\Util.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Util\bin\Release\Util.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Util\bin\Release\Util.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Util\obj\Release\Util.csprojResolveAssemblyReference.cache
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Util\obj\Release\Util.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Util\obj\Release\Util.pdb

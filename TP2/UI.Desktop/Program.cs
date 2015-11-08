@@ -18,8 +18,8 @@ namespace UI.Desktop
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Inicio());
             //Application.Run(new Especialidades()); //OK
-            Application.Run(new Planes()); //OK
-            Application.Run(new Personas()); //OK //cuando se da aceptar, preguntar si queire crearse usuario, y de ahi abrir un formulario de usuarioDesktop
+            //Application.Run(new Planes()); //OK
+            //Application.Run(new Personas()); //OK //cuando se da aceptar, preguntar si queire crearse usuario, y de ahi abrir un formulario de usuarioDesktop
             //Application.Run(new Materias()); //OK
             Application.Run(new Usuarios());           
             //Application.Run(new AlumnosInscripciones());

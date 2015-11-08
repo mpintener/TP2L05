@@ -10,3 +10,15 @@ C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Web\bin\Da
 C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Web\obj\Release\UI.Web.csprojResolveAssemblyReference.cache
 C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Web\obj\Release\UI.Web.dll
 C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\UI.Web\obj\Release\UI.Web.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\bin\UI.Web.dll.config
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\bin\UI.Web.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\bin\UI.Web.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\bin\Business.Entities.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\bin\Business.Logic.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\bin\Data.Database.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\bin\Business.Entities.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\bin\Business.Logic.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\bin\Data.Database.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\obj\Release\UI.Web.csprojResolveAssemblyReference.cache
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\obj\Release\UI.Web.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Web\obj\Release\UI.Web.pdb

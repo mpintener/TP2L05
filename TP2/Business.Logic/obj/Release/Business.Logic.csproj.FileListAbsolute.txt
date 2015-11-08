@@ -52,3 +52,12 @@ C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\Business.Logi
 C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\Business.Logic\obj\Release\Business.Logic.csprojResolveAssemblyReference.cache
 C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\Business.Logic\obj\Release\Business.Logic.dll
 C:\Users\Marti\Documents\GitHub\TPS QUE NO\ACADEMIA-TP2\TP2L05\TP2\Business.Logic\obj\Release\Business.Logic.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Release\Business.Logic.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Release\Business.Logic.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Release\Business.Entities.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Release\Data.Database.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Release\Data.Database.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Release\Business.Entities.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\obj\Release\Business.Logic.csprojResolveAssemblyReference.cache
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\obj\Release\Business.Logic.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\obj\Release\Business.Logic.pdb

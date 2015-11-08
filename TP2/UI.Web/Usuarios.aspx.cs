@@ -85,6 +85,7 @@ namespace UI.Web
 
         private void LoadEntity(Usuario usu)
         {
+            usu.ID = Convert.ToInt32(this.idUsuarioTextBox.Text);
             usu.IDPersona = Convert.ToInt32(this.idPersonaTextBox.Text);
             usu.NombreUsuario = this.usuarioTextBox.Text;
             usu.Habilitado = this.habilitadoCheckBox.Checked;

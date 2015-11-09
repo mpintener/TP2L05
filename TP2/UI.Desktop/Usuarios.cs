@@ -37,10 +37,7 @@ namespace UI.Desktop
             Listar();
             }
 
-        private void btnActualizar_Click( object sender, EventArgs e )
-            {
-            Listar();
-            }
+        
 
         private void btnSalir_Click( object sender, EventArgs e )
             {    
@@ -85,10 +82,5 @@ namespace UI.Desktop
                 this.Listar();
                 }
             }
-
-        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         }
     }

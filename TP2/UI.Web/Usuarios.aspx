@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="Usuarios" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="UI.Web.Usuarios" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
+<asp:Content ID="Usuarios" ContentPlaceHolderID="bodyContentPlaceHolder" runat="server">
    
      <asp:Panel ID="gridPanel" HorizontalAlign="Center" runat="server">
-
+         <h2>Usuarios</h2><br />
         <asp:GridView ID="GridView1" HorizontalAlign="Center" runat="server" AutoGenerateColumns="False"
             CssClass="Grid"
             AlternatingRowStyle-CssClass="alt"

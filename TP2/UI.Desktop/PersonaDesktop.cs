@@ -22,7 +22,7 @@ namespace UI.Desktop
 
             PlanLogic PL = new PlanLogic();
             this.cbIDPlan.DataSource = PL.GetAll();
-            this.cbIDPlan.DisplayMember = "descripcion";
+            this.cbIDPlan.DisplayMember = "descripcion"; //en la bd se llama desc_plan, pero al poner eso no muesra nada
             this.cbIDPlan.ValueMember = "id_plan";
         }
         private Persona _PersonaActual;
@@ -91,7 +91,7 @@ namespace UI.Desktop
                     this.PersonaActual.Nombre = this.txtNombre.Text;
                     this.PersonaActual.Apellido = this.txtApellido.Text;
                     this.PersonaActual.Legajo = Convert.ToInt32(txtLegajo.Text);
-                    this.PersonaActual.IDPlan = Convert.ToInt32(this.cbIDPlan.SelectedValue);
+                    this.PersonaActual.IDPlan = Convert.ToInt32(cbIDPlan.SelectedValue);
                     this.PersonaActual.Direccion = this.txtDireccion.Text;
                     this.PersonaActual.Telefono = this.mtbTelefono.Text;
                     this.PersonaActual.Email = this.txtEmail.Text;

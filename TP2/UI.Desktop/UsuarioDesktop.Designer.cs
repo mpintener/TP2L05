@@ -41,10 +41,10 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblIDPersona = new System.Windows.Forms.Label();
-            this.cbIDPersona = new System.Windows.Forms.ComboBox();
             this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tp2_netDataSet = new UI.Desktop.tp2_netDataSet();
             this.personasTableAdapter = new UI.Desktop.tp2_netDataSetTableAdapters.personasTableAdapter();
+            this.txtIDPersona = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).BeginInit();
             this.SuspendLayout();
@@ -161,18 +161,6 @@
             this.lblIDPersona.TabIndex = 17;
             this.lblIDPersona.Text = "ID Persona";
             // 
-            // cbIDPersona
-            // 
-            this.cbIDPersona.DataSource = this.personasBindingSource;
-            this.cbIDPersona.DisplayMember = "tipo_persona";
-            this.cbIDPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbIDPersona.Location = new System.Drawing.Point(92, 57);
-            this.cbIDPersona.Name = "cbIDPersona";
-            this.cbIDPersona.Size = new System.Drawing.Size(155, 21);
-            this.cbIDPersona.TabIndex = 2;
-            this.cbIDPersona.Tag = "IDPersona";
-            this.cbIDPersona.ValueMember = "id_persona";
-            // 
             // personasBindingSource
             // 
             this.personasBindingSource.DataMember = "personas";
@@ -187,13 +175,20 @@
             // 
             this.personasTableAdapter.ClearBeforeFill = true;
             // 
+            // txtIDPersona
+            // 
+            this.txtIDPersona.Location = new System.Drawing.Point(92, 57);
+            this.txtIDPersona.Name = "txtIDPersona";
+            this.txtIDPersona.Size = new System.Drawing.Size(155, 20);
+            this.txtIDPersona.TabIndex = 18;
+            // 
             // UsuarioDesktop
             // 
             this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 174);
-            this.Controls.Add(this.cbIDPersona);
+            this.Controls.Add(this.txtIDPersona);
             this.Controls.Add(this.lblIDPersona);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -230,10 +225,10 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblIDPersona;
-        private System.Windows.Forms.ComboBox cbIDPersona;
         private tp2_netDataSet tp2_netDataSet;
         private System.Windows.Forms.BindingSource personasBindingSource;
         private tp2_netDataSetTableAdapters.personasTableAdapter personasTableAdapter;
+        private System.Windows.Forms.TextBox txtIDPersona;
         
         }
     }

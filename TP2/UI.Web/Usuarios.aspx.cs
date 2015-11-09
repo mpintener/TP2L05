@@ -120,6 +120,7 @@ namespace UI.Web
                     this.LoadEntity(this.Entity);
                     this.SaveEntity(this.Entity);
                     this.LoadGrid();
+                    this.formPanel.Visible = false;
                     break;
                 default:
                     break;
@@ -179,7 +180,7 @@ namespace UI.Web
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            
         }
 
    

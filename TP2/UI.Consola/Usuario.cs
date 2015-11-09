@@ -102,17 +102,11 @@ namespace UI.Consola
         public void MostrarDatos(Business.Entities.Usuario usr)
             {
             Console.WriteLine("\t\tUsuario: {0}", usr.ID);
-            
-            Console.WriteLine("\t\tNombre: {0}", usr.Nombre);
-            
-            Console.WriteLine("\t\tApellido: {0}", usr.Apellido);
-            
+                        
             Console.WriteLine("\t\tNombre de Usuario: {0}", usr.NombreUsuario);
             
             Console.WriteLine("\t\tClave: {0}", usr.Clave);
-            
-            Console.WriteLine("\t\tEmail: {0}", usr.Email);
-            
+
             Console.WriteLine("\t\tHabilitado: {0}", usr.Habilitado);
             
             Console.WriteLine();
@@ -172,14 +166,6 @@ namespace UI.Consola
 
                 Business.Entities.Usuario usuario = UsuarioNegocio.GetOne(ID);
 
-                Console.WriteLine("\nIngrese Nombre:\n");
-
-                usuario.Nombre = Console.ReadLine();
-
-                Console.WriteLine("\nIngrese Apellido:\n");
-
-                usuario.Apellido = Console.ReadLine();
-
                 Console.WriteLine("\nIngrese Nombre Usuario:\n");
 
                 usuario.NombreUsuario = Console.ReadLine();
@@ -187,10 +173,6 @@ namespace UI.Consola
                 Console.WriteLine("\nIngrese Clave:\n");
 
                 usuario.Clave = Console.ReadLine();
-
-                Console.WriteLine("\nIngrese Email:\n");
-
-                usuario.Email = Console.ReadLine();
 
                 Console.WriteLine("\nIngrese Habilitación Usuario (1- Si / Otro- No):\n");
 
@@ -235,14 +217,6 @@ namespace UI.Consola
 
             Console.Clear();
 
-            Console.WriteLine("Ingrese Nombre:\n");
-
-            usuario.Nombre = Console.ReadLine();
-
-            Console.WriteLine("Ingrese Apellido:\n");
-
-            usuario.Apellido = Console.ReadLine();
-
             Console.WriteLine("Ingrese Nombre Usuario:\n");
 
             usuario.NombreUsuario = Console.ReadLine();
@@ -250,10 +224,6 @@ namespace UI.Consola
             Console.WriteLine("Ingrese Clave:\n");
 
             usuario.Clave = Console.ReadLine();
-
-            Console.WriteLine("Ingrese Email:\n");
-
-            usuario.Email = Console.ReadLine();
 
             Console.WriteLine("Ingrese Habilitación Usuario (1- Si / Otro- No):\n");
 

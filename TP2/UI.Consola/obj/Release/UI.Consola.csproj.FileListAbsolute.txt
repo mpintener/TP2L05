@@ -1,0 +1,12 @@
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\obj\Release\UI.Consola.csprojResolveAssemblyReference.cache
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\bin\Release\UI.Consola.exe.config
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\bin\Release\UI.Consola.exe
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\bin\Release\UI.Consola.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\bin\Release\Business.Entities.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\bin\Release\Business.Logic.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\bin\Release\Data.Database.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\bin\Release\Business.Entities.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\bin\Release\Business.Logic.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\bin\Release\Data.Database.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\obj\Release\UI.Consola.exe
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Consola\obj\Release\UI.Consola.pdb

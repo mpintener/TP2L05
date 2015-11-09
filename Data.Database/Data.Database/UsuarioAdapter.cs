@@ -141,7 +141,7 @@ namespace Data.Database
                     "UPDATE usuarios SET nombre_usuario=@nombre_usuario, clave=@clave,"
                     + " habilitado=@habilitado id_persona=@id_persona WHERE id_usuario=@id", sqlConn);              
                 
-                cmdSave.Parameters.Add("@id_usuario", SqlDbType.Int).Value = usuario.ID;
+                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = usuario.ID;
                 cmdSave.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
                 cmdSave.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
                 cmdSave.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;

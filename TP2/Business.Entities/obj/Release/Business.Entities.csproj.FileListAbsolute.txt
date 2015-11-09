@@ -25,6 +25,5 @@ C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\Business.Entities\obj\
 C:\Users\Caste\Documents\GitHub\TP2_Net\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.pdb
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.dll
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.pdb
-C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.csprojResolveAssemblyReference.cache
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.dll
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.pdb

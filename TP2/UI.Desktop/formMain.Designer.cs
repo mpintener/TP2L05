@@ -31,7 +31,6 @@
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.mnuArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnoInscripcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,8 +56,6 @@
             // mnuArchivo
             // 
             this.mnuArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuSalir,
-            this.usuariosToolStripMenuItem,
             this.alumnoInscripcionesToolStripMenuItem,
             this.comisionToolStripMenuItem,
             this.cursoToolStripMenuItem,
@@ -67,7 +64,8 @@
             this.materiaToolStripMenuItem,
             this.modulosToolStripMenuItem,
             this.personasToolStripMenuItem,
-            this.planesToolStripMenuItem});
+            this.planesToolStripMenuItem,
+            this.mnuSalir});
             this.mnuArchivo.Name = "mnuArchivo";
             this.mnuArchivo.Size = new System.Drawing.Size(60, 20);
             this.mnuArchivo.Text = "Archivo";
@@ -78,13 +76,6 @@
             this.mnuSalir.Size = new System.Drawing.Size(189, 22);
             this.mnuSalir.Text = "Salir";
             this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // alumnoInscripcionesToolStripMenuItem
             // 
@@ -173,7 +164,6 @@
         private System.Windows.Forms.MenuStrip mnsPrincipal;
         private System.Windows.Forms.ToolStripMenuItem mnuArchivo;
         private System.Windows.Forms.ToolStripMenuItem mnuSalir;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alumnoInscripcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comisionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cursoToolStripMenuItem;

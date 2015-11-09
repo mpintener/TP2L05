@@ -32,7 +32,6 @@
             this.txtFechaNac = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtLegajo = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtTipoPersona = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -48,24 +47,14 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.cbIDPlan = new System.Windows.Forms.ComboBox();
-            this.planesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tp2_netDataSet = new UI.Desktop.tp2_netDataSet();
-            this.planesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.planesTableAdapter = new UI.Desktop.tp2_netDataSetTableAdapters.planesTableAdapter();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
             this.mtbFechaNacimiento = new System.Windows.Forms.MaskedTextBox();
             this.ttFechaNacimiento = new System.Windows.Forms.ToolTip(this.components);
-            this.mARTI_tp2_netDataSet = new UI.Desktop.MARTI_tp2_netDataSet();
-            this.mARTItp2netDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.planesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.planesTableAdapter1 = new UI.Desktop.MARTI_tp2_netDataSetTableAdapters.planesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mARTI_tp2_netDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mARTItp2netDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource2)).BeginInit();
+            this.mtbLegajo = new System.Windows.Forms.MaskedTextBox();
+            this.chkUsuario = new System.Windows.Forms.CheckBox();
+            this.ttTelefono = new System.Windows.Forms.ToolTip(this.components);
+            this.ttLegajo = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // txtFechaNac
@@ -79,7 +68,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(337, 154);
+            this.btnCancelar.Location = new System.Drawing.Point(337, 193);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 12;
@@ -89,7 +78,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(216, 154);
+            this.btnAceptar.Location = new System.Drawing.Point(216, 193);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 11;
@@ -97,14 +86,6 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             this.btnAceptar.Enter += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // txtLegajo
-            // 
-            this.txtLegajo.Location = new System.Drawing.Point(429, 88);
-            this.txtLegajo.Name = "txtLegajo";
-            this.txtLegajo.Size = new System.Drawing.Size(163, 20);
-            this.txtLegajo.TabIndex = 9;
-            this.txtLegajo.Tag = "Legajo";
             // 
             // txtDireccion
             // 
@@ -144,7 +125,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(160, 20);
-            this.txtID.TabIndex = 23;
+            this.txtID.TabIndex = 1;
             this.txtID.Tag = "ID";
             // 
             // lblTipoPersona
@@ -230,8 +211,7 @@
             // 
             // cbIDPlan
             // 
-            this.cbIDPlan.DataSource = this.planesBindingSource2;
-            this.cbIDPlan.DisplayMember = "desc_plan";
+            this.cbIDPlan.DisplayMember = "descripcion";
             this.cbIDPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIDPlan.FormattingEnabled = true;
             this.cbIDPlan.Location = new System.Drawing.Point(132, 36);
@@ -240,25 +220,6 @@
             this.cbIDPlan.TabIndex = 2;
             this.cbIDPlan.Tag = "IDPlan";
             this.cbIDPlan.ValueMember = "id_plan";
-            // 
-            // planesBindingSource1
-            // 
-            this.planesBindingSource1.DataMember = "planes";
-            this.planesBindingSource1.DataSource = this.tp2_netDataSet;
-            // 
-            // tp2_netDataSet
-            // 
-            this.tp2_netDataSet.DataSetName = "tp2_netDataSet";
-            this.tp2_netDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // planesBindingSource
-            // 
-            this.planesBindingSource.DataMember = "planes";
-            this.planesBindingSource.DataSource = this.tp2_netDataSet;
-            // 
-            // planesTableAdapter
-            // 
-            this.planesTableAdapter.ClearBeforeFill = true;
             // 
             // txtEmail
             // 
@@ -276,6 +237,7 @@
             this.mtbTelefono.Size = new System.Drawing.Size(160, 20);
             this.mtbTelefono.TabIndex = 7;
             this.mtbTelefono.Tag = "Teléfono";
+            this.mtbTelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbTelefono_MaskInputRejected);
             // 
             // mtbFechaNacimiento
             // 
@@ -286,38 +248,41 @@
             this.mtbFechaNacimiento.TabIndex = 5;
             this.mtbFechaNacimiento.Tag = "FechaNacimiento";
             // 
-            // mARTI_tp2_netDataSet
+            // mtbLegajo
             // 
-            this.mARTI_tp2_netDataSet.DataSetName = "MARTI_tp2_netDataSet";
-            this.mARTI_tp2_netDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.mtbLegajo.Location = new System.Drawing.Point(429, 89);
+            this.mtbLegajo.Mask = "99999";
+            this.mtbLegajo.Name = "mtbLegajo";
+            this.mtbLegajo.Size = new System.Drawing.Size(163, 20);
+            this.mtbLegajo.TabIndex = 9;
+            this.mtbLegajo.Tag = "Legajo";
+            this.mtbLegajo.ValidatingType = typeof(int);
+            this.mtbLegajo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbLegajo_MaskInputRejected);
             // 
-            // mARTItp2netDataSetBindingSource
+            // chkUsuario
             // 
-            this.mARTItp2netDataSetBindingSource.DataSource = this.mARTI_tp2_netDataSet;
-            this.mARTItp2netDataSetBindingSource.Position = 0;
-            // 
-            // planesBindingSource2
-            // 
-            this.planesBindingSource2.DataMember = "planes";
-            this.planesBindingSource2.DataSource = this.mARTItp2netDataSetBindingSource;
-            // 
-            // planesTableAdapter1
-            // 
-            this.planesTableAdapter1.ClearBeforeFill = true;
+            this.chkUsuario.AutoSize = true;
+            this.chkUsuario.Location = new System.Drawing.Point(276, 157);
+            this.chkUsuario.Name = "chkUsuario";
+            this.chkUsuario.Size = new System.Drawing.Size(110, 17);
+            this.chkUsuario.TabIndex = 21;
+            this.chkUsuario.Text = "Gestionar Usuario";
+            this.chkUsuario.UseVisualStyleBackColor = true;
             // 
             // PersonaDesktop
             // 
             this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 191);
+            this.ClientSize = new System.Drawing.Size(645, 228);
+            this.Controls.Add(this.chkUsuario);
+            this.Controls.Add(this.mtbLegajo);
             this.Controls.Add(this.mtbFechaNacimiento);
             this.Controls.Add(this.mtbTelefono);
             this.Controls.Add(this.cbIDPlan);
             this.Controls.Add(this.txtFechaNac);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtLegajo);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtTipoPersona);
@@ -335,13 +300,6 @@
             this.Controls.Add(this.lblID);
             this.Name = "PersonaDesktop";
             this.Text = "Persona";
-            this.Load += new System.EventHandler(this.PersonaDesktop_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mARTI_tp2_netDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mARTItp2netDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,22 +321,17 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtTipoPersona;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtLegajo;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label txtFechaNac;
         private System.Windows.Forms.ComboBox cbIDPlan;
-        private tp2_netDataSet tp2_netDataSet;
-        private System.Windows.Forms.BindingSource planesBindingSource;
-        private tp2_netDataSetTableAdapters.planesTableAdapter planesTableAdapter;
-        private System.Windows.Forms.BindingSource planesBindingSource1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.MaskedTextBox mtbTelefono;
         private System.Windows.Forms.MaskedTextBox mtbFechaNacimiento;
         private System.Windows.Forms.ToolTip ttFechaNacimiento;
-        private System.Windows.Forms.BindingSource mARTItp2netDataSetBindingSource;
-        private MARTI_tp2_netDataSet mARTI_tp2_netDataSet;
-        private System.Windows.Forms.BindingSource planesBindingSource2;
-        private MARTI_tp2_netDataSetTableAdapters.planesTableAdapter planesTableAdapter1;
+        private System.Windows.Forms.MaskedTextBox mtbLegajo;
+        private System.Windows.Forms.CheckBox chkUsuario;
+        private System.Windows.Forms.ToolTip ttTelefono;
+        private System.Windows.Forms.ToolTip ttLegajo;
     }
 }

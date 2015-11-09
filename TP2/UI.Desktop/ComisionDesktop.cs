@@ -99,9 +99,7 @@ namespace UI.Desktop
         public override void GuardarCambios() 
             {
             MapearADatos();
-
             ComisionLogic CL = new ComisionLogic();
-
             CL.Save(ComisionActual);
             }
 
@@ -162,7 +160,6 @@ namespace UI.Desktop
             if (Validar() == true)
             {
                 GuardarCambios();
-
                 this.Close();
             }
         }
@@ -172,13 +169,6 @@ namespace UI.Desktop
             DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?", "Cancelar", MessageBoxButtons.YesNo));
 
             if (DR == DialogResult.Yes) this.Close(); 
-        }
-
-        private void ComisionDesktop_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'tp2_netDataSet.planes' Puede moverla o quitarla según sea necesario.
-            this.planesTableAdapter.Fill(this.tp2_netDataSet.planes);
-
         }
 
         private void mtbAnioEspecialidad_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)

@@ -7,3 +7,8 @@ C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Util\bin\Debug\Uti
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Util\obj\Debug\Util.dll
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Util\obj\Debug\Util.pdb
+C:\Users\Caste\Documents\GitHub\TP2L05\TP2\Util\bin\Debug\Util.dll
+C:\Users\Caste\Documents\GitHub\TP2L05\TP2\Util\bin\Debug\Util.pdb
+C:\Users\Caste\Documents\GitHub\TP2L05\TP2\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\TP2L05\TP2\Util\obj\Debug\Util.dll
+C:\Users\Caste\Documents\GitHub\TP2L05\TP2\Util\obj\Debug\Util.pdb

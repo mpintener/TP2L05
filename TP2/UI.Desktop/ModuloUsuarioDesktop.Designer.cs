@@ -35,18 +35,10 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.modulosusuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbIDModulo = new System.Windows.Forms.ComboBox();
-            this.modulosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tp2_netDataSet = new UI.Desktop.tp2_netDataSet();
-            this.modulosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.modulosTableAdapter = new UI.Desktop.tp2_netDataSetTableAdapters.modulosTableAdapter();
             this.mtbIDUsuario = new System.Windows.Forms.MaskedTextBox();
             this.ttIDUsuario = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.modulosusuariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modulosBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modulosBindingSource)).BeginInit();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblID
@@ -90,7 +82,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(88, 105);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 4;
+            this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -108,8 +100,7 @@
             // 
             // cbIDModulo
             // 
-            this.cbIDModulo.DataSource = this.modulosBindingSource1;
-            this.cbIDModulo.DisplayMember = "desc_modulo";
+            this.cbIDModulo.DisplayMember = "id_modulo";
             this.cbIDModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIDModulo.FormattingEnabled = true;
             this.cbIDModulo.Location = new System.Drawing.Point(84, 44);
@@ -119,20 +110,6 @@
             this.cbIDModulo.Tag = "IDModulo";
             this.cbIDModulo.ValueMember = "id_modulo";
             // 
-            // modulosBindingSource1
-            // 
-            this.modulosBindingSource1.DataMember = "modulos";
-            this.modulosBindingSource1.DataSource = this.tp2_netDataSet;
-            // 
-            // tp2_netDataSet
-            // 
-            this.tp2_netDataSet.DataSetName = "tp2_netDataSet";
-            this.tp2_netDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // modulosTableAdapter
-            // 
-            this.modulosTableAdapter.ClearBeforeFill = true;
-            // 
             // mtbIDUsuario
             // 
             this.mtbIDUsuario.Location = new System.Drawing.Point(84, 72);
@@ -140,12 +117,24 @@
             this.mtbIDUsuario.Name = "mtbIDUsuario";
             this.mtbIDUsuario.Size = new System.Drawing.Size(147, 20);
             this.mtbIDUsuario.TabIndex = 3;
+            this.mtbIDUsuario.Tag = "IDUsuario";
             this.mtbIDUsuario.ValidatingType = typeof(int);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(254, 72);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // ModuloUsuarioDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(271, 139);
+            this.ClientSize = new System.Drawing.Size(341, 137);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.mtbIDUsuario);
             this.Controls.Add(this.cbIDModulo);
             this.Controls.Add(this.btnCancelar);
@@ -156,11 +145,6 @@
             this.Controls.Add(this.lblID);
             this.Name = "ModuloUsuarioDesktop";
             this.Text = "Modulo - Usuario";
-            this.Load += new System.EventHandler(this.ModuloUsuarioDesktop_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.modulosusuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modulosBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modulosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,13 +158,9 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.BindingSource modulosusuariosBindingSource;
         private System.Windows.Forms.ComboBox cbIDModulo;
-        private System.Windows.Forms.BindingSource modulosBindingSource;
-        private tp2_netDataSet tp2_netDataSet;
-        private System.Windows.Forms.BindingSource modulosBindingSource1;
-        private tp2_netDataSetTableAdapters.modulosTableAdapter modulosTableAdapter;
         private System.Windows.Forms.MaskedTextBox mtbIDUsuario;
         private System.Windows.Forms.ToolTip ttIDUsuario;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

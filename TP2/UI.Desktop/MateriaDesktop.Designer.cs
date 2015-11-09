@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblID = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblIDPlan = new System.Windows.Forms.Label();
@@ -41,16 +40,6 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cbIDPlan = new System.Windows.Forms.ComboBox();
-            this.planesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tp2_netDataSet = new UI.Desktop.tp2_netDataSet();
-            this.planesTableAdapter = new UI.Desktop.tp2_netDataSetTableAdapters.planesTableAdapter();
-            this.mARTI_tp2_netDataSet = new UI.Desktop.MARTI_tp2_netDataSet();
-            this.planesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.planesTableAdapter1 = new UI.Desktop.MARTI_tp2_netDataSetTableAdapters.planesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mARTI_tp2_netDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -86,7 +75,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(189, 20);
-            this.txtID.TabIndex = 23;
+            this.txtID.TabIndex = 1;
             this.txtID.Tag = "ID";
             // 
             // lblHorasSemanales
@@ -154,8 +143,7 @@
             // 
             // cbIDPlan
             // 
-            this.cbIDPlan.DataSource = this.planesBindingSource1;
-            this.cbIDPlan.DisplayMember = "desc_plan";
+            this.cbIDPlan.DisplayMember = "id_plan";
             this.cbIDPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIDPlan.FormattingEnabled = true;
             this.cbIDPlan.Location = new System.Drawing.Point(85, 35);
@@ -164,34 +152,6 @@
             this.cbIDPlan.TabIndex = 2;
             this.cbIDPlan.Tag = "IDPlan";
             this.cbIDPlan.ValueMember = "id_plan";
-            // 
-            // planesBindingSource
-            // 
-            this.planesBindingSource.DataMember = "planes";
-            this.planesBindingSource.DataSource = this.tp2_netDataSet;
-            // 
-            // tp2_netDataSet
-            // 
-            this.tp2_netDataSet.DataSetName = "tp2_netDataSet";
-            this.tp2_netDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // planesTableAdapter
-            // 
-            this.planesTableAdapter.ClearBeforeFill = true;
-            // 
-            // mARTI_tp2_netDataSet
-            // 
-            this.mARTI_tp2_netDataSet.DataSetName = "MARTI_tp2_netDataSet";
-            this.mARTI_tp2_netDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // planesBindingSource1
-            // 
-            this.planesBindingSource1.DataMember = "planes";
-            this.planesBindingSource1.DataSource = this.mARTI_tp2_netDataSet;
-            // 
-            // planesTableAdapter1
-            // 
-            this.planesTableAdapter1.ClearBeforeFill = true;
             // 
             // MateriaDesktop
             // 
@@ -213,11 +173,6 @@
             this.Controls.Add(this.lblID);
             this.Name = "MateriaDesktop";
             this.Text = "MateriaDesktop";
-            this.Load += new System.EventHandler(this.MateriaDesktop_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mARTI_tp2_netDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,12 +192,6 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cbIDPlan;
-        private tp2_netDataSet tp2_netDataSet;
-        private System.Windows.Forms.BindingSource planesBindingSource;
-        private tp2_netDataSetTableAdapters.planesTableAdapter planesTableAdapter;
-        private MARTI_tp2_netDataSet mARTI_tp2_netDataSet;
-        private System.Windows.Forms.BindingSource planesBindingSource1;
-        private MARTI_tp2_netDataSetTableAdapters.planesTableAdapter planesTableAdapter1;
         
 
     }

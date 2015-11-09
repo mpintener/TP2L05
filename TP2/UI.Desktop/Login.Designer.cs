@@ -50,39 +50,39 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 71);
+            this.label2.Location = new System.Drawing.Point(25, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Usuario:";
+            this.label2.Text = "Usuario";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 115);
+            this.label3.Location = new System.Drawing.Point(25, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Contraseña:";
+            this.label3.Text = "Contraseña";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(95, 68);
+            this.txtUsuario.Location = new System.Drawing.Point(95, 71);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(195, 20);
             this.txtUsuario.TabIndex = 3;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(101, 108);
+            this.txtPass.Location = new System.Drawing.Point(95, 104);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(189, 20);
+            this.txtPass.Size = new System.Drawing.Size(195, 20);
             this.txtPass.TabIndex = 4;
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(215, 150);
+            this.btnIngresar.Location = new System.Drawing.Point(215, 143);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
             this.btnIngresar.TabIndex = 5;
@@ -93,7 +93,7 @@
             // lnkOlvidaPass
             // 
             this.lnkOlvidaPass.AutoSize = true;
-            this.lnkOlvidaPass.Location = new System.Drawing.Point(12, 213);
+            this.lnkOlvidaPass.Location = new System.Drawing.Point(12, 177);
             this.lnkOlvidaPass.Name = "lnkOlvidaPass";
             this.lnkOlvidaPass.Size = new System.Drawing.Size(106, 13);
             this.lnkOlvidaPass.TabIndex = 6;
@@ -101,12 +101,12 @@
             this.lnkOlvidaPass.Text = "Olvide mi contraseña";
             this.lnkOlvidaPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkOlvidaPass_LinkClicked);
             // 
-            // formLogin
+            // Login
             // 
             this.AcceptButton = this.btnIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 235);
+            this.ClientSize = new System.Drawing.Size(324, 198);
             this.Controls.Add(this.lnkOlvidaPass);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtPass);
@@ -117,7 +117,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "formLogin";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ingreso";
             this.ResumeLayout(false);

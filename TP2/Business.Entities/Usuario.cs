@@ -13,6 +13,7 @@ namespace Business.Entities
         private string _Clave;
         private bool _Habilitado;
         private int _IDPersona;
+        private bool _CambiarClave;
 
         public int IDPersona
         {
@@ -30,6 +31,12 @@ namespace Business.Entities
         {
             get { return _Clave; }
             set { _Clave = value; }
+        }
+
+        public bool CambiarClave
+        {
+            get { return _CambiarClave; }
+            set { _CambiarClave = value; }
         }
 
         public bool Habilitado

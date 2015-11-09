@@ -17,6 +17,11 @@ namespace UI.Desktop
         public PlanDesktop()
         {
             InitializeComponent();
+            
+            EspecialidadLogic EL = new EspecialidadLogic();
+            this.cbIDEspecialidad.DataSource = EL.GetAll();
+            this.cbIDEspecialidad.DisplayMember = "descripcion"; 
+            this.cbIDEspecialidad.ValueMember = "id_especialidad";
         }
 
         private Plan _PlanActual;
@@ -150,11 +155,6 @@ namespace UI.Desktop
         {
             DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question));
             if (DR == DialogResult.Yes) this.Close();
-        }
-
-        private void PlanDesktop_Load(object sender, EventArgs e)
-        {
-    
         }
 
     }

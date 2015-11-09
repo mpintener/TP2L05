@@ -80,7 +80,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 23;
+            this.txtID.TabIndex = 1;
             this.txtID.Tag = "ID";
             // 
             // txtDescripcion
@@ -88,7 +88,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(113, 72);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtDescripcion.TabIndex = 1;
+            this.txtDescripcion.TabIndex = 2;
             this.txtDescripcion.Tag = "Descripcion";
             // 
             // EspecialidadDesktop

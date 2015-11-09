@@ -122,11 +122,6 @@
     <Compile Include="formMain.Designer.cs">
       <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="MARTI_tp2_netDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MARTI_tp2_netDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Materias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,11 +181,6 @@
     </Compile>
     <Compile Include="Planes.Designer.cs">
       <DependentUpon>Planes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="tp2_netDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tp2_netDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="UsuarioDesktop.cs">
       <SubType>Form</SubType>
@@ -287,17 +277,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="MARTI_tp2_netDataSet.xsc">
-      <DependentUpon>MARTI_tp2_netDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MARTI_tp2_netDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MARTI_tp2_netDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MARTI_tp2_netDataSet.xss">
-      <DependentUpon>MARTI_tp2_netDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -307,17 +286,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="tp2_netDataSet.xsc">
-      <DependentUpon>tp2_netDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="tp2_netDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>tp2_netDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="tp2_netDataSet.xss">
-      <DependentUpon>tp2_netDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

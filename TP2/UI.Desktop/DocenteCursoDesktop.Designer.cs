@@ -37,18 +37,10 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cbIDCurso = new System.Windows.Forms.ComboBox();
-            this.cursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tp2_netDataSet = new UI.Desktop.tp2_netDataSet();
-            this.cursosTableAdapter = new UI.Desktop.tp2_netDataSetTableAdapters.cursosTableAdapter();
             this.cbTipoCargo = new System.Windows.Forms.ComboBox();
-            this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personasTableAdapter = new UI.Desktop.tp2_netDataSetTableAdapters.personasTableAdapter();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.mtbIDDocente = new System.Windows.Forms.MaskedTextBox();
             this.ttIDDocente = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtIDDictado
@@ -98,7 +90,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(79, 142);
+            this.btnAceptar.Location = new System.Drawing.Point(79, 127);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 6;
@@ -109,7 +101,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(160, 142);
+            this.btnCancelar.Location = new System.Drawing.Point(160, 127);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 5;
@@ -119,7 +111,6 @@
             // 
             // cbIDCurso
             // 
-            this.cbIDCurso.DataSource = this.cursosBindingSource;
             this.cbIDCurso.DisplayMember = "id_curso";
             this.cbIDCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIDCurso.FormattingEnabled = true;
@@ -130,24 +121,8 @@
             this.cbIDCurso.Tag = "IDCurso";
             this.cbIDCurso.ValueMember = "id_curso";
             // 
-            // cursosBindingSource
-            // 
-            this.cursosBindingSource.DataMember = "cursos";
-            this.cursosBindingSource.DataSource = this.tp2_netDataSet;
-            // 
-            // tp2_netDataSet
-            // 
-            this.tp2_netDataSet.DataSetName = "tp2_netDataSet";
-            this.tp2_netDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cursosTableAdapter
-            // 
-            this.cursosTableAdapter.ClearBeforeFill = true;
-            // 
             // cbTipoCargo
             // 
-            this.cbTipoCargo.DataSource = this.personasBindingSource;
-            this.cbTipoCargo.DisplayMember = "tipo_persona";
             this.cbTipoCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoCargo.FormattingEnabled = true;
             this.cbTipoCargo.Location = new System.Drawing.Point(90, 90);
@@ -155,16 +130,7 @@
             this.cbTipoCargo.Size = new System.Drawing.Size(127, 21);
             this.cbTipoCargo.TabIndex = 5;
             this.cbTipoCargo.Tag = "TipoCargo";
-            this.cbTipoCargo.ValueMember = "tipo_persona";
-            // 
-            // personasBindingSource
-            // 
-            this.personasBindingSource.DataMember = "personas";
-            this.personasBindingSource.DataSource = this.tp2_netDataSet;
-            // 
-            // personasTableAdapter
-            // 
-            this.personasTableAdapter.ClearBeforeFill = true;
+            this.cbTipoCargo.ValueMember = "cargo";
             // 
             // btnBuscar
             // 
@@ -174,6 +140,7 @@
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // mtbIDDocente
             // 
@@ -189,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 176);
+            this.ClientSize = new System.Drawing.Size(305, 157);
             this.Controls.Add(this.mtbIDDocente);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cbTipoCargo);
@@ -203,10 +170,6 @@
             this.Controls.Add(this.txtIDDictado);
             this.Name = "DocenteCursoDesktop";
             this.Text = "Docente - Curso";
-            this.Load += new System.EventHandler(this.DocenteCursoDesktop_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,12 +185,7 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cbIDCurso;
-        private tp2_netDataSet tp2_netDataSet;
-        private System.Windows.Forms.BindingSource cursosBindingSource;
-        private tp2_netDataSetTableAdapters.cursosTableAdapter cursosTableAdapter;
         private System.Windows.Forms.ComboBox cbTipoCargo;
-        private System.Windows.Forms.BindingSource personasBindingSource;
-        private tp2_netDataSetTableAdapters.personasTableAdapter personasTableAdapter;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.MaskedTextBox mtbIDDocente;
         private System.Windows.Forms.ToolTip ttIDDocente;

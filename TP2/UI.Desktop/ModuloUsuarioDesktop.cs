@@ -167,17 +167,22 @@ namespace UI.Desktop
             if (DR == DialogResult.Yes) this.Close(); 
         }
 
-        private void ModuloUsuarioDesktop_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'tp2_netDataSet.modulos' Puede moverla o quitarla según sea necesario.
-            this.modulosTableAdapter.Fill(this.tp2_netDataSet.modulos);
-
-        }
-
         private void mtbCupo_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             ttIDUsuario.ToolTipTitle = "Tipo de dato invalido";
             ttIDUsuario.Show("El campo admite solo digitos", mtbIDUsuario);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //Siempre se deben ingresar 5 numeros, de lo contrario tira error. Buscar como hacer que se complete con ceros
+            int id = int.Parse(this.mtbIDUsuario.Text);
+            ModuloUsuarioLogic MUL = new ModuloUsuarioLogic();
+            MDActual = MUL.GetOne(id);
+            if (MDActual == null)
+            {
+                DialogResult DR = (MessageBox.Show("El id no existe", "Aceptar", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            }
         }
     }
 }

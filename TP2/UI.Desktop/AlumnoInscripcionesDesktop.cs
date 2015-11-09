@@ -100,12 +100,9 @@ namespace UI.Desktop
 
         public override void GuardarCambios() 
             {
-
             MapearADatos();
-
             AlumnoInscripcionLogic AIL = new AlumnoInscripcionLogic();
             AIL.Save(AluInscActual);
-
             }
 
         public override bool Validar()
@@ -164,7 +161,6 @@ namespace UI.Desktop
             if (Validar() == true)
             {
                 GuardarCambios();
-
                 this.Close();
             }
         }
@@ -181,9 +177,6 @@ namespace UI.Desktop
             mtbNota.Mask = "00";
             txtCondicion.ReadOnly = true;
             mtbNota.ReadOnly = true;
-            // TODO: esta línea de código carga datos en la tabla 'tp2_netDataSet.cursos' Puede moverla o quitarla según sea necesario.
-            this.cursosTableAdapter.Fill(this.tp2_netDataSet.cursos);
-
         }
 
         //Metodo que se utiliza en conjunto con la mascara mbNota para validar que el tipo de dato que se ingrese sea entero

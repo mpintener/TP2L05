@@ -102,9 +102,9 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                /*Exception ExcepcionManejada = new Exception("Error al recuperar datos de los alumnos e inscripciones", Ex);
-                throw ExcepcionManejada; */
-                aluInsc = null;
+                Exception ExcepcionManejada = new Exception("Error al recuperar datos de los alumnos e inscripciones", Ex);
+                throw ExcepcionManejada; 
+                //aluInsc = null;
             }
 
             finally

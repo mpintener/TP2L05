@@ -38,15 +38,8 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.cbIDPlan = new System.Windows.Forms.ComboBox();
-            this.planesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tp2_netDataSet = new UI.Desktop.tp2_netDataSet();
-            this.planesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.planesTableAdapter = new UI.Desktop.tp2_netDataSetTableAdapters.planesTableAdapter();
             this.mtbAnioEspecialidad = new System.Windows.Forms.MaskedTextBox();
             this.ttAnioEspecialidad = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -84,9 +77,9 @@
             this.lblIDPlan.AutoSize = true;
             this.lblIDPlan.Location = new System.Drawing.Point(35, 54);
             this.lblIDPlan.Name = "lblIDPlan";
-            this.lblIDPlan.Size = new System.Drawing.Size(28, 13);
+            this.lblIDPlan.Size = new System.Drawing.Size(39, 13);
             this.lblIDPlan.TabIndex = 3;
-            this.lblIDPlan.Text = "Plan";
+            this.lblIDPlan.Text = "IDPlan";
             // 
             // lblDescripcion
             // 
@@ -125,8 +118,6 @@
             // 
             // cbIDPlan
             // 
-            this.cbIDPlan.DataSource = this.planesBindingSource1;
-            this.cbIDPlan.DisplayMember = "descripcion";
             this.cbIDPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIDPlan.FormattingEnabled = true;
             this.cbIDPlan.Location = new System.Drawing.Point(136, 52);
@@ -135,20 +126,6 @@
             this.cbIDPlan.TabIndex = 2;
             this.cbIDPlan.Tag = "IDPlan";
             this.cbIDPlan.ValueMember = "id_plan";
-            // 
-            // planesBindingSource1
-            // 
-            this.planesBindingSource1.DataMember = "planes";
-            this.planesBindingSource1.DataSource = this.tp2_netDataSet;
-            // 
-            // tp2_netDataSet
-            // 
-            this.tp2_netDataSet.DataSetName = "tp2_netDataSet";
-            this.tp2_netDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // planesTableAdapter
-            // 
-            this.planesTableAdapter.ClearBeforeFill = true;
             // 
             // mtbAnioEspecialidad
             // 
@@ -159,9 +136,9 @@
             this.mtbAnioEspecialidad.TabIndex = 4;
             this.mtbAnioEspecialidad.Tag = "AñoEspecialidad";
             this.mtbAnioEspecialidad.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbAnioEspecialidad_MaskInputRejected);
-
+            // 
             // ComisionDesktop
-
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(283, 188);
@@ -177,10 +154,6 @@
             this.Controls.Add(this.btnAceptar);
             this.Name = "ComisionDesktop";
             this.Text = "ComisionDesktop";
-            this.Load += new System.EventHandler(this.ComisionDesktop_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,10 +170,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.ComboBox cbIDPlan;
-        private System.Windows.Forms.BindingSource planesBindingSource;
-        private tp2_netDataSet tp2_netDataSet;
-        private System.Windows.Forms.BindingSource planesBindingSource1;
-        private tp2_netDataSetTableAdapters.planesTableAdapter planesTableAdapter;
         private System.Windows.Forms.MaskedTextBox mtbAnioEspecialidad;
         private System.Windows.Forms.ToolTip ttAnioEspecialidad;
     }

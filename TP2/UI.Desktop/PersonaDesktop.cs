@@ -22,8 +22,9 @@ namespace UI.Desktop
 
             PlanLogic PL = new PlanLogic();
             this.cbIDPlan.DataSource = PL.GetAll();
-            this.cbIDPlan.DisplayMember = "descripcion"; //en la bd se llama desc_plan, pero al poner eso no muesra nada
+            this.cbIDPlan.DisplayMember = "descripcion"; 
             this.cbIDPlan.ValueMember = "id_plan";
+          
         }
         private Persona _PersonaActual;
 
@@ -42,7 +43,7 @@ namespace UI.Desktop
             this.txtNombre.Text = this.PersonaActual.Nombre;           
             this.txtDireccion.Text = this.PersonaActual.Direccion;      
             this.txtEmail.Text = this.PersonaActual.Email;            
-            this.txtLegajo.Text = this.PersonaActual.Legajo.ToString();
+            this.mtbLegajo.Text = this.PersonaActual.Legajo.ToString();
             this.mtbTelefono.Text = this.PersonaActual.Telefono;
             this.txtTipoPersona.Text = this.PersonaActual.TiposPersona.ToString();
             this.cbIDPlan.Text = this.PersonaActual.IDPlan.ToString();
@@ -90,7 +91,7 @@ namespace UI.Desktop
 
                     this.PersonaActual.Nombre = this.txtNombre.Text;
                     this.PersonaActual.Apellido = this.txtApellido.Text;
-                    this.PersonaActual.Legajo = Convert.ToInt32(txtLegajo.Text);
+                    this.PersonaActual.Legajo = Convert.ToInt32(mtbLegajo.Text);
                     this.PersonaActual.IDPlan = Convert.ToInt32(cbIDPlan.SelectedValue);
                     this.PersonaActual.Direccion = this.txtDireccion.Text;
                     this.PersonaActual.Telefono = this.mtbTelefono.Text;
@@ -100,26 +101,13 @@ namespace UI.Desktop
 
                 }
                     
-                    /* PARA LLAMAR AL FORM DE ALTA USUARIO
-
-                DialogResult DR = (MessageBox.Show("¿Desea crear una cuenta de usuario?", "Cancelar", MessageBoxButtons.YesNo));
-                if (DR == DialogResult.Yes) 
-                {
-                    UsuarioDesktop UD = new UsuarioDesktop(AplicationForm.ModoForm.Alta);
-                    UD.Text = "Alta usuario";
-                    UD.ShowDialog();
-                }
-                else this.Close();
-
-                }
-           */
                 else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
                     this.PersonaActual.ID = Convert.ToInt32(this.txtID.Text);
                     this.PersonaActual.Direccion = this.txtDireccion.Text;
                     this.PersonaActual.Nombre = this.txtNombre.Text;
                     this.PersonaActual.Apellido = this.txtApellido.Text;
-                    this.PersonaActual.Legajo = Convert.ToInt32(txtLegajo.Text);
+                    this.PersonaActual.Legajo = Convert.ToInt32(mtbLegajo.Text);
                     this.PersonaActual.IDPlan = Convert.ToInt32(this.cbIDPlan.SelectedValue);
                     this.PersonaActual.Telefono = this.mtbTelefono.Text;
                     this.PersonaActual.Email = this.txtEmail.Text;
@@ -145,22 +133,11 @@ namespace UI.Desktop
                   if ((c is TextBox || c is ComboBox) && (c.Tag.ToString() != "ID") && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
               }
 
-            if (!(mtbFechaNacimiento.MaskFull || mtbTelefono.MaskFull))
+            if (!(mtbFechaNacimiento.MaskFull || mtbTelefono.MaskFull || mtbLegajo.MaskFull))
             {
-              mensaje = "Fecha de nacimiento y/o telefono estan vacios.\n" + mensaje;
+              mensaje = "Fecha de nacimiento y/o Telefono y/o Legajo estan vacios.\n" + mensaje;
               ok=false;
             }
-
-          /*
-          if (!Util.Util.IsDate(this.mtbFechaNacimiento.Text)) 
-          {
-            mensaje += "La fecha de nacimiento ingresada no es valida.\n";
-
-              ok = false;
-          }
-          */
-
-          //Para validar los digitos ingresados correspondan a una fecha 
 
           mtbFechaNacimiento.ValidatingType = typeof(System.DateTime);
           mtbFechaNacimiento.TypeValidationCompleted += new TypeValidationEventHandler(mtbFechaNacimiento_TypeValidationCompleted);
@@ -176,6 +153,12 @@ namespace UI.Desktop
           {
               mensaje += "El email ingresado no es válido.\n";
               ok = false;
+          }
+
+          if (this.chkUsuario.Checked)
+          {
+              Usuarios u = new Usuarios();
+              u.ShowDialog();
           }
           
           if (!string.IsNullOrEmpty(mensaje)) Notificar(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -221,14 +204,6 @@ namespace UI.Desktop
             if (DR == DialogResult.Yes) this.Close();      
         }
 
-        private void PersonaDesktop_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'mARTI_tp2_netDataSet.planes' Puede moverla o quitarla según sea necesario.
-            this.planesTableAdapter1.Fill(this.mARTI_tp2_netDataSet.planes);
-            // TODO: esta línea de código carga datos en la tabla 'tp2_netDataSet.planes' Puede moverla o quitarla según sea necesario.
-            this.planesTableAdapter.Fill(this.tp2_netDataSet.planes);
-        }
-
         private void mtbFechaNacimiento_TypeValidationCompleted(object sender, TypeValidationEventArgs e)
         {
             if (!e.IsValidInput)
@@ -241,6 +216,18 @@ namespace UI.Desktop
         private void mtbFechaNacimiento_KeyDown(object sender, KeyEventArgs e)
         {
             ttFechaNacimiento.Hide(mtbFechaNacimiento);
+        }
+
+        private void mtbTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            ttTelefono.ToolTipTitle = "Tipo de dato no valido";
+            ttTelefono.Show("El campo admite solo digitos de longitud máxima 6", mtbTelefono);
+        }
+
+        private void mtbLegajo_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            ttLegajo.ToolTipTitle = "Tipo de dato no valido";
+            ttLegajo.Show("El campo admite solo digitos de longitud máxima 6", mtbLegajo);
         }
     }
 }

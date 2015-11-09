@@ -32,8 +32,7 @@ namespace Business.Logic
         return PlanData.GetAll();
         }
 
-        public Plan GetOne(int ID) 
-      
+        public Plan GetOne(int ID)  
         {
         return PlanData.GetOne(ID);
         }

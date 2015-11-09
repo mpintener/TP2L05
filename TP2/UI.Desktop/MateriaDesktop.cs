@@ -162,13 +162,5 @@ namespace UI.Desktop
             if (DR == DialogResult.Yes) this.Close();
         }
 
-        private void MateriaDesktop_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'mARTI_tp2_netDataSet.planes' Puede moverla o quitarla según sea necesario.
-            this.planesTableAdapter1.Fill(this.mARTI_tp2_netDataSet.planes);
-            // TODO: esta línea de código carga datos en la tabla 'tp2_netDataSet.planes' Puede moverla o quitarla según sea necesario.
-            this.planesTableAdapter.Fill(this.tp2_netDataSet.planes);
-
-        }
     }
 }

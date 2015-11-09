@@ -25,7 +25,7 @@ namespace UI.Desktop
 
             DocenteCursoLogic DCL = new DocenteCursoLogic();
             this.cbTipoCargo.DataSource = DCL.GetAll();
-            this.cbTipoCargo.DisplayMember = "tipo_persona";
+            this.cbTipoCargo.DisplayMember = "cargo";
             this.cbTipoCargo.ValueMember = "cargo";
             }
 
@@ -88,7 +88,6 @@ namespace UI.Desktop
             if (Modo == AplicationForm.ModoForm.Alta)
                 {
                 DocenteCurso dca = new DocenteCurso();
-                 
                 DocenteCursoActual = dca;
 
                 this.DocenteCursoActual.IDDocente = Convert.ToInt32(this.mtbIDDocente.Text);
@@ -178,18 +177,22 @@ namespace UI.Desktop
             if (DR == DialogResult.Yes) this.Close();    
         }
 
-        private void DocenteCursoDesktop_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'tp2_netDataSet.personas' Puede moverla o quitarla según sea necesario.
-            this.personasTableAdapter.Fill(this.tp2_netDataSet.personas);
-            // TODO: esta línea de código carga datos en la tabla 'tp2_netDataSet.cursos' Puede moverla o quitarla según sea necesario.
-            this.cursosTableAdapter.Fill(this.tp2_netDataSet.cursos);
-        }
-
         private void mtbCupo_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             ttIDDocente.ToolTipTitle = "Tipo de dato invalido";
             ttIDDocente.Show("El campo admite solo digitos", mtbIDDocente);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //Siempre se deben ingresar 5 numeros, de lo contrario tira error. Buscar como hacer que se complete con ceros
+            int id = int.Parse(this.mtbIDDocente.Text);
+            DocenteCursoLogic DCL = new DocenteCursoLogic();
+            DocenteCursoActual = DCL.GetOne(id);
+            if (DocenteCursoActual == null)
+            {
+                DialogResult DR = (MessageBox.Show("El id no existe", "Aceptar", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            }
         }
     }
 }

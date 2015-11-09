@@ -87,7 +87,6 @@ namespace UI.Desktop
             if (Modo == AplicationForm.ModoForm.Alta)
                 {
                 Curso cur = new Curso();             
-                
                 CursoActual = cur;
 
                 this.CursoActual.Cupo = Convert.ToInt32(this.mtbCupo.Text);
@@ -132,7 +131,7 @@ namespace UI.Desktop
 
                 if (!(mtbAnioCalendario.MaskFull || mtbCupo.MaskFull))
                 {
-                    mensaje = "Año Calendario o Cupo estan vacios.\n" + mensaje;
+                    mensaje = "Año Calendario y/o Cupo estan vacios.\n" + mensaje;
                     ok = false;
                 }
 

@@ -34,3 +34,10 @@ C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Dat
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\bin\Debug\Data.Database.pdb
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\bin\Debug\Business.Entities.dll
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\bin\Debug\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\TP2L05\Data.Database\Data.Database\bin\Debug\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\TP2L05\Data.Database\Data.Database\bin\Debug\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\TP2L05\Data.Database\Data.Database\bin\Debug\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\TP2L05\Data.Database\Data.Database\bin\Debug\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\TP2L05\Data.Database\Data.Database\obj\Debug\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\TP2L05\Data.Database\Data.Database\obj\Debug\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\TP2L05\Data.Database\Data.Database\obj\Debug\Data.Database.pdb

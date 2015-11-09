@@ -11,8 +11,6 @@ using System.Text.RegularExpressions;
 using Business.Entities;
 using Business.Logic;
 
-
-
 namespace UI.Desktop
     {
     public partial class UsuarioDesktop : AplicationForm
@@ -35,10 +33,11 @@ namespace UI.Desktop
         public override void MapearDeDatos()
             {
             this.txtID.Text = this.UsuarioActual.ID.ToString();
-            this.txtIDPersona.Text = this.UsuarioActual.IDPersona.ToString();
+            this.mtbIDPersona.Text = this.UsuarioActual.IDPersona.ToString();
             this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;                      
             this.txtClave.Text = this.UsuarioActual.Clave;
-            this.txtUsuario.Text = this.UsuarioActual.NombreUsuario;
+            this.chkCambiarClave.Checked = this.UsuarioActual.CambiarClave;
+            this.txtNombreUsuario.Text = this.UsuarioActual.NombreUsuario;
 
             switch (Modo)
                 {
@@ -81,17 +80,19 @@ namespace UI.Desktop
                 Usuario usu = new Usuario();                
                 UsuarioActual = usu;
                  
-                this.UsuarioActual.NombreUsuario = this.txtUsuario.Text;
-                this.UsuarioActual.IDPersona = Convert.ToInt32(this.txtIDPersona.Text);
-                this.UsuarioActual.Clave = this.txtClave.Text;                
+                this.UsuarioActual.NombreUsuario = this.txtNombreUsuario.Text;
+                this.UsuarioActual.IDPersona = Convert.ToInt32(this.mtbIDPersona.Text);
+                this.UsuarioActual.Clave = this.txtClave.Text;
+                this.UsuarioActual.CambiarClave = this.chkCambiarClave.Checked;
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;                 
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
                 this.UsuarioActual.ID = Convert.ToInt32(this.txtID.Text);
-                this.UsuarioActual.IDPersona = Convert.ToInt32(this.txtIDPersona.Text);
-                this.UsuarioActual.NombreUsuario = this.txtUsuario.Text;
-                this.UsuarioActual.Clave = this.txtClave.Text;                              
+                this.UsuarioActual.IDPersona = Convert.ToInt32(this.mtbIDPersona.Text);
+                this.UsuarioActual.NombreUsuario = this.txtNombreUsuario.Text;
+                this.UsuarioActual.Clave = this.txtClave.Text;
+                this.UsuarioActual.CambiarClave = this.chkCambiarClave.Checked;
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;  
                 }
             }
@@ -109,20 +110,39 @@ namespace UI.Desktop
             string mensaje = "";
             bool ok = true;
 
-            foreach (Control c in this.Controls)
+            if (Modo == ModoForm.Alta || Modo == ModoForm.Baja)
             {
-                if ((c is TextBox || c is ComboBox) && (c.Tag.ToString() != "ID") && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
-            }
 
-            if (!string.IsNullOrEmpty(mensaje))
+                foreach (Control c in this.Controls)
+                {
+                    if ((c is TextBox || c is ComboBox) && (c.Tag.ToString() != "ID" && c.Tag.ToString() != "NuevaClave" && c.Tag.ToString() != "ConfirmarNuevaClave") && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
+                }
+            }
+            else if (Modo == ModoForm.Modificacion && this.chkCambiarClave.Checked)
             {
-                mensaje = "Por favor complete los siguientes campos:\n" + mensaje;
-                ok = false;
+                foreach (Control c in this.Controls)
+                {
+                    if ((c is TextBox || c is ComboBox) && (c.Tag.ToString() != "ID") && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
+                }
+
+                this.txtNuevaClave.ReadOnly = false;
+                this.txtConfirmarNuevaClave.ReadOnly = false;
+
+                if (!(this.txtNuevaClave.Text.Equals(this.txtConfirmarNuevaClave.Text) || (this.txtNuevaClave.Text.Length < 8)))
+                {
+                    this.txtClave.Text = this.txtNuevaClave.Text;
+                }
             }
 
             if (!(this.txtClave.Text.Equals(this.txtConfirmarClave.Text)) || (this.txtClave.Text.Length < 8))
             {
                 mensaje += "La contraseña ingresada no coincide o posee menos de ocho caracteres.\n";
+                ok = false;
+            }
+
+            if (!string.IsNullOrEmpty(mensaje))
+            {
+                mensaje = "Por favor complete los siguientes campos:\n" + mensaje;
                 ok = false;
             }
 
@@ -170,10 +190,16 @@ namespace UI.Desktop
             if (DR == DialogResult.Yes) this.Close();      
             }
 
-        private void UsuarioDesktop_Load(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'tp2_netDataSet.personas' Puede moverla o quitarla según sea necesario.
-            this.personasTableAdapter.Fill(this.tp2_netDataSet.personas);
-        }  
+            //Siempre se deben ingresar 5 numeros, de lo contrario tira error. Buscar como hacer que se complete con ceros
+            int id = int.Parse(this.mtbIDPersona.Text);
+            UsuarioLogic UL = new UsuarioLogic();
+            UsuarioActual = UL.GetOne(id);
+            if (UsuarioActual == null)
+            {
+                DialogResult DR = (MessageBox.Show("El id no existe", "Aceptar", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            }        
+        }
     }
 }

@@ -27,28 +27,5 @@ namespace Util
             return true;
         }
        
-       /*
-        public static bool IsDate(string fechaentrante)
-        {
-            bool isDate = true;
-
-            try
-            {
-                DateTime fecha = DateTime.ParseExact(fechaentrante, "DD-MM-YYYY", null);
-            }
-
-            catch (Exception Ex)
-            {
-                isDate = false;
-
-                Exception ExcepcionManejada = new Exception("El formato para la fecha no es valido\n Ingrese la fecha como DD/MM/AAAA", Ex);
-               
-                throw ExcepcionManejada;
-
-            }
-            return isDate;
-        }
-       
-       */
     }
 }

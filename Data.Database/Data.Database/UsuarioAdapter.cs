@@ -178,6 +178,7 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
                 cmdSave.Parameters.Add("@id_persona", SqlDbType.Bit).Value = usuario.IDPersona;
                 usuario.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
+
             }
 
             catch (Exception Ex)

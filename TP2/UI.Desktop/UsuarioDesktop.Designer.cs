@@ -181,6 +181,7 @@
             this.txtIDPersona.Name = "txtIDPersona";
             this.txtIDPersona.Size = new System.Drawing.Size(155, 20);
             this.txtIDPersona.TabIndex = 18;
+            this.txtIDPersona.Tag = "IdPersona";
             // 
             // UsuarioDesktop
             // 

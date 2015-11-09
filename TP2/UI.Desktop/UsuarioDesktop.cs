@@ -34,7 +34,8 @@ namespace UI.Desktop
 
         public override void MapearDeDatos()
             {
-            this.txtID.Text = this.UsuarioActual.ID.ToString();        
+            this.txtID.Text = this.UsuarioActual.ID.ToString();
+            this.txtIDPersona.Text = this.UsuarioActual.IDPersona.ToString();
             this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;                      
             this.txtClave.Text = this.UsuarioActual.Clave;
             this.txtUsuario.Text = this.UsuarioActual.NombreUsuario;
@@ -80,13 +81,15 @@ namespace UI.Desktop
                 Usuario usu = new Usuario();                
                 UsuarioActual = usu;
                  
-                this.UsuarioActual.NombreUsuario = this.txtUsuario.Text;                
+                this.UsuarioActual.NombreUsuario = this.txtUsuario.Text;
+                this.UsuarioActual.IDPersona = Convert.ToInt32(this.txtIDPersona.Text);
                 this.UsuarioActual.Clave = this.txtClave.Text;                
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;                 
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
-                this.UsuarioActual.ID = Convert.ToInt32(this.txtID.Text);            
+                this.UsuarioActual.ID = Convert.ToInt32(this.txtID.Text);
+                this.UsuarioActual.IDPersona = Convert.ToInt32(this.txtIDPersona.Text);
                 this.UsuarioActual.NombreUsuario = this.txtUsuario.Text;
                 this.UsuarioActual.Clave = this.txtClave.Text;                              
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;  

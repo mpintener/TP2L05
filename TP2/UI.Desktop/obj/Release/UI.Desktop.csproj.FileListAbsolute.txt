@@ -235,7 +235,6 @@ C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.D
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCursoDesktop.resources
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.EspecialidadDesktop.resources
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Especialidades.resources
-C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Inicio.resources
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Login.resources
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Materias.resources
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.MateriaDesktop.resources
@@ -288,3 +287,4 @@ C:\Users\Marti\Documents\GitHub\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\U
 C:\Users\Marti\Documents\GitHub\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Usuarios.resources
 C:\Users\Marti\Documents\GitHub\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Properties.Resources.resources
 C:\Users\Marti\Documents\GitHub\ACADEMIA-TP2\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.formMain.resources

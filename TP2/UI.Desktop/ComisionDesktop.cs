@@ -85,14 +85,14 @@ namespace UI.Desktop
                  
                 this.ComisionActual.Descripcion = this.txtDescripcion.Text;
                 this.ComisionActual.AnioEspecialidad = Convert.ToInt32(this.mtbAnioEspecialidad.Text);
-                this.ComisionActual.IDPlan = Convert.ToInt32(this.cbIDPlan.SelectedValue);
+                this.ComisionActual.IDPlan = ((Plan)this.cbIDPlan.SelectedValue).ID;
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
                 this.ComisionActual.ID = Convert.ToInt32(this.txtID.Text);            
                 this.ComisionActual.Descripcion = this.txtDescripcion.Text;
                 this.ComisionActual.AnioEspecialidad = Convert.ToInt32(this.mtbAnioEspecialidad.Text);
-                this.ComisionActual.IDPlan = Convert.ToInt32(this.cbIDPlan.SelectedValue);
+                this.ComisionActual.IDPlan = ((Plan)this.cbIDPlan.SelectedValue).ID;
                 }
             }
 

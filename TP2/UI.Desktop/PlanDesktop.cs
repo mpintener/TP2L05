@@ -73,21 +73,19 @@ namespace UI.Desktop
 
         public override void MapearADatos()
         {
-
             if (Modo == AplicationForm.ModoForm.Alta)
             {   
                 Plan p = new Plan();
-               
                 PlanActual = p;
-                
-                this.PlanActual.IDEspecialidad = Convert.ToInt32(cbIDEspecialidad.SelectedValue);
+
+                this.PlanActual.IDEspecialidad = ((Especialidad)cbIDEspecialidad.SelectedValue).ID;
                 this.PlanActual.Descripcion = this.txtDescripcion.Text;
             }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
             {
                 this.PlanActual.ID = Convert.ToInt32(this.txtID.Text);
                 this.PlanActual.Descripcion = this.txtDescripcion.Text;
-                this.PlanActual.IDEspecialidad = Convert.ToInt32(this.cbIDEspecialidad.SelectedValue);
+                this.PlanActual.IDEspecialidad = ((Especialidad)cbIDEspecialidad.SelectedValue).ID;
             }
         }
 

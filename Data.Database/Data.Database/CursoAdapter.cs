@@ -120,10 +120,10 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                
-                SqlCommand cmdDelete = new SqlCommand("delete cursos where id_curso=@id", sqlConn);
-                
-                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+
+                SqlCommand cmdDelete = new SqlCommand("delete cursos where id_curso=@id_curso", sqlConn);
+
+                cmdDelete.Parameters.Add("@id_curso", SqlDbType.Int).Value = ID;
                 
                 cmdDelete.ExecuteNonQuery();
             }

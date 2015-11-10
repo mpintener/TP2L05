@@ -79,8 +79,8 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdMaterias = new SqlCommand("SELECT * from materias where id_materia=@id", sqlConn);
-                cmdMaterias.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdMaterias = new SqlCommand("SELECT * from materias where id_materia=@id_materia", sqlConn);
+                cmdMaterias.Parameters.Add("@id_materia", SqlDbType.Int).Value = ID;
                 SqlDataReader drMaterias = cmdMaterias.ExecuteReader();
 
                 if (drMaterias.Read())
@@ -114,8 +114,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdDelete = new SqlCommand("delete materias where id_materia=@id", sqlConn);
-                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdDelete = new SqlCommand("delete materias where id_materia=@id_materia", sqlConn);
+                cmdDelete.Parameters.Add("@id_materia", SqlDbType.Int).Value = ID;
                 cmdDelete.ExecuteNonQuery();
             }
 

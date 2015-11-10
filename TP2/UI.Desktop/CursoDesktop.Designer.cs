@@ -38,7 +38,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cbIDMateria = new System.Windows.Forms.ComboBox();
-            this.cbComision = new System.Windows.Forms.ComboBox();
+            this.cbIDComision = new System.Windows.Forms.ComboBox();
             this.mtbCupo = new System.Windows.Forms.MaskedTextBox();
             this.mtbAnioCalendario = new System.Windows.Forms.MaskedTextBox();
             this.ttCupo = new System.Windows.Forms.ToolTip(this.components);
@@ -122,6 +122,7 @@
             // 
             // cbIDMateria
             // 
+            this.cbIDMateria.DisplayMember = "id_materia";
             this.cbIDMateria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIDMateria.Location = new System.Drawing.Point(348, 53);
             this.cbIDMateria.Name = "cbIDMateria";
@@ -130,16 +131,17 @@
             this.cbIDMateria.Tag = "IDMateria";
             this.cbIDMateria.ValueMember = "id_materia";
             // 
-            // cbComision
+            // cbIDComision
             // 
-            this.cbComision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbComision.FormattingEnabled = true;
-            this.cbComision.Location = new System.Drawing.Point(348, 26);
-            this.cbComision.Name = "cbComision";
-            this.cbComision.Size = new System.Drawing.Size(162, 21);
-            this.cbComision.TabIndex = 4;
-            this.cbComision.Tag = "IDComision";
-            this.cbComision.ValueMember = "id_comision";
+            this.cbIDComision.DisplayMember = "id_comision";
+            this.cbIDComision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbIDComision.FormattingEnabled = true;
+            this.cbIDComision.Location = new System.Drawing.Point(348, 26);
+            this.cbIDComision.Name = "cbIDComision";
+            this.cbIDComision.Size = new System.Drawing.Size(162, 21);
+            this.cbIDComision.TabIndex = 4;
+            this.cbIDComision.Tag = "IDComision";
+            this.cbIDComision.ValueMember = "id_comision";
             // 
             // mtbCupo
             // 
@@ -166,7 +168,7 @@
             this.ClientSize = new System.Drawing.Size(532, 162);
             this.Controls.Add(this.mtbAnioCalendario);
             this.Controls.Add(this.mtbCupo);
-            this.Controls.Add(this.cbComision);
+            this.Controls.Add(this.cbIDComision);
             this.Controls.Add(this.cbIDMateria);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -178,7 +180,6 @@
             this.Controls.Add(this.lblID);
             this.Name = "CursoDesktop";
             this.Text = "CursoDesktop";
-            this.Load += new System.EventHandler(this.CursoDesktop_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +196,7 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cbIDMateria;
-        private System.Windows.Forms.ComboBox cbComision;
+        private System.Windows.Forms.ComboBox cbIDComision;
         private System.Windows.Forms.MaskedTextBox mtbCupo;
         private System.Windows.Forms.MaskedTextBox mtbAnioCalendario;
         private System.Windows.Forms.ToolTip ttCupo;

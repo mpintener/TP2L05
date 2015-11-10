@@ -83,16 +83,16 @@ namespace UI.Desktop
                 
                 AluInscActual = aluInsc;
                                 
-                this.AluInscActual.IDAlumno = Convert.ToInt32(this.mtbIDAlumno.Text);                
-                this.AluInscActual.IDCurso = Convert.ToInt32(this.cbIDCurso.SelectedValue);                
+                this.AluInscActual.IDAlumno = Convert.ToInt32(this.mtbIDAlumno.Text);
+                this.AluInscActual.IDCurso = ((Curso)this.cbIDCurso.SelectedValue).ID;
                 this.AluInscActual.Condicion = this.txtCondicion.Text;                
                 this.AluInscActual.Nota = Convert.ToInt32(this.mtbNota.Text);     
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
                 this.AluInscActual.ID = Convert.ToInt32(this.ID.Text);                
-                this.AluInscActual.IDAlumno = Convert.ToInt32(this.mtbIDAlumno.Text);                
-                this.AluInscActual.IDCurso = Convert.ToInt32(this.cbIDCurso.SelectedValue);                
+                this.AluInscActual.IDAlumno = Convert.ToInt32(this.mtbIDAlumno.Text);
+                this.AluInscActual.IDCurso = ((Curso)this.cbIDCurso.SelectedValue).ID;                
                 this.AluInscActual.Condicion = this.txtCondicion.Text;                
                 this.AluInscActual.Nota = Convert.ToInt32(this.mtbNota.Text);
                 }
@@ -197,14 +197,17 @@ namespace UI.Desktop
         {
             //Siempre se deben ingresar 5 numeros, de lo contrario tira error. Buscar como hacer que se complete con ceros
             int id = int.Parse(this.mtbIDAlumno.Text);
-            AlumnoInscripcionLogic AIL = new AlumnoInscripcionLogic();
-            AluInscActual = AIL.GetOne(id);
-            if (AluInscActual == null)
-            {
-                DialogResult DR = (MessageBox.Show("El id no existe", "Aceptar", MessageBoxButtons.OK, MessageBoxIcon.Error));
-            }
-            else { txtCondicion.ReadOnly = false; mtbNota.ReadOnly = false; }
+            PersonasLogic PL = new PersonasLogic();
+            Persona p;
+            p = PL.GetOne(id);
 
+            DialogResult DR;
+
+            if (p.ID == id)
+            {
+                DR = (MessageBox.Show("ID encontrado", "Busqueda Exitosa", MessageBoxButtons.OK, MessageBoxIcon.None));
+            }
+            else DR = (MessageBox.Show("ID no existe,por favor vuelva a ingresarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error));
         }
     }
 }

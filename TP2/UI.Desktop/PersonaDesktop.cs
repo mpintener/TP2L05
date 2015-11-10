@@ -29,7 +29,6 @@ namespace UI.Desktop
         private Persona _PersonaActual;
 
         public Persona PersonaActual
-        
             {
             get { return _PersonaActual; }
 
@@ -83,7 +82,6 @@ namespace UI.Desktop
 
         public override void MapearADatos()
             {
-
                 if (Modo == AplicationForm.ModoForm.Alta)
                 {
                     Persona per = new Persona();
@@ -92,13 +90,12 @@ namespace UI.Desktop
                     this.PersonaActual.Nombre = this.txtNombre.Text;
                     this.PersonaActual.Apellido = this.txtApellido.Text;
                     this.PersonaActual.Legajo = Convert.ToInt32(mtbLegajo.Text);
-                    this.PersonaActual.IDPlan = ((Plan)cbIDPlan.SelectedValue).ID; //Convert.ToInt32(cbIDPlan.SelectedValue);
+                    this.PersonaActual.IDPlan = ((Plan)cbIDPlan.SelectedValue).ID; 
                     this.PersonaActual.Direccion = this.txtDireccion.Text;
                     this.PersonaActual.Telefono = this.mtbTelefono.Text;
                     this.PersonaActual.Email = this.txtEmail.Text;
                     this.PersonaActual.TiposPersona = Convert.ToInt32(this.txtTipoPersona.Text);
                     this.PersonaActual.FechaNacimiento = Convert.ToDateTime(this.mtbFechaNacimiento.Text);
-
                 }
                     
                 else if (Modo == AplicationForm.ModoForm.Modificacion)
@@ -108,7 +105,7 @@ namespace UI.Desktop
                     this.PersonaActual.Nombre = this.txtNombre.Text;
                     this.PersonaActual.Apellido = this.txtApellido.Text;
                     this.PersonaActual.Legajo = Convert.ToInt32(mtbLegajo.Text);
-                    this.PersonaActual.IDPlan = Convert.ToInt32(this.cbIDPlan.SelectedValue);
+                    this.PersonaActual.IDPlan = ((Plan)cbIDPlan.SelectedValue).ID;
                     this.PersonaActual.Telefono = this.mtbTelefono.Text;
                     this.PersonaActual.Email = this.txtEmail.Text;
                     this.PersonaActual.TiposPersona = Convert.ToInt32(this.txtTipoPersona.Text);

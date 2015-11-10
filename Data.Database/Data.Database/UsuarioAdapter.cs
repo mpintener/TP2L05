@@ -74,6 +74,7 @@ namespace Data.Database
         {
 
             Usuario usr = new Usuario();
+
             try
             {
                 this.OpenConnection();
@@ -89,7 +90,6 @@ namespace Data.Database
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
                     usr.IDPersona = (int)drUsuarios["id_persona"];
                 }
-
                 drUsuarios.Close();
             }
 
@@ -177,7 +177,7 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
                 cmdSave.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
                 cmdSave.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
-                cmdSave.Parameters.Add("@id_persona", SqlDbType.Bit).Value = usuario.IDPersona;
+                cmdSave.Parameters.Add("@id_persona", SqlDbType.Int).Value = usuario.IDPersona;
                 usuario.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
 
             }

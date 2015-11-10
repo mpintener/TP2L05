@@ -10,7 +10,7 @@ namespace Business.Entities
         {
 
         //Enumeración
-        public enum States { Deleted, New, Modified, Unmodified }
+        public enum States {Deleted, New, Modified, Unmodified }
 
         public BusinessEntity() 
         {
@@ -22,14 +22,12 @@ namespace Business.Entities
         //Propiedad llamada ID
         public int ID
         {
-
         get {
             return _ID;
             }
         set
             {
             _ID = value;
-
             }     
         }
 
@@ -39,14 +37,12 @@ namespace Business.Entities
         
         public States State
         {
-        
         get {
             return _State;
             }
         set
             {
             _State = value;
-
             }     
         }
     

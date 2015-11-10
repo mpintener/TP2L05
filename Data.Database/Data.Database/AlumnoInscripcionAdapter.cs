@@ -81,8 +81,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdAlumnosInscripciones = new SqlCommand("SELECT * from alumnos_inscripciones where id_inscripcion=@id", sqlConn);
-                cmdAlumnosInscripciones.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdAlumnosInscripciones = new SqlCommand("SELECT * from alumnos_inscripciones where id_inscripcion=@id_inscripcion", sqlConn);
+                cmdAlumnosInscripciones.Parameters.Add("@id_inscripcion", SqlDbType.Int).Value = ID;
                 SqlDataReader drAlumnosInscripciones = cmdAlumnosInscripciones.ExecuteReader();
 
                 if (drAlumnosInscripciones.Read())
@@ -116,10 +116,10 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                
-                SqlCommand cmdDelete = new SqlCommand("delete usuarios where id_inscripcion=@id", sqlConn);
-                
-                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+
+                SqlCommand cmdDelete = new SqlCommand("delete usuarios where id_inscripcion=@id_inscripcion", sqlConn);
+
+                cmdDelete.Parameters.Add("@id_inscripcion", SqlDbType.Int).Value = ID;
                 
                 cmdDelete.ExecuteNonQuery();
             }
@@ -144,9 +144,9 @@ namespace Data.Database
                 SqlCommand cmdSave = new SqlCommand(
                     "UPDATE alumnos_inscripciones SET id_alumno=@id_alumno,"
                     + "id_curso=@id_curso, nota=@nota, condicion=@condicion " +
-                    "WHERE id_inscripcion=@id", sqlConn);
-              
-                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = alumnoInscripciones.ID;
+                    "WHERE id_inscripcion=@id_inscripcion", sqlConn);
+
+                cmdSave.Parameters.Add("@id_inscripcion", SqlDbType.Int).Value = alumnoInscripciones.ID;
                 cmdSave.Parameters.Add("@id_alumno", SqlDbType.Int).Value = alumnoInscripciones.IDAlumno;
                 cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = alumnoInscripciones.IDCurso;
                 cmdSave.Parameters.Add("@condicion", SqlDbType.VarChar, 50).Value = alumnoInscripciones.Condicion;

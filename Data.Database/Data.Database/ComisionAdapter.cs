@@ -76,8 +76,8 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdComisiones = new SqlCommand("SELECT * from comisiones where id_comision=@id", sqlConn);
-                cmdComisiones.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdComisiones = new SqlCommand("SELECT * from comisiones where id_comision=@id_comision", sqlConn);
+                cmdComisiones.Parameters.Add("@id_comision", SqlDbType.Int).Value = ID;
                 SqlDataReader drComisiones = cmdComisiones.ExecuteReader();
 
                 if (drComisiones.Read())
@@ -110,9 +110,9 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdDelete = new SqlCommand("delete comisiones where id_comision=@id", sqlConn);
+                SqlCommand cmdDelete = new SqlCommand("delete comisiones where id_comision=@id_comision", sqlConn);
 
-                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                cmdDelete.Parameters.Add("@id_comision", SqlDbType.Int).Value = ID;
 
                 cmdDelete.ExecuteNonQuery();
             }
@@ -137,9 +137,9 @@ namespace Data.Database
                 SqlCommand cmdSave = new SqlCommand(
                     "UPDATE comisiones SET desc_comision=@desc_comision,"
                     + "anio_especialidad=@anio_especialidad, id_plan=@id_plan " +
-                    "WHERE id_comision=@id", sqlConn);
+                    "WHERE id_comision=@id_comision", sqlConn);
 
-                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = comision.ID;
+                cmdSave.Parameters.Add("@id_comision", SqlDbType.Int).Value = comision.ID;
                 cmdSave.Parameters.Add("@desc_comision", SqlDbType.VarChar, 50).Value = comision.Descripcion;
                 cmdSave.Parameters.Add("@anio_especialidad", SqlDbType.Int).Value = comision.AnioEspecialidad;
                 cmdSave.Parameters.Add("@id_plan", SqlDbType.Int).Value = comision.IDPlan;

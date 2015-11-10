@@ -14,16 +14,15 @@ using Business.Logic;
 namespace UI.Desktop
 {
     public partial class CursoDesktop : AplicationForm
-    {
-        
+    {   
         public CursoDesktop()
             {
             InitializeComponent();
 
             ComisionLogic CL = new ComisionLogic();
-            this.cbComision.DataSource = CL.GetAll();
-            this.cbComision.DisplayMember = "desc_comision";
-            this.cbComision.ValueMember = "id_comision";
+            this.cbIDComision.DataSource = CL.GetAll();
+            this.cbIDComision.DisplayMember = "desc_comision";
+            this.cbIDComision.ValueMember = "id_comision";
 
             MateriaLogic ML = new MateriaLogic();
             this.cbIDMateria.DataSource = ML.GetAll();
@@ -44,7 +43,7 @@ namespace UI.Desktop
         public override void MapearDeDatos()
             {
             this.txtID.Text = this.CursoActual.ID.ToString();     
-            this.cbComision.Text = this.CursoActual.IDComision.ToString();           
+            this.cbIDComision.Text = this.CursoActual.IDComision.ToString();           
             this.mtbCupo.Text = this.CursoActual.Cupo.ToString();    
             this.cbIDMateria.Text = this.CursoActual.IDMateria.ToString();
             this.mtbAnioCalendario.Text = this.CursoActual.AnioCalendario.ToString();
@@ -91,16 +90,16 @@ namespace UI.Desktop
 
                 this.CursoActual.Cupo = Convert.ToInt32(this.mtbCupo.Text);
                 this.CursoActual.AnioCalendario = Convert.ToInt32(mtbAnioCalendario.Text);
-                this.CursoActual.IDComision = Convert.ToInt32(cbComision.SelectedValue);                     
-                this.CursoActual.IDMateria=Convert.ToInt32(cbIDMateria.SelectedValue);
+                this.CursoActual.IDComision = ((Comision)this.cbIDComision.SelectedValue).ID;
+                this.CursoActual.IDMateria = ((Materia)this.cbIDMateria.SelectedValue).ID;
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
                 this.CursoActual.ID = Convert.ToInt32(this.txtID.Text);             
                 this.CursoActual.AnioCalendario=Convert.ToInt32(this.mtbAnioCalendario.Text);
                 this.CursoActual.Cupo = Convert.ToInt32(this.mtbCupo.Text);
-                this.CursoActual.IDComision = Convert.ToInt32(this.cbComision.SelectedValue);
-                this.CursoActual.IDMateria = Convert.ToInt32(this.cbIDMateria.SelectedValue);
+                this.CursoActual.IDComision = ((Comision)this.cbIDComision.SelectedValue).ID;
+                this.CursoActual.IDMateria = ((Materia)this.cbIDMateria.SelectedValue).ID;
                 }
             }
 
@@ -177,10 +176,6 @@ namespace UI.Desktop
             DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?", "Cancelar", MessageBoxButtons.YesNo));
 
             if (DR == DialogResult.Yes) this.Close();
-        }
-
-        private void CursoDesktop_Load(object sender, EventArgs e)
-        {
         }
 
         private void mtbAnioCalendario_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)

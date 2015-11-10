@@ -79,8 +79,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdDocenteCurso = new SqlCommand("SELECT * from docentes_cursos where id_dictado=@id", sqlConn);
-                cmdDocenteCurso.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdDocenteCurso = new SqlCommand("SELECT * from docentes_cursos where id_dictado=@id_dictado", sqlConn);
+                cmdDocenteCurso.Parameters.Add("@id_dictado", SqlDbType.Int).Value = ID;
                 SqlDataReader drDocenteCurso = cmdDocenteCurso.ExecuteReader();
 
                 if (drDocenteCurso.Read())
@@ -114,8 +114,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdDelete = new SqlCommand("delete docentes_cursos where id_dictado=@id", sqlConn);
-                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdDelete = new SqlCommand("delete docentes_cursos where id_dictado=@id_dictado", sqlConn);
+                cmdDelete.Parameters.Add("@id_dictado", SqlDbType.Int).Value = ID;
                 cmdDelete.ExecuteNonQuery();
             }
 
@@ -138,9 +138,9 @@ namespace Data.Database
 
                 SqlCommand cmdSave = new SqlCommand(
                     "UPDATE docentes_cursos SET id_docente=@id_docente, id_curso=@id_curso, cargo=@cargo " +
-                    "WHERE id_dictado=@id", sqlConn);
+                    "WHERE id_dictado=@id_dictado", sqlConn);
 
-                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = docenteCurso.ID;
+                cmdSave.Parameters.Add("@id_dictado", SqlDbType.Int).Value = docenteCurso.ID;
                 cmdSave.Parameters.Add("@id_docente", SqlDbType.Int).Value = docenteCurso.IDDocente;
                 cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = docenteCurso.IDCurso;
                 cmdSave.Parameters.Add("@cargo", SqlDbType.VarChar, 50).Value = docenteCurso.TipoCargo;

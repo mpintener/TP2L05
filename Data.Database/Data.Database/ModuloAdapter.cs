@@ -56,9 +56,9 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdModulos = new SqlCommand("SELECT * from modulos where id_modulo=@id", sqlConn);
-                
-                cmdModulos.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdModulos = new SqlCommand("SELECT * from modulos where id_modulo=@id_modulo", sqlConn);
+
+                cmdModulos.Parameters.Add("@id_modulo", SqlDbType.Int).Value = ID;
                 
                 SqlDataReader drModulos = cmdModulos.ExecuteReader();
 
@@ -91,8 +91,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdDelete = new SqlCommand("delete modulos where id_modulo=@id", sqlConn);
-                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdDelete = new SqlCommand("delete modulos where id_modulo=@id_modulo", sqlConn);
+                cmdDelete.Parameters.Add("@id_modulo", SqlDbType.Int).Value = ID;
                 cmdDelete.ExecuteNonQuery();
             }
 
@@ -115,9 +115,9 @@ namespace Data.Database
 
                 SqlCommand cmdSave = new SqlCommand(
                     "UPDATE modulos SET desc_modulo=@desc_modulo, ejecuta=@ejecuta " +
-                    "WHERE id_modulo=@id", sqlConn);
+                    "WHERE id_modulo=@id_modulo", sqlConn);
 
-                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = modulo.ID;
+                cmdSave.Parameters.Add("@id_modulo", SqlDbType.Int).Value = modulo.ID;
                 cmdSave.Parameters.Add("@desc_modulo", SqlDbType.VarChar, 50).Value = modulo.Descripcion;
                 cmdSave.Parameters.Add("@ejecuta", SqlDbType.VarChar, 50).Value = modulo.Ejecuta;
 

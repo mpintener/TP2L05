@@ -82,7 +82,7 @@ namespace UI.Desktop
                 MateriaActual = mat;
                  
                 this.MateriaActual.Descripcion = this.txtDescripcion.Text;
-                this.MateriaActual.IDPlan = Convert.ToInt32(this.cbIDPlan.SelectedValue);                
+                this.MateriaActual.IDPlan = ((Plan)this.cbIDPlan.SelectedValue).ID;                
                 this.MateriaActual.HsSemanales = Convert.ToInt32(this.txtHorasSemanales.Text);                
                 this.MateriaActual.HsTotales = Convert.ToInt32(this.txtHorasTotales.Text);           
                 }
@@ -90,7 +90,7 @@ namespace UI.Desktop
                 {
                 this.MateriaActual.ID = Convert.ToInt32(this.txtID.Text);                
                 this.MateriaActual.Descripcion = this.txtDescripcion.Text;
-                this.MateriaActual.IDPlan = Convert.ToInt32(this.cbIDPlan.SelectedValue);                
+                this.MateriaActual.IDPlan = ((Plan)this.cbIDPlan.SelectedValue).ID;
                 this.MateriaActual.HsSemanales = Convert.ToInt32(this.txtHorasSemanales.Text);                
                 this.MateriaActual.HsTotales = Convert.ToInt32(this.txtHorasTotales.Text);  
                 }

@@ -40,11 +40,6 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblIDPersona = new System.Windows.Forms.Label();
-            this.txtConfirmarNuevaClave = new System.Windows.Forms.TextBox();
-            this.txtNuevaClave = new System.Windows.Forms.TextBox();
-            this.lblNuevaClave = new System.Windows.Forms.Label();
-            this.lblConfirmarNuevaClave = new System.Windows.Forms.Label();
-            this.chkCambiarClave = new System.Windows.Forms.CheckBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.mtbIDPersona = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
@@ -69,17 +64,17 @@
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(126, 81);
+            this.txtClave.Location = new System.Drawing.Point(487, 29);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(155, 20);
-            this.txtClave.TabIndex = 3;
+            this.txtClave.TabIndex = 5;
             this.txtClave.Tag = "Clave";
             // 
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(28, 91);
+            this.lblClave.Location = new System.Drawing.Point(403, 32);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(34, 13);
             this.lblClave.TabIndex = 7;
@@ -87,25 +82,25 @@
             // 
             // txtNombreUsuario
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(126, 55);
+            this.txtNombreUsuario.Location = new System.Drawing.Point(126, 80);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(155, 20);
-            this.txtNombreUsuario.TabIndex = 2;
+            this.txtNombreUsuario.TabIndex = 4;
             this.txtNombreUsuario.Tag = "NombreUsuario";
             // 
             // txtConfirmarClave
             // 
-            this.txtConfirmarClave.Location = new System.Drawing.Point(126, 107);
+            this.txtConfirmarClave.Location = new System.Drawing.Point(487, 53);
             this.txtConfirmarClave.Name = "txtConfirmarClave";
             this.txtConfirmarClave.PasswordChar = '*';
             this.txtConfirmarClave.Size = new System.Drawing.Size(155, 20);
-            this.txtConfirmarClave.TabIndex = 4;
+            this.txtConfirmarClave.TabIndex = 6;
             this.txtConfirmarClave.Tag = "ConfirmarClave";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(28, 65);
+            this.lblUsuario.Location = new System.Drawing.Point(28, 87);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 12;
@@ -114,7 +109,7 @@
             // lblConfirmarClave
             // 
             this.lblConfirmarClave.AutoSize = true;
-            this.lblConfirmarClave.Location = new System.Drawing.Point(28, 114);
+            this.lblConfirmarClave.Location = new System.Drawing.Point(403, 61);
             this.lblConfirmarClave.Name = "lblConfirmarClave";
             this.lblConfirmarClave.Size = new System.Drawing.Size(78, 13);
             this.lblConfirmarClave.TabIndex = 13;
@@ -123,19 +118,19 @@
             // chkHabilitado
             // 
             this.chkHabilitado.AutoSize = true;
-            this.chkHabilitado.Location = new System.Drawing.Point(325, 32);
+            this.chkHabilitado.Location = new System.Drawing.Point(406, 87);
             this.chkHabilitado.Name = "chkHabilitado";
             this.chkHabilitado.Size = new System.Drawing.Size(73, 17);
-            this.chkHabilitado.TabIndex = 5;
+            this.chkHabilitado.TabIndex = 7;
             this.chkHabilitado.Text = "Habilitado";
             this.chkHabilitado.UseVisualStyleBackColor = true;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(232, 148);
+            this.btnAceptar.Location = new System.Drawing.Point(206, 115);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 10;
+            this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -144,7 +139,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(323, 148);
+            this.btnCancelar.Location = new System.Drawing.Point(298, 115);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 16;
@@ -155,75 +150,29 @@
             // lblIDPersona
             // 
             this.lblIDPersona.AutoSize = true;
-            this.lblIDPersona.Location = new System.Drawing.Point(322, 114);
+            this.lblIDPersona.Location = new System.Drawing.Point(28, 62);
             this.lblIDPersona.Name = "lblIDPersona";
             this.lblIDPersona.Size = new System.Drawing.Size(60, 13);
             this.lblIDPersona.TabIndex = 17;
             this.lblIDPersona.Text = "ID Persona";
             // 
-            // txtConfirmarNuevaClave
-            // 
-            this.txtConfirmarNuevaClave.Location = new System.Drawing.Point(444, 84);
-            this.txtConfirmarNuevaClave.Name = "txtConfirmarNuevaClave";
-            this.txtConfirmarNuevaClave.ReadOnly = true;
-            this.txtConfirmarNuevaClave.Size = new System.Drawing.Size(155, 20);
-            this.txtConfirmarNuevaClave.TabIndex = 8;
-            this.txtConfirmarNuevaClave.Tag = "ConfirmarNuevaClave";
-            // 
-            // txtNuevaClave
-            // 
-            this.txtNuevaClave.Location = new System.Drawing.Point(444, 55);
-            this.txtNuevaClave.Name = "txtNuevaClave";
-            this.txtNuevaClave.ReadOnly = true;
-            this.txtNuevaClave.Size = new System.Drawing.Size(155, 20);
-            this.txtNuevaClave.TabIndex = 7;
-            this.txtNuevaClave.Tag = "NuevaClave";
-            // 
-            // lblNuevaClave
-            // 
-            this.lblNuevaClave.AutoSize = true;
-            this.lblNuevaClave.Location = new System.Drawing.Point(322, 62);
-            this.lblNuevaClave.Name = "lblNuevaClave";
-            this.lblNuevaClave.Size = new System.Drawing.Size(69, 13);
-            this.lblNuevaClave.TabIndex = 20;
-            this.lblNuevaClave.Text = "Nueva Clave";
-            // 
-            // lblConfirmarNuevaClave
-            // 
-            this.lblConfirmarNuevaClave.AutoSize = true;
-            this.lblConfirmarNuevaClave.Location = new System.Drawing.Point(322, 91);
-            this.lblConfirmarNuevaClave.Name = "lblConfirmarNuevaClave";
-            this.lblConfirmarNuevaClave.Size = new System.Drawing.Size(116, 13);
-            this.lblConfirmarNuevaClave.TabIndex = 21;
-            this.lblConfirmarNuevaClave.Text = "Confirmar Nueva Clave";
-            // 
-            // chkCambiarClave
-            // 
-            this.chkCambiarClave.AutoSize = true;
-            this.chkCambiarClave.Location = new System.Drawing.Point(444, 31);
-            this.chkCambiarClave.Name = "chkCambiarClave";
-            this.chkCambiarClave.Size = new System.Drawing.Size(94, 17);
-            this.chkCambiarClave.TabIndex = 6;
-            this.chkCambiarClave.Text = "Cambiar Clave";
-            this.chkCambiarClave.UseVisualStyleBackColor = true;
-            // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(605, 109);
+            this.btnBuscar.Location = new System.Drawing.Point(298, 51);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 22;
+            this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // mtbIDPersona
             // 
-            this.mtbIDPersona.Location = new System.Drawing.Point(444, 111);
+            this.mtbIDPersona.Location = new System.Drawing.Point(126, 54);
             this.mtbIDPersona.Mask = "99999";
             this.mtbIDPersona.Name = "mtbIDPersona";
             this.mtbIDPersona.Size = new System.Drawing.Size(155, 20);
-            this.mtbIDPersona.TabIndex = 9;
+            this.mtbIDPersona.TabIndex = 2;
             this.mtbIDPersona.Tag = "IDPersona";
             this.mtbIDPersona.ValidatingType = typeof(int);
             // 
@@ -232,14 +181,9 @@
             this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 183);
+            this.ClientSize = new System.Drawing.Size(656, 149);
             this.Controls.Add(this.mtbIDPersona);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.chkCambiarClave);
-            this.Controls.Add(this.lblConfirmarNuevaClave);
-            this.Controls.Add(this.lblNuevaClave);
-            this.Controls.Add(this.txtNuevaClave);
-            this.Controls.Add(this.txtConfirmarNuevaClave);
             this.Controls.Add(this.lblIDPersona);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -273,11 +217,6 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblIDPersona;
-        private System.Windows.Forms.TextBox txtConfirmarNuevaClave;
-        private System.Windows.Forms.TextBox txtNuevaClave;
-        private System.Windows.Forms.Label lblNuevaClave;
-        private System.Windows.Forms.Label lblConfirmarNuevaClave;
-        private System.Windows.Forms.CheckBox chkCambiarClave;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.MaskedTextBox mtbIDPersona;
         

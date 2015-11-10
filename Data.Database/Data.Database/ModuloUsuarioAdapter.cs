@@ -64,9 +64,9 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdModuloUsuarios = new SqlCommand("SELECT * from modulos_usuarios where id_modulo_usuario=@id", sqlConn);
+                SqlCommand cmdModuloUsuarios = new SqlCommand("SELECT * from modulos_usuarios where id_modulo_usuario=@id_modulo_usuario", sqlConn);
 
-                cmdModuloUsuarios.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                cmdModuloUsuarios.Parameters.Add("@id_modulo_usuario", SqlDbType.Int).Value = ID;
 
                 SqlDataReader drModuloUsuarios = cmdModuloUsuarios.ExecuteReader();
 
@@ -104,9 +104,9 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdDelete = new SqlCommand("delete modulos_usuarios where id_modulo_usuario=@id", sqlConn);
+                SqlCommand cmdDelete = new SqlCommand("delete modulos_usuarios where id_modulo_usuario=@id_modulo_usuario", sqlConn);
 
-                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                cmdDelete.Parameters.Add("@id_modulo_usuario", SqlDbType.Int).Value = ID;
 
                 cmdDelete.ExecuteNonQuery();
             }
@@ -133,9 +133,9 @@ namespace Data.Database
                 SqlCommand cmdSave = new SqlCommand(
                     "UPDATE modulos_usuarios SET id_modulo=@id_modulo, id_usuario=@id_usuario, alta=@alta, baja=@baja" +
                     "consulta=@consulta, modificacion=@modificacion " +
-                    "WHERE id_modulo_usuario=@id", sqlConn);
+                    "WHERE id_modulo_usuario=@id_modulo_usuario", sqlConn);
 
-                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = moduloUsuario.ID;
+                cmdSave.Parameters.Add("@id_modulo_usuario", SqlDbType.Int).Value = moduloUsuario.ID;
                 cmdSave.Parameters.Add("@id_modulo", SqlDbType.Int).Value = moduloUsuario.IDModulo;
                 cmdSave.Parameters.Add("@id_usuario", SqlDbType.Int).Value = moduloUsuario.IDUsuario;
                 cmdSave.Parameters.Add("@alta", SqlDbType.Bit).Value = moduloUsuario.PermiteAlta;

@@ -23,10 +23,10 @@ namespace UI.Desktop
             this.cbIDCurso.DisplayMember = "id_curso";
             this.cbIDCurso.ValueMember = "id_curso";
 
-            DocenteCursoLogic DCL = new DocenteCursoLogic();
-            this.cbTipoCargo.DataSource = DCL.GetAll();
-            this.cbTipoCargo.DisplayMember = "cargo";
-            this.cbTipoCargo.ValueMember = "cargo";
+            PersonasLogic PL = new PersonasLogic();
+            this.cbTipoCargo.DataSource = PL.GetAll();
+            this.cbTipoCargo.DisplayMember = "legajo";
+            this.cbTipoCargo.ValueMember = "tipo_persona";
             }
 
         private DocenteCurso _DocenteCursoActual;
@@ -91,15 +91,15 @@ namespace UI.Desktop
                 DocenteCursoActual = dca;
 
                 this.DocenteCursoActual.IDDocente = Convert.ToInt32(this.mtbIDDocente.Text);
-                this.DocenteCursoActual.IDCurso = Convert.ToInt32(this.cbIDCurso.SelectedValue);
-                this.DocenteCursoActual.TipoCargo = Convert.ToInt32(this.cbTipoCargo.SelectedValue);                
+                this.DocenteCursoActual.IDCurso = ((Curso)this.cbIDCurso.SelectedValue).ID;
+                this.DocenteCursoActual.TipoCargo = ((Persona)this.cbTipoCargo.SelectedValue).TiposPersona;                
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
                     this.DocenteCursoActual.ID = Convert.ToInt32(this.txtIDDictado.Text);
                     this.DocenteCursoActual.IDDocente = Convert.ToInt32(this.mtbIDDocente.Text);
-                    this.DocenteCursoActual.IDCurso = Convert.ToInt32(this.cbIDCurso.SelectedValue);
-                    this.DocenteCursoActual.TipoCargo = Convert.ToInt32(this.cbTipoCargo.Text); 
+                    this.DocenteCursoActual.IDCurso = ((Curso)this.cbIDCurso.SelectedValue).ID;
+                    this.DocenteCursoActual.TipoCargo = ((Persona)this.cbTipoCargo.SelectedValue).TiposPersona; 
                 }
             }
 
@@ -187,12 +187,17 @@ namespace UI.Desktop
         {
             //Siempre se deben ingresar 5 numeros, de lo contrario tira error. Buscar como hacer que se complete con ceros
             int id = int.Parse(this.mtbIDDocente.Text);
-            DocenteCursoLogic DCL = new DocenteCursoLogic();
-            DocenteCursoActual = DCL.GetOne(id);
-            if (DocenteCursoActual == null)
+            PersonasLogic PL = new PersonasLogic();
+            Persona p;
+            p = PL.GetOne(id);
+
+            DialogResult DR;
+
+            if (p.ID == id)
             {
-                DialogResult DR = (MessageBox.Show("El id no existe", "Aceptar", MessageBoxButtons.OK, MessageBoxIcon.Error));
+                DR = (MessageBox.Show("ID encontrado", "Busqueda Exitosa", MessageBoxButtons.OK, MessageBoxIcon.None));
             }
+            else DR = (MessageBox.Show("ID no existe,por favor vuelva a ingresarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error));
         }
     }
 }

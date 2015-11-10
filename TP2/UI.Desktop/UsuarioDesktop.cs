@@ -36,7 +36,6 @@ namespace UI.Desktop
             this.mtbIDPersona.Text = this.UsuarioActual.IDPersona.ToString();
             this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;                      
             this.txtClave.Text = this.UsuarioActual.Clave;
-            this.chkCambiarClave.Checked = this.UsuarioActual.CambiarClave;
             this.txtNombreUsuario.Text = this.UsuarioActual.NombreUsuario;
 
             switch (Modo)
@@ -83,7 +82,6 @@ namespace UI.Desktop
                 this.UsuarioActual.NombreUsuario = this.txtNombreUsuario.Text;
                 this.UsuarioActual.IDPersona = Convert.ToInt32(this.mtbIDPersona.Text);
                 this.UsuarioActual.Clave = this.txtClave.Text;
-                this.UsuarioActual.CambiarClave = this.chkCambiarClave.Checked;
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;                 
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
@@ -92,7 +90,6 @@ namespace UI.Desktop
                 this.UsuarioActual.IDPersona = Convert.ToInt32(this.mtbIDPersona.Text);
                 this.UsuarioActual.NombreUsuario = this.txtNombreUsuario.Text;
                 this.UsuarioActual.Clave = this.txtClave.Text;
-                this.UsuarioActual.CambiarClave = this.chkCambiarClave.Checked;
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;  
                 }
             }
@@ -110,30 +107,12 @@ namespace UI.Desktop
             string mensaje = "";
             bool ok = true;
 
-            if (Modo == ModoForm.Alta || Modo == ModoForm.Baja)
-            {
-
-                foreach (Control c in this.Controls)
-                {
-                    if ((c is TextBox || c is ComboBox) && (c.Tag.ToString() != "ID" && c.Tag.ToString() != "NuevaClave" && c.Tag.ToString() != "ConfirmarNuevaClave") && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
-                }
-            }
-            else if (Modo == ModoForm.Modificacion && this.chkCambiarClave.Checked)
-            {
+         
                 foreach (Control c in this.Controls)
                 {
                     if ((c is TextBox || c is ComboBox) && (c.Tag.ToString() != "ID") && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
                 }
-
-                this.txtNuevaClave.ReadOnly = false;
-                this.txtConfirmarNuevaClave.ReadOnly = false;
-
-                if (!(this.txtNuevaClave.Text.Equals(this.txtConfirmarNuevaClave.Text) || (this.txtNuevaClave.Text.Length < 8)))
-                {
-                    this.txtClave.Text = this.txtNuevaClave.Text;
-                }
-            }
-
+           
             if (!(this.txtClave.Text.Equals(this.txtConfirmarClave.Text)) || (this.txtClave.Text.Length < 8))
             {
                 mensaje += "La contraseña ingresada no coincide o posee menos de ocho caracteres.\n";
@@ -194,12 +173,17 @@ namespace UI.Desktop
         {
             //Siempre se deben ingresar 5 numeros, de lo contrario tira error. Buscar como hacer que se complete con ceros
             int id = int.Parse(this.mtbIDPersona.Text);
-            UsuarioLogic UL = new UsuarioLogic();
-            UsuarioActual = UL.GetOne(id);
-            if (UsuarioActual == null)
+            PersonasLogic PL = new PersonasLogic();
+            Persona p;
+            p = PL.GetOne(id);
+            DialogResult DR;
+
+            if (p.ID == id)
             {
-                DialogResult DR = (MessageBox.Show("El id no existe", "Aceptar", MessageBoxButtons.OK, MessageBoxIcon.Error));
-            }        
+                DR = (MessageBox.Show("ID encontrado", "Busqueda Exitosa", MessageBoxButtons.OK, MessageBoxIcon.None));
+            }
+            else DR = (MessageBox.Show("ID no existe,por favor vuelva a ingresarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error));
+
         }
     }
 }

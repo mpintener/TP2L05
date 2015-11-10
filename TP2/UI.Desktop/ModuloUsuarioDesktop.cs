@@ -81,14 +81,13 @@ namespace UI.Desktop
                 MDActual = modousu;
 
                 this.MDActual.ID = Convert.ToInt32(this.txtID.Text);
-                this.MDActual.IDModulo = Convert.ToInt32(this.cbIDModulo.SelectedValue);
+                this.MDActual.IDModulo = ((Modulo)this.cbIDModulo.SelectedValue).ID;
                 this.MDActual.IDUsuario = Convert.ToInt32(this.mtbIDUsuario.Text);
-
             }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
             {
                 this.MDActual.ID = Convert.ToInt32(this.txtID.Text);
-                this.MDActual.IDModulo = Convert.ToInt32(this.cbIDModulo.SelectedValue);
+                this.MDActual.IDModulo = ((Modulo)this.cbIDModulo.SelectedValue).ID;
                 this.MDActual.IDUsuario = Convert.ToInt32(this.mtbIDUsuario.Text);
             }
         }
@@ -177,12 +176,17 @@ namespace UI.Desktop
         {
             //Siempre se deben ingresar 5 numeros, de lo contrario tira error. Buscar como hacer que se complete con ceros
             int id = int.Parse(this.mtbIDUsuario.Text);
-            ModuloUsuarioLogic MUL = new ModuloUsuarioLogic();
-            MDActual = MUL.GetOne(id);
-            if (MDActual == null)
+            UsuarioLogic UL = new UsuarioLogic();
+            Usuario u;
+            u = UL.GetOne(id);
+            DialogResult DR;
+
+            if (u.ID == id)
             {
-                DialogResult DR = (MessageBox.Show("El id no existe", "Aceptar", MessageBoxButtons.OK, MessageBoxIcon.Error));
+                DR = (MessageBox.Show("ID encontrado", "Busqueda Exitosa", MessageBoxButtons.OK, MessageBoxIcon.None));
             }
+            else DR = (MessageBox.Show("ID no existe,por favor vuelva a ingresarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error));
+
         }
     }
 }

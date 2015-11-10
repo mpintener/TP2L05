@@ -19,11 +19,6 @@ namespace UI.Desktop
             InitializeComponent();
             }
 
-        private void tlUsuarios_Paint( object sender, PaintEventArgs e )
-            {
-
-            }
-
         public void Listar()
             {
             UsuarioLogic UL = new UsuarioLogic();
@@ -32,12 +27,10 @@ namespace UI.Desktop
             this.dgvUsuarios.DataSource = l;
             }
 
-        private void Usuarios_Load( object sender, EventArgs e )
-            {
+        private void Usuarios_Load(object sender, EventArgs e)
+        {
             Listar();
-            }
-
-        
+        }
 
         private void btnSalir_Click( object sender, EventArgs e )
             {    
@@ -53,7 +46,6 @@ namespace UI.Desktop
             UsuarioDesktop UD = new UsuarioDesktop(AplicationForm.ModoForm.Alta);
             UD.Text = "Alta usuario";
             UD.ShowDialog();
-
             this.Listar();
             }
 
@@ -82,5 +74,10 @@ namespace UI.Desktop
                 this.Listar();
                 }
             }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Listar();
+        }
         }
     }

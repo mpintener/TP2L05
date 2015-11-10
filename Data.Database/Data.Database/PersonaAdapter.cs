@@ -80,11 +80,12 @@ namespace Data.Database
         public Persona GetOne(int ID)
         {
             Persona per = new Persona();
+
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdPersonas = new SqlCommand("SELECT * from personas where id_persona=@id", sqlConn);
-                cmdPersonas.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdPersonas = new SqlCommand("SELECT * from personas where id_persona=@id_persona", sqlConn);
+                cmdPersonas.Parameters.Add("@id_persona", SqlDbType.Int).Value = ID;
                 SqlDataReader drPersonas = cmdPersonas.ExecuteReader();
 
                 if (drPersonas.Read())
@@ -123,8 +124,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdDelete = new SqlCommand("delete personas where id_persona=@id", sqlConn);
-                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdDelete = new SqlCommand("delete personas where id_persona=@id_persona", sqlConn);
+                cmdDelete.Parameters.Add("@id_persona", SqlDbType.Int).Value = ID;
                 cmdDelete.ExecuteNonQuery();
             }
 

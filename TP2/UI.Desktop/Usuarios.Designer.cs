@@ -38,6 +38,7 @@
             this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.habilitado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.tsUsuarios = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
@@ -75,6 +76,7 @@
             this.tlUsuarios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlUsuarios.Controls.Add(this.dgvUsuarios, 0, 0);
             this.tlUsuarios.Controls.Add(this.btnSalir, 1, 1);
+            this.tlUsuarios.Controls.Add(this.btnActualizar, 0, 1);
             this.tlUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlUsuarios.Location = new System.Drawing.Point(0, 0);
             this.tlUsuarios.Name = "tlUsuarios";
@@ -83,7 +85,6 @@
             this.tlUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlUsuarios.Size = new System.Drawing.Size(523, 251);
             this.tlUsuarios.TabIndex = 1;
-            this.tlUsuarios.Paint += new System.Windows.Forms.PaintEventHandler(this.tlUsuarios_Paint);
             // 
             // dgvUsuarios
             // 
@@ -147,6 +148,17 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Location = new System.Drawing.Point(364, 225);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 3;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // tsUsuarios
             // 
@@ -231,6 +243,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn clave;
         private System.Windows.Forms.DataGridViewCheckBoxColumn habilitado;
+        private System.Windows.Forms.Button btnActualizar;
         }
     }
 

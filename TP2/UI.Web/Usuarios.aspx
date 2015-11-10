@@ -37,20 +37,20 @@
         <asp:CheckBox ID="habilitadoCheckBox" runat="server" />
         <br />
         <asp:Label ID="claveLabel" runat="server" Text="Clave: "></asp:Label>
-        <asp:TextBox ID="claveTextBox" Text="Password" runat="server"></asp:TextBox>
+        <asp:TextBox ID="claveTextBox" TextMode="Password" runat="server"></asp:TextBox>
         <br />
         
         <asp:Label ID="repetirClaveLabel" runat="server" Text="Repetir Clave: ">
         </asp:Label>
-        <asp:TextBox ID="repetirClaveTextBox" Text="Password" runat="server">
+        <asp:TextBox ID="repetirClaveTextBox" TextMode="Password" runat="server">
         </asp:TextBox>
        
         <br />
     </asp:Panel>
     <asp:Panel ID="gridAdictionsPanel" runat="server">
-        <asp:LinkButton ID="editarLinkButton" runat="server" OnClick="editarLinkButton_Click1">Editar </asp:LinkButton>
-        <asp:LinkButton ID="eliminarLinkButton" runat="server" OnClick="eliminarLinkButton_Click1">Eliminar </asp:LinkButton>
-        <asp:LinkButton ID="nuevoLinkButton" runat="server" OnClick="nuevoLinkButton_Click">Nuevo</asp:LinkButton>
+       <asp:Button ID="btnNuevo" CssClass="button" runat="server" Text="Nuevo" OnClick="btnNuevo_Click"/>
+        <asp:Button ID="btnEditar" CssClass="button" runat="server" Text="Editar" OnClick="btnEditar_Click"/>
+        <asp:Button ID="btnEliminar" CssClass="button" runat="server" Text="Eliminar" OnClick="btnEliminar_Click"/>
     </asp:Panel>
     <asp:Panel ID="formActionsPanel" runat="server">     
         <asp:Button ID="btnAceptar" CssClass="button" runat="server" Text="Aceptar" OnClick="btnAceptar_Click"/>

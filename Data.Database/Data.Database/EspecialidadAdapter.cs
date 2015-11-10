@@ -29,11 +29,9 @@ namespace Data.Database
                 {
 
                     Especialidad e = new Especialidad();
-
                
                     e.ID = (int)drEspecialidades["id_especialidad"];
                     e.Descripcion = (string)drEspecialidades["descripcion"];
-
 
                     especialidades.Add(e);
                 }
@@ -44,9 +42,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de especialidades", Ex);
-
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -83,9 +79,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de especialidades", Ex);
-
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -109,8 +103,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar la especialidad", Ex);
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
             finally
             {
@@ -135,8 +128,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al modificar especialidad", Ex);
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -153,7 +145,7 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into especialidades (descripcion)" +
+                    "insert into especialidades (descripcion) " +
                     "values (@descripcion)" +
                     " select @@identity", sqlConn);
 
@@ -163,9 +155,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear especialidad", Ex);
-
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally

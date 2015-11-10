@@ -66,8 +66,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de personas", Ex);
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -107,8 +106,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de la persona", Ex);
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -126,16 +124,13 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdDelete = new SqlCommand("delete personas where id_persona=@id", sqlConn);
-
                 cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
-
                 cmdDelete.ExecuteNonQuery();
             }
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar persona", Ex);
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
             finally
             {
@@ -151,7 +146,7 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE personas SET apellido=@apellido, nombre=@nombre, direccion=@direccion, telefono=@telefono,"
+                    "UPDATE personas SET apellido=@apellido, nombre=@nombre, direccion=@direccion, telefono=@telefono, "
                     + "fecha_nac=@fecha_nac, legajo=@legajo, tipo_persona=@tipo_persona, email=@email, id_plan=@id_plan WHERE id_persona=@id_persona", sqlConn);
 
                 cmdSave.Parameters.Add("@id_persona", SqlDbType.Int).Value = persona.ID;
@@ -169,9 +164,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al modificar persona", Ex);
-                throw ExcepcionManejeada;
-
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -188,8 +181,8 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into personas (apellido, nombre, fecha_nac, direccion, telefono, email, legajo, tipo_persona, id_plan)" +
-                    "values (@apellido, @nombre, @fecha_nac, @direccion, @telefono, @email, @legajo, @tipo_persona, @id_plan)" +
+                    "insert into personas (apellido, nombre, fecha_nac, direccion, telefono, email, legajo, tipo_persona, id_plan) " +
+                    "values (@apellido, @nombre, @fecha_nac, @direccion, @telefono, @email, @legajo, @tipo_persona, @id_plan) " +
                     "select @@identity", sqlConn);
 
                 cmdSave.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = persona.Apellido;
@@ -206,8 +199,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear persona", Ex);
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally

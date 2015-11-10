@@ -50,21 +50,15 @@ namespace Data.Database
                     dc.ID = (int)drDocenteCurso["id_dictado"];
 
                     //agrego el objeto con datos a la lista que devuelvo
-
                     docentecurso.Add(dc);
                 }
-
                 //cerramos el datareader y la conexion a la BD
-
                 drDocenteCurso.Close();
-
             }
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de cursos y docentes", Ex);
-
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -79,7 +73,6 @@ namespace Data.Database
 
         public DocenteCurso GetOne(int ID)
         {
-
             DocenteCurso dc = new DocenteCurso();
 
             try
@@ -87,9 +80,7 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdDocenteCurso = new SqlCommand("SELECT * from docentes_cursos where id_dictado=@id", sqlConn);
-
                 cmdDocenteCurso.Parameters.Add("@id", SqlDbType.Int).Value = ID;
-
                 SqlDataReader drDocenteCurso = cmdDocenteCurso.ExecuteReader();
 
                 if (drDocenteCurso.Read())
@@ -105,9 +96,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de los cursos y docentes", Ex);
-
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -126,17 +115,13 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdDelete = new SqlCommand("delete docentes_cursos where id_dictado=@id", sqlConn);
-
                 cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
-
                 cmdDelete.ExecuteNonQuery();
             }
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar curso y docente", Ex);
-
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
             finally
             {
@@ -152,10 +137,10 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE docentes_cursos SET id_docente=@id_docente, id_curso=@id_curso, cargo=@cargo" +
+                    "UPDATE docentes_cursos SET id_docente=@id_docente, id_curso=@id_curso, cargo=@cargo " +
                     "WHERE id_dictado=@id", sqlConn);
 
-                cmdSave.Parameters.Add("@id_dictado", SqlDbType.Int).Value = docenteCurso.ID;
+                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = docenteCurso.ID;
                 cmdSave.Parameters.Add("@id_docente", SqlDbType.Int).Value = docenteCurso.IDDocente;
                 cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = docenteCurso.IDCurso;
                 cmdSave.Parameters.Add("@cargo", SqlDbType.VarChar, 50).Value = docenteCurso.TipoCargo;
@@ -164,9 +149,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al modificar docentes y cursos", Ex);
-
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -183,8 +166,8 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into docentes_cursos (id_docente, id_curso, cargo)" +
-                    "values (@id_docente,@id_curso,@cargo)" +
+                    "insert into docentes_cursos (id_docente, id_curso, cargo) " +
+                    "values (@id_docente, @id_curso, @cargo)" +
                     "select @@identity", sqlConn);
 
                 cmdSave.Parameters.Add("@id_docente", SqlDbType.Int).Value = docenteCurso.IDDocente;
@@ -195,9 +178,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear curso y docente", Ex);
-
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally

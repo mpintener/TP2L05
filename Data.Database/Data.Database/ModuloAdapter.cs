@@ -29,7 +29,7 @@ namespace Data.Database
 
                     m.ID = (int)drModulos["id_modulo"];
                     m.Descripcion=(String)drModulos["desc_modulo"];
-                    m.Ejecuta = (String)drModulos["Ejecuta"];
+                    m.Ejecuta = (String)drModulos["ejecuta"];
 
                     modulos.Add(m);
                 }
@@ -39,9 +39,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de modulos", Ex);
-                
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -76,9 +74,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos del modulo", Ex);
-                
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -96,17 +92,13 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdDelete = new SqlCommand("delete modulos where id_modulo=@id", sqlConn);
-
                 cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
-
                 cmdDelete.ExecuteNonQuery();
             }
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar modulo", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
             finally
             {
@@ -122,7 +114,7 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE modulos SET desc_modulo=@desc_modulo, ejecuta=@ejecuta" +
+                    "UPDATE modulos SET desc_modulo=@desc_modulo, ejecuta=@ejecuta " +
                     "WHERE id_modulo=@id", sqlConn);
 
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = modulo.ID;
@@ -134,9 +126,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al modificar modulo", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -153,8 +143,8 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into modulos(desc_modulo,ejecuta)" +
-                    "values (@desc_modulo, @ejecuta)" +
+                    "insert into modulos(desc_modulo, ejecuta) " +
+                    "values (@desc_modulo, @ejecuta) " +
                     "select @@identity", sqlConn);
 
                 cmdSave.Parameters.Add("@desc_modulo", SqlDbType.VarChar, 50).Value = modulo.Descripcion;
@@ -164,9 +154,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear modulos", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally

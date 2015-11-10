@@ -63,9 +63,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de cursos", Ex);
-
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -87,17 +85,14 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdCursos = new SqlCommand("SELECT * from cursos where id_curso=@curso", sqlConn);
-
-                cmdCursos.Parameters.Add("@curso", SqlDbType.Int).Value = ID;
-
+                SqlCommand cmdCursos = new SqlCommand("SELECT * from cursos where id_curso=@id_curso", sqlConn);
+                cmdCursos.Parameters.Add("@id_curso", SqlDbType.Int).Value = ID;
                 SqlDataReader drCursos = cmdCursos.ExecuteReader();
 
                 if (drCursos.Read())
                 {
-                    cur.Cupo = (int)drCursos["id_curso"];
+                    cur.ID = (int)drCursos["id_curso"];
                     cur.Cupo = (int)drCursos["cupo"];
-                    //cur.Descripcion = (string)drCursos["descripcion"];
                     cur.IDComision = (int)drCursos["id_comision"];
                     cur.IDMateria = (int)drCursos["id_materia"];
                     cur.AnioCalendario = (int)drCursos["anio_calendario"];
@@ -108,9 +103,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos del curso", Ex);
-
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -137,9 +130,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar curso", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
             finally
             {
@@ -155,8 +146,8 @@ namespace Data.Database
                 this.OpenConnection();
         
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE cursos SET id_curso=@id_curso, id_materia=@id_materia,"
-                    + "id_comision=@id_comision, anio_calendario=@anio_calendario, cupo=@cupo" +
+                    "UPDATE cursos SET id_materia=@id_materia, "
+                    + "id_comision=@id_comision, anio_calendario=@anio_calendario, cupo=@cupo " +
                     "WHERE id_curso=@id_curso", sqlConn);
 
                 cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = curso.ID;
@@ -169,9 +160,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al modificar curso", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -188,11 +177,10 @@ namespace Data.Database
                 this.OpenConnection();
         
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into cursos (id_curso, id_materia, id_comision, anio_calendario, cupo)" +
-                    "values (@id_curso, @id_materia,@id_comision,@anio_calendario,@cupo)" +
+                    "insert into cursos (id_materia, id_comision, anio_calendario, cupo)" +
+                    "values (@id_materia, @id_comision, @anio_calendario, @cupo)" +
                     "select @@identity", sqlConn);
-
-                cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = curso.ID;
+               
                 cmdSave.Parameters.Add("@id_materia", SqlDbType.Int).Value = curso.IDMateria;
                 cmdSave.Parameters.Add("@id_comision", SqlDbType.Int).Value = curso.IDComision;
                 cmdSave.Parameters.Add("@anio_calendario", SqlDbType.Int).Value = curso.AnioCalendario;
@@ -202,9 +190,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear curso", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally

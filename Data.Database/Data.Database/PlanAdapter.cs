@@ -28,7 +28,7 @@ namespace Data.Database
                     Plan p = new Plan();
 
                     p.ID = (int)drPlanes["id_plan"];
-                    p.Descripcion = (string)drPlanes["descripcion"];
+                    p.Descripcion = (string)drPlanes["desc_plan"];
                     p.IDEspecialidad = (int)drPlanes["id_especialidad"];
 
                     planes.Add(p);
@@ -39,9 +39,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de planes", Ex);
-
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -72,7 +70,7 @@ namespace Data.Database
                 {
                     p.ID = (int)drPlanes["id_plan"];
                     p.IDEspecialidad = (int)drPlanes["id_especialidad"];
-                    p.Descripcion = (string)drPlanes["descripcion"];
+                    p.Descripcion = (string)drPlanes["desc_plan"];
                 }
 
                 drPlanes.Close();
@@ -80,9 +78,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos planes", Ex);
-
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -109,9 +105,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar plan", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
             finally
             {
@@ -127,11 +121,11 @@ namespace Data.Database
                 this.OpenConnection();
         
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE planes SET id_especialidad=@id_especialidad, descripcion=@descripcion"
+                    "UPDATE planes SET id_especialidad=@id_especialidad, desc_plan=@desc_plan "
                     + "WHERE id_plan=@id_plan", sqlConn);
 
                 cmdSave.Parameters.Add("@id_plan", SqlDbType.Int).Value = plan.ID;
-                cmdSave.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = plan.Descripcion;
+                cmdSave.Parameters.Add("@desc_plan", SqlDbType.VarChar, 50).Value = plan.Descripcion;
                 cmdSave.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = plan.IDEspecialidad;
 
                 cmdSave.ExecuteNonQuery();
@@ -139,9 +133,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al modificar plan", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -158,11 +150,11 @@ namespace Data.Database
                 this.OpenConnection();
         
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into planes (descripcion, id_especialidad)" +
-                    "values (@descripcion, @id_especialidad)" +
+                    "insert into planes (desc_plan, id_especialidad)" +
+                    "values (@desc_plan, @id_especialidad)" +
                     "select @@identity", sqlConn);
 
-                cmdSave.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = plan.Descripcion;
+                cmdSave.Parameters.Add("@desc_plan", SqlDbType.VarChar, 50).Value = plan.Descripcion;
                 cmdSave.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = plan.IDEspecialidad;
 
                 plan.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
@@ -170,9 +162,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear plan", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally

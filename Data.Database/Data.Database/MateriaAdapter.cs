@@ -61,8 +61,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de materias", Ex);
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -98,8 +97,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de la materia", Ex);
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -123,8 +121,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar materia", Ex);
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
             finally
             {
@@ -155,8 +152,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al modificar materia", Ex);
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -173,8 +169,8 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into materias (desc_materia, hs_semanales, hs_totales, id_plan)" +
-                    "values (@desc_materia, @hs_semanales, @hs_totales, @id_plan)" +
+                    "insert into materias (desc_materia, hs_semanales, hs_totales, id_plan) " +
+                    "values (@desc_materia, @hs_semanales, @hs_totales, @id_plan) " +
                     "select @@identity", sqlConn);
 
                 cmdSave.Parameters.Add("@desc_materia", SqlDbType.VarChar, 50).Value = materia.Descripcion;
@@ -186,8 +182,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear materia", Ex);
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally

@@ -78,11 +78,6 @@ namespace UI.Web
             this.usuarioTextBox.Text = this.Entity.NombreUsuario;
         }
 
-        protected void editarLinkButton_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void LoadEntity(Usuario usu)
         {
 
@@ -139,7 +134,7 @@ namespace UI.Web
             this.repetirClaveLabel.Visible = enable;
         }
 
-        protected void nuevoLinkButton_Click(object sender, EventArgs e)
+        protected void btnNuevo_Click(object sender, EventArgs e)
         {
             this.formPanel.Visible = true;
             this.FormMode = FormModes.Alta;
@@ -155,7 +150,7 @@ namespace UI.Web
             this.habilitadoCheckBox.Checked = false;
         }
 
-        protected void editarLinkButton_Click1(object sender, EventArgs e)
+        protected void btnEditar_Click(object sender, EventArgs e)
         {
             if (GridView1.SelectedIndex >= 0)
             {
@@ -166,7 +161,7 @@ namespace UI.Web
             }
         }
 
-        protected void eliminarLinkButton_Click1(object sender, EventArgs e)
+        protected void btnEliminar_Click(object sender, EventArgs e)
         {
 
             if (GridView1.SelectedIndex >= 0)

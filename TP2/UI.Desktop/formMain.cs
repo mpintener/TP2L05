@@ -91,5 +91,11 @@ namespace UI.Desktop
             Planes p = new Planes();
             p.ShowDialog();
         }
+
+        private void usuariosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Usuarios u = new Usuarios();
+            u.ShowDialog();
+        }
     }
 }

@@ -58,8 +58,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de comisiones", Ex);
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -94,8 +93,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de las comisiones", Ex);
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -121,8 +119,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar la comision", Ex);
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
             finally
             {
@@ -138,11 +135,11 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE comisiones SET id_comision=@id_comision, desc_comision=@desc_comision,"
-                    + "anio_especialidad=@anio_especialidad, id_plan=@id_plan" +
+                    "UPDATE comisiones SET desc_comision=@desc_comision,"
+                    + "anio_especialidad=@anio_especialidad, id_plan=@id_plan " +
                     "WHERE id_comision=@id", sqlConn);
 
-                cmdSave.Parameters.Add("@id_comision", SqlDbType.Int).Value = comision.ID;
+                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = comision.ID;
                 cmdSave.Parameters.Add("@desc_comision", SqlDbType.VarChar, 50).Value = comision.Descripcion;
                 cmdSave.Parameters.Add("@anio_especialidad", SqlDbType.Int).Value = comision.AnioEspecialidad;
                 cmdSave.Parameters.Add("@id_plan", SqlDbType.Int).Value = comision.IDPlan;
@@ -151,8 +148,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al modificar comision", Ex);
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -169,11 +165,10 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into comisiones (id_comision, desc_comision, anio_especialidad, id_plan)" +
-                    "values (@id_comision, @desc_comision,@anio_especialidad,@id_plan)" +
+                    "insert into comisiones(desc_comision, anio_especialidad, id_plan) " +
+                    "values (@desc_comision, @anio_especialidad, @id_plan) " +
                     "select @@identity", sqlConn);
 
-                cmdSave.Parameters.Add("@id_comision", SqlDbType.Int).Value = comision.ID;
                 cmdSave.Parameters.Add("@desc_comision", SqlDbType.VarChar, 50).Value = comision.Descripcion;
                 cmdSave.Parameters.Add("@anio_especialidad", SqlDbType.Int).Value = comision.AnioEspecialidad;
                 cmdSave.Parameters.Add("@id_plan", SqlDbType.Int).Value = comision.IDPlan;
@@ -182,8 +177,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear comision", Ex);
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally

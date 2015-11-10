@@ -30,7 +30,6 @@
         {
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.mnuArchivo = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnoInscripcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +39,8 @@
             this.modulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,17 +66,11 @@
             this.modulosToolStripMenuItem,
             this.personasToolStripMenuItem,
             this.planesToolStripMenuItem,
-            this.mnuSalir});
+            this.mnuSalir,
+            this.usuariosToolStripMenuItem});
             this.mnuArchivo.Name = "mnuArchivo";
             this.mnuArchivo.Size = new System.Drawing.Size(60, 20);
             this.mnuArchivo.Text = "Archivo";
-            // 
-            // mnuSalir
-            // 
-            this.mnuSalir.Name = "mnuSalir";
-            this.mnuSalir.Size = new System.Drawing.Size(189, 22);
-            this.mnuSalir.Text = "Salir";
-            this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
             // 
             // alumnoInscripcionesToolStripMenuItem
             // 
@@ -140,6 +135,20 @@
             this.planesToolStripMenuItem.Text = "Planes";
             this.planesToolStripMenuItem.Click += new System.EventHandler(this.planesToolStripMenuItem_Click);
             // 
+            // mnuSalir
+            // 
+            this.mnuSalir.Name = "mnuSalir";
+            this.mnuSalir.Size = new System.Drawing.Size(189, 22);
+            this.mnuSalir.Text = "Salir";
+            this.mnuSalir.Click += new System.EventHandler(this.mnuSalir_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click_1);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,5 +182,6 @@
         private System.Windows.Forms.ToolStripMenuItem modulosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
     }
 }

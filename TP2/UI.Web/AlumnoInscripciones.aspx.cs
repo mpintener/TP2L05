@@ -9,14 +9,19 @@ using Business.Logic;
 
 namespace UI.Web
 {
-    public partial class Usuarios : BasePage
+    public partial class AlumnosInscripciones : BasePage
     {
-        UsuarioLogic _logic;
-        private UsuarioLogic Logic
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack) LoadGrid();
+        }
+
+        AlumnoInscripcionLogic _logic;
+        private AlumnoInscripcionLogic Logic
         {
             get
             {
-                if (_logic == null) _logic = new UsuarioLogic();
+                if (_logic == null) _logic = new AlumnoInscripcionLogic();
                 return _logic;
             }
         }
@@ -26,12 +31,6 @@ namespace UI.Web
             this.GridView1.DataSource = this.Logic.GetAll();
             this.GridView1.DataBind();
         }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack) LoadGrid();
-        }
-
         protected int SelectedID
         {
             get
@@ -50,13 +49,13 @@ namespace UI.Web
                 this.ViewState["SelectedID"] = value;
             }
         }
-   
-        private Usuario _Entity;
 
-        private Usuario Entity
+        private AlumnoInscripciones _Entity;
+
+        private AlumnoInscripciones Entity
         {
             get { return _Entity; }
-            set { _Entity = value;}
+            set { _Entity = value; }
         }
 
         private void DeleteEntity(int id)
@@ -72,31 +71,30 @@ namespace UI.Web
         private void LoadForm(int id)
         {
             this.Entity = this.Logic.GetOne(id);
-            this.idPersonaTextBox.Text = this.Entity.IDPersona.ToString();
-            this.idUsuarioTextBox.Text = this.Entity.ID.ToString();
-            this.habilitadoCheckBox.Text = this.Entity.Habilitado.ToString();
-            this.usuarioTextBox.Text = this.Entity.NombreUsuario;
+            this.idAlumnoTextBox.Text = this.Entity.IDAlumno.ToString();
+            this.idCursoTextBox.Text = this.Entity.IDCurso.ToString();
+            this.notaTextBox.Text = this.Entity.Nota.ToString();
+            this.condicionTextBox.Text = this.Entity.Condicion;
         }
 
         protected void editarLinkButton_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void LoadEntity(Usuario usu)
-        {
-
-            usu.IDPersona = Convert.ToInt32(this.idPersonaTextBox.Text);
-            usu.NombreUsuario = this.usuarioTextBox.Text;
-            usu.Habilitado = this.habilitadoCheckBox.Checked;
-            usu.Clave = this.claveTextBox.Text;
-            //falta validar q las contraseñas sean iguales
 
         }
 
-        private void SaveEntity(Usuario usu)
+        private void LoadEntity(AlumnoInscripciones aluIns)
         {
-            this.Logic.Save(usu);
+
+            aluIns.IDAlumno = Convert.ToInt32(this.idAlumnoTextBox.Text);
+            aluIns.IDCurso = Convert.ToInt32(this.idCursoTextBox.Text);
+            aluIns.Nota = Convert.ToInt32(this.notaTextBox.Text);
+            aluIns.Condicion = this.condicionTextBox.Text;
+           
+        }
+
+        private void SaveEntity(AlumnoInscripciones aluIns)
+        {
+            this.Logic.Save(aluIns);
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
@@ -104,7 +102,7 @@ namespace UI.Web
             switch (this.FormMode)
             {
                 case FormModes.Alta:
-                    this.Entity = new Usuario();
+                    this.Entity = new AlumnoInscripciones();
                     this.LoadEntity(this.Entity);
                     this.SaveEntity(this.Entity);
                     this.LoadGrid();
@@ -114,7 +112,7 @@ namespace UI.Web
                     this.LoadGrid();
                     break;
                 case FormModes.Modificacion:
-                    this.Entity = new Usuario();
+                    this.Entity = new AlumnoInscripciones();
                     this.Entity.ID = (int)GridView1.SelectedValue;
                     this.Entity.State = BusinessEntity.States.Modified;
                     this.LoadEntity(this.Entity);
@@ -128,18 +126,15 @@ namespace UI.Web
             this.formPanel.Visible = false;
         }
 
-        private void EnableForm (bool enable)
+        private void EnableForm(bool enable)
         {
-            this.idPersonaTextBox.Enabled = enable;
-            this.idUsuarioTextBox.Enabled = enable;
-            this.usuarioTextBox.Enabled = enable;
-            this.claveTextBox.Visible = enable;
-            this.claveLabel.Visible = enable;
-            this.repetirClaveTextBox.Visible = enable;
-            this.repetirClaveLabel.Visible = enable;
+            this.idAlumnoTextBox.Enabled = enable;
+            this.idCursoTextBox.Enabled = enable;
+            this.notaTextBox.Enabled = enable;
+            this.condicionTextBox.Visible = enable;
         }
 
-        protected void nuevoLinkButton_Click(object sender, EventArgs e)
+        protected void btnNuevo_Click(object sender, EventArgs e)
         {
             this.formPanel.Visible = true;
             this.FormMode = FormModes.Alta;
@@ -149,13 +144,13 @@ namespace UI.Web
 
         private void ClearForm()
         {
-            this.idPersonaTextBox.Text = string.Empty;
-            this.idUsuarioTextBox.Text = string.Empty;
-            this.usuarioTextBox.Text = string.Empty;
-            this.habilitadoCheckBox.Checked = false;
+            this.idAlumnoTextBox.Text = string.Empty;
+            this.idCursoTextBox.Text = string.Empty;
+            this.notaTextBox.Text = string.Empty;
+            this.condicionTextBox.Text = string.Empty;
         }
 
-        protected void editarLinkButton_Click1(object sender, EventArgs e)
+        protected void btnEditar_Click(object sender, EventArgs e)
         {
             if (GridView1.SelectedIndex >= 0)
             {
@@ -166,7 +161,7 @@ namespace UI.Web
             }
         }
 
-        protected void eliminarLinkButton_Click1(object sender, EventArgs e)
+        protected void btnEliminar_Click(object sender, EventArgs e)
         {
 
             if (GridView1.SelectedIndex >= 0)
@@ -174,16 +169,15 @@ namespace UI.Web
                 this.formPanel.Visible = true;
                 this.FormMode = FormModes.Baja;
                 this.EnableForm(true);
-                this.LoadForm((int) GridView1.SelectedValue);
+                this.LoadForm((int)GridView1.SelectedValue);
             }
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
             Response.Redirect("Home.aspx");
-        }  
-        
-
+            
+        }
 
     }
 }

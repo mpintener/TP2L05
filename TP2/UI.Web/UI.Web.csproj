@@ -57,6 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AlumnoInscripciones.aspx" />
+    <Content Include="Comisiones.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -75,8 +77,22 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlumnoInscripciones.aspx.cs">
+      <DependentUpon>AlumnoInscripciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlumnoInscripciones.aspx.designer.cs">
+      <DependentUpon>AlumnoInscripciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comisiones.aspx.cs">
+      <DependentUpon>Comisiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comisiones.aspx.designer.cs">
+      <DependentUpon>Comisiones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

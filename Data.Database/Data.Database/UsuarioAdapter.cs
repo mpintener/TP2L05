@@ -47,7 +47,6 @@ namespace Data.Database
                     usr.ID = (int)drUsuarios["id_usuario"];
                     usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
                     usr.Clave = (string)drUsuarios["clave"];
-                    usr.CambiarClave= (bool)drUsuarios["cambia_clave"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
                     usr.IDPersona = (int)drUsuarios["id_persona"];
 
@@ -60,8 +59,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de usuarios", Ex);
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -88,7 +86,6 @@ namespace Data.Database
                     usr.ID = (int)drUsuarios["id_usuario"];
                     usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
                     usr.Clave = (string)drUsuarios["clave"];
-                    usr.CambiarClave = (bool)drUsuarios["cambia_clave"];
                     usr.Habilitado = (bool)drUsuarios["habilitado"];
                     usr.IDPersona = (int)drUsuarios["id_persona"];
                 }
@@ -123,8 +120,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar usuario", Ex);               
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
             finally
             {
@@ -140,12 +136,11 @@ namespace Data.Database
                 this.OpenConnection();
         
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE usuarios SET nombre_usuario=@nombre_usuario, clave=@clave, cambia_clave=@cambia_clave"
-                    + " habilitado=@habilitado, id_persona=@id_persona WHERE id_usuario=@id_usuario", sqlConn);              
+                    "UPDATE usuarios SET nombre_usuario=@nombre_usuario, clave=@clave," 
+                    + " habilitado=@habilitado, id_persona=@id_persona WHERE id_usuario=@id", sqlConn);              
                 
-                cmdSave.Parameters.Add("@id_usuario", SqlDbType.Int).Value = usuario.ID;
+                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = usuario.ID;
                 cmdSave.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
-                cmdSave.Parameters.Add("@cambia_clave", SqlDbType.Bit).Value = usuario.CambiarClave;
                 cmdSave.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
                 cmdSave.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
                 cmdSave.Parameters.Add("@id_persona", SqlDbType.Int).Value = usuario.IDPersona;
@@ -154,8 +149,11 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
+                /*
                 Exception ExcepcionManejeada = new Exception("Error al modificar usuario", Ex);              
                 throw ExcepcionManejeada;
+                 * */
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -172,13 +170,12 @@ namespace Data.Database
                 this.OpenConnection();
         
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into usuarios (nombre_usuario, clave, cambia_clave, habilitado, id_persona)" +
-                    "values (@nombre_usuario, @clave, @cambia_clave,@habilitado, @id_persona)" +
+                    "insert into usuarios (nombre_usuario, clave, habilitado, id_persona) " + 
+                    "values (@nombre_usuario, @clave, @habilitado, @id_persona) " +
                     "select @@identity", sqlConn);
                 
                 cmdSave.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
                 cmdSave.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
-                cmdSave.Parameters.Add("@cambia_clave", SqlDbType.Bit).Value = usuario.CambiarClave;
                 cmdSave.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
                 cmdSave.Parameters.Add("@id_persona", SqlDbType.Bit).Value = usuario.IDPersona;
                 usuario.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
@@ -187,8 +184,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear usuario", Ex);              
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally

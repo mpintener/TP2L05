@@ -92,7 +92,7 @@ namespace UI.Desktop
                     this.PersonaActual.Nombre = this.txtNombre.Text;
                     this.PersonaActual.Apellido = this.txtApellido.Text;
                     this.PersonaActual.Legajo = Convert.ToInt32(mtbLegajo.Text);
-                    this.PersonaActual.IDPlan = Convert.ToInt32(cbIDPlan.SelectedValue);
+                    this.PersonaActual.IDPlan = ((Plan)cbIDPlan.SelectedValue).ID; //Convert.ToInt32(cbIDPlan.SelectedValue);
                     this.PersonaActual.Direccion = this.txtDireccion.Text;
                     this.PersonaActual.Telefono = this.mtbTelefono.Text;
                     this.PersonaActual.Email = this.txtEmail.Text;

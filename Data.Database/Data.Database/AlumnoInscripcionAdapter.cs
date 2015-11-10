@@ -61,9 +61,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de alumnos e inscripciones", Ex);
-
-                throw ExcepcionManejada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -102,9 +100,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de los alumnos e inscripciones", Ex);
-                throw ExcepcionManejada; 
-                //aluInsc = null;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -130,9 +126,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar alumno e inscripcion", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
             finally
             {
@@ -148,11 +142,11 @@ namespace Data.Database
                 this.OpenConnection();
         
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE alumnos_inscripciones SET id_inscripcion=@id_inscripcion, id_alumno=@id_alumno,"
-                    + "id_curso=@id_curso, nota=@nota, condicion=@condicion" +
+                    "UPDATE alumnos_inscripciones SET id_alumno=@id_alumno,"
+                    + "id_curso=@id_curso, nota=@nota, condicion=@condicion " +
                     "WHERE id_inscripcion=@id", sqlConn);
               
-                cmdSave.Parameters.Add("@id_inscripcion", SqlDbType.Int).Value = alumnoInscripciones.ID;
+                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = alumnoInscripciones.ID;
                 cmdSave.Parameters.Add("@id_alumno", SqlDbType.Int).Value = alumnoInscripciones.IDAlumno;
                 cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = alumnoInscripciones.IDCurso;
                 cmdSave.Parameters.Add("@condicion", SqlDbType.VarChar, 50).Value = alumnoInscripciones.Condicion;
@@ -163,9 +157,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al modificar alumno e inscripcion", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally
@@ -182,11 +174,10 @@ namespace Data.Database
                 this.OpenConnection();
         
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into usuarios (id_inscripcion, id_alumno, id_curso, condicion, nota)" +
-                    "values (@id_inscripcion, @id_alumno,@id_curso,@condicion,@nota)" +
+                    "insert into usuarios (id_alumno, id_curso, condicion, nota) " +
+                    "values (@id_alumno, @id_curso, @condicion, @nota) " +
                     "select @@identity", sqlConn);
                 
-                cmdSave.Parameters.Add("@id_inscripcion", SqlDbType.Int).Value = alumnoInscripciones.ID;
                 cmdSave.Parameters.Add("@id_alumno", SqlDbType.Int).Value = alumnoInscripciones.IDAlumno;
                 cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = alumnoInscripciones.IDCurso;
                 cmdSave.Parameters.Add("@condicion", SqlDbType.VarChar, 50).Value = alumnoInscripciones.Condicion;
@@ -196,9 +187,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear alumno e inscripcion", Ex);
-                
-                throw ExcepcionManejeada;
+                Console.WriteLine(Ex.Message);
             }
 
             finally

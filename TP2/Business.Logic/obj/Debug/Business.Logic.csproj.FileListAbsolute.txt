@@ -53,3 +53,12 @@ C:\Users\Caste\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Debug\Business.Ent
 C:\Users\Caste\Documents\GitHub\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.csprojResolveAssemblyReference.cache
 C:\Users\Caste\Documents\GitHub\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.dll
 C:\Users\Caste\Documents\GitHub\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Debug\Business.Logic.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Debug\Business.Logic.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Debug\Business.Entities.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Debug\Data.Database.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Debug\Data.Database.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\bin\Debug\Business.Entities.pdb
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.csprojResolveAssemblyReference.cache
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.dll
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.pdb

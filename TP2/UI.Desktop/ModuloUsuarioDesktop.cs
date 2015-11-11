@@ -19,10 +19,10 @@ namespace UI.Desktop
         {
             InitializeComponent();
 
-            ModuloUsuarioLogic MUL = new ModuloUsuarioLogic();
-            this.cbIDModulo.DataSource = MUL.GetAll();
-            this.cbIDModulo.DisplayMember = "id_modulo_usuario";
-            this.cbIDModulo.ValueMember = "id_modulo_usuario";
+            ModuloLogic ML = new ModuloLogic();
+            this.cbIDModulo.DataSource = ML.GetAll();
+            this.cbIDModulo.DisplayMember = "id_modulo";
+            this.cbIDModulo.ValueMember = "id_modulo";
         }
 
         private ModuloUsuario _MDActual;
@@ -184,9 +184,19 @@ namespace UI.Desktop
             if (u.ID == id)
             {
                 DR = (MessageBox.Show("ID encontrado", "Busqueda Exitosa", MessageBoxButtons.OK, MessageBoxIcon.None));
-            }
-            else DR = (MessageBox.Show("ID no existe,por favor vuelva a ingresarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error));
 
+                this.cbIDModulo.Enabled = true;
+                this.btnAceptar.Enabled = true;
+                this.btnCancelar.Enabled = true;
+            }
+            else
+            {
+                DR = (MessageBox.Show("ID no existe,por favor vuelva a ingresarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error));
+
+                this.cbIDModulo.Enabled = true;
+                this.btnAceptar.Enabled = true;
+                this.btnCancelar.Enabled = true;
+            }
         }
     }
 }

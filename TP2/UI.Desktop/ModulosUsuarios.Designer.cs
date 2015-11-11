@@ -39,7 +39,6 @@
             this.baja = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.modificacion = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.consulta = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsModuloUsuario = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
@@ -77,7 +76,6 @@
             this.tlModuloUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlModuloUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlModuloUsuario.Controls.Add(this.dgvModuloUsuario, 0, 0);
-            this.tlModuloUsuario.Controls.Add(this.btnActualizar, 0, 1);
             this.tlModuloUsuario.Controls.Add(this.btnSalir, 1, 1);
             this.tlModuloUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlModuloUsuario.Location = new System.Drawing.Point(0, 0);
@@ -166,18 +164,6 @@
             this.consulta.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.consulta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(471, 295);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 1;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            this.btnActualizar.Enter += new System.EventHandler(this.btnActualizar_Click);
-            // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(552, 295);
@@ -257,7 +243,6 @@
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.TableLayoutPanel tlModuloUsuario;
         private System.Windows.Forms.DataGridView dgvModuloUsuario;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStrip tsModuloUsuario;
         private System.Windows.Forms.ToolStripButton tsbNuevo;

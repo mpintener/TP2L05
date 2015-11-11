@@ -123,6 +123,7 @@
             // 
             // cbTipoCargo
             // 
+            this.cbTipoCargo.DisplayMember = "legajo";
             this.cbTipoCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoCargo.FormattingEnabled = true;
             this.cbTipoCargo.Location = new System.Drawing.Point(90, 90);
@@ -130,7 +131,7 @@
             this.cbTipoCargo.Size = new System.Drawing.Size(127, 21);
             this.cbTipoCargo.TabIndex = 5;
             this.cbTipoCargo.Tag = "TipoCargo";
-            this.cbTipoCargo.ValueMember = "cargo";
+            this.cbTipoCargo.ValueMember = "tipo_persona";
             // 
             // btnBuscar
             // 

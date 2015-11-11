@@ -105,7 +105,7 @@
             // 
             // cbIDEspecialidad
             // 
-            this.cbIDEspecialidad.DisplayMember = "id_especialidad";
+            this.cbIDEspecialidad.DisplayMember = "descripcion";
             this.cbIDEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIDEspecialidad.FormattingEnabled = true;
             this.cbIDEspecialidad.Location = new System.Drawing.Point(129, 45);

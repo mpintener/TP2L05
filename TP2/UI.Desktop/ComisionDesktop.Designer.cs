@@ -118,6 +118,7 @@
             // 
             // cbIDPlan
             // 
+            this.cbIDPlan.DisplayMember = "desc_plan";
             this.cbIDPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIDPlan.FormattingEnabled = true;
             this.cbIDPlan.Location = new System.Drawing.Point(136, 52);

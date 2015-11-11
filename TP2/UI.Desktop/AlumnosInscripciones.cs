@@ -23,7 +23,6 @@ namespace UI.Desktop
         public void Listar()
             {
             AlumnoInscripcionLogic AIL = new AlumnoInscripcionLogic();
-
             List<AlumnoInscripciones> l = AIL.GetAll();
             }
 
@@ -32,10 +31,6 @@ namespace UI.Desktop
             Listar();
             }
 
-        private void btnActualizar_Click( object sender, EventArgs e )
-            {
-            Listar();
-            }
 
         private void btnSalir_Click( object sender, EventArgs e )
             {    
@@ -62,6 +57,8 @@ namespace UI.Desktop
                 AlumnoInscripcionesDesktop AID = new AlumnoInscripcionesDesktop(ID, AplicationForm.ModoForm.Modificacion);
                 AID.Text = "Eliminar";
                 AID.ShowDialog();
+                this.Listar();
+
             }
         }
 
@@ -73,6 +70,7 @@ namespace UI.Desktop
                 AlumnoInscripcionesDesktop AID = new AlumnoInscripcionesDesktop(ID, AplicationForm.ModoForm.Baja);
                 AID.Text = "Eliminar";
                 AID.ShowDialog();
+                this.Listar();
                 }
         }
     }    

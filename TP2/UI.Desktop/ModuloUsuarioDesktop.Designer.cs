@@ -53,7 +53,7 @@
             // lblIDModulo
             // 
             this.lblIDModulo.AutoSize = true;
-            this.lblIDModulo.Location = new System.Drawing.Point(13, 46);
+            this.lblIDModulo.Location = new System.Drawing.Point(12, 76);
             this.lblIDModulo.Name = "lblIDModulo";
             this.lblIDModulo.Size = new System.Drawing.Size(56, 13);
             this.lblIDModulo.TabIndex = 1;
@@ -62,7 +62,7 @@
             // lblIDUsuario
             // 
             this.lblIDUsuario.AutoSize = true;
-            this.lblIDUsuario.Location = new System.Drawing.Point(12, 72);
+            this.lblIDUsuario.Location = new System.Drawing.Point(12, 48);
             this.lblIDUsuario.Name = "lblIDUsuario";
             this.lblIDUsuario.Size = new System.Drawing.Size(57, 13);
             this.lblIDUsuario.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(88, 105);
+            this.btnAceptar.Location = new System.Drawing.Point(73, 112);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 5;
@@ -90,7 +90,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(169, 105);
+            this.btnCancelar.Location = new System.Drawing.Point(168, 112);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 5;
@@ -103,7 +103,7 @@
             this.cbIDModulo.DisplayMember = "id_modulo";
             this.cbIDModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIDModulo.FormattingEnabled = true;
-            this.cbIDModulo.Location = new System.Drawing.Point(84, 44);
+            this.cbIDModulo.Location = new System.Drawing.Point(84, 73);
             this.cbIDModulo.Name = "cbIDModulo";
             this.cbIDModulo.Size = new System.Drawing.Size(147, 21);
             this.cbIDModulo.TabIndex = 2;
@@ -112,7 +112,7 @@
             // 
             // mtbIDUsuario
             // 
-            this.mtbIDUsuario.Location = new System.Drawing.Point(84, 72);
+            this.mtbIDUsuario.Location = new System.Drawing.Point(84, 45);
             this.mtbIDUsuario.Mask = "99999";
             this.mtbIDUsuario.Name = "mtbIDUsuario";
             this.mtbIDUsuario.Size = new System.Drawing.Size(147, 20);
@@ -122,7 +122,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(254, 72);
+            this.btnBuscar.Location = new System.Drawing.Point(246, 42);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 4;
@@ -133,7 +133,7 @@
             // ModuloUsuarioDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(341, 137);
+            this.ClientSize = new System.Drawing.Size(333, 145);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.mtbIDUsuario);
             this.Controls.Add(this.cbIDModulo);

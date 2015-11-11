@@ -38,7 +38,6 @@
             this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.condicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.tsAlumnosInscripciones = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
@@ -76,7 +75,6 @@
             this.tlAlumnosInscripciones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlAlumnosInscripciones.Controls.Add(this.dgvAlumnoInscripciones, 0, 0);
             this.tlAlumnosInscripciones.Controls.Add(this.btnSalir, 1, 1);
-            this.tlAlumnosInscripciones.Controls.Add(this.btnActualizar, 0, 1);
             this.tlAlumnosInscripciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlAlumnosInscripciones.Location = new System.Drawing.Point(0, 0);
             this.tlAlumnosInscripciones.Name = "tlAlumnosInscripciones";
@@ -150,18 +148,6 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(386, 359);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 1;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            this.btnActualizar.Enter += new System.EventHandler(this.btnActualizar_Click);
-            // 
             // tsAlumnosInscripciones
             // 
             this.tsAlumnosInscripciones.Dock = System.Windows.Forms.DockStyle.None;
@@ -234,7 +220,6 @@
         private System.Windows.Forms.TableLayoutPanel tlAlumnosInscripciones;
         private System.Windows.Forms.DataGridView dgvAlumnoInscripciones;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.ToolStrip tsAlumnosInscripciones;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbEditar;

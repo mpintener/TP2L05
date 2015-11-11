@@ -55,6 +55,7 @@ namespace UI.Desktop
                 int ID = ((Business.Entities.DocenteCurso)this.dgvDocenteCurso.SelectedRows[0].DataBoundItem).ID;
                 DocenteCursoDesktop DCD = new DocenteCursoDesktop(ID, AplicationForm.ModoForm.Modificacion);
                 DCD.ShowDialog();
+                this.Listar();
             }
 
         }
@@ -66,6 +67,7 @@ namespace UI.Desktop
                 int ID = ((Business.Entities.DocenteCurso)this.dgvDocenteCurso.SelectedRows[0].DataBoundItem).ID;
                 DocenteCursoDesktop DCD = new DocenteCursoDesktop(ID, AplicationForm.ModoForm.Baja);
                 DCD.ShowDialog();
+                this.Listar();
             }
         }
     }

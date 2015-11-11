@@ -36,7 +36,6 @@
             this.idPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anioEspecialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsComisiones = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
@@ -74,7 +73,6 @@
             this.tlComisiones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlComisiones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlComisiones.Controls.Add(this.dgvComisiones, 0, 0);
-            this.tlComisiones.Controls.Add(this.btnActualizar, 0, 1);
             this.tlComisiones.Controls.Add(this.btnSalir, 1, 1);
             this.tlComisiones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlComisiones.Location = new System.Drawing.Point(0, 0);
@@ -129,17 +127,6 @@
             this.anioEspecialidad.HeaderText = "Año Especialidad";
             this.anioEspecialidad.Name = "anioEspecialidad";
             this.anioEspecialidad.ReadOnly = true;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(288, 220);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 1;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnSalir
             // 
@@ -223,7 +210,6 @@
         private System.Windows.Forms.ToolStripContainer tcComisiones;
         private System.Windows.Forms.TableLayoutPanel tlComisiones;
         private System.Windows.Forms.DataGridView dgvComisiones;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStrip tsComisiones;
         private System.Windows.Forms.ToolStripButton tsbNuevo;

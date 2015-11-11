@@ -32,16 +32,15 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tlDocenteCurso = new System.Windows.Forms.TableLayoutPanel();
             this.dgvDocenteCurso = new System.Windows.Forms.DataGridView();
-            this.btnActualizar = new System.Windows.Forms.Button();
+            this.idDictado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDocente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsDocenteCurso = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
-            this.idDictado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDocente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -74,7 +73,6 @@
             this.tlDocenteCurso.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlDocenteCurso.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlDocenteCurso.Controls.Add(this.dgvDocenteCurso, 0, 0);
-            this.tlDocenteCurso.Controls.Add(this.btnActualizar, 0, 1);
             this.tlDocenteCurso.Controls.Add(this.btnSalir, 1, 1);
             this.tlDocenteCurso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlDocenteCurso.Location = new System.Drawing.Point(0, 0);
@@ -103,16 +101,33 @@
             this.dgvDocenteCurso.Size = new System.Drawing.Size(444, 324);
             this.dgvDocenteCurso.TabIndex = 0;
             // 
-            // btnActualizar
+            // idDictado
             // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(291, 333);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 1;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.idDictado.DataPropertyName = "ID";
+            this.idDictado.HeaderText = "ID Dictado";
+            this.idDictado.Name = "idDictado";
+            this.idDictado.ReadOnly = true;
+            // 
+            // idCurso
+            // 
+            this.idCurso.DataPropertyName = "IDCurso";
+            this.idCurso.HeaderText = "ID Curso";
+            this.idCurso.Name = "idCurso";
+            this.idCurso.ReadOnly = true;
+            // 
+            // idDocente
+            // 
+            this.idDocente.DataPropertyName = "IDDocente";
+            this.idDocente.HeaderText = "ID Docente";
+            this.idDocente.Name = "idDocente";
+            this.idDocente.ReadOnly = true;
+            // 
+            // tipoCargo
+            // 
+            this.tipoCargo.DataPropertyName = "TipoCargo";
+            this.tipoCargo.HeaderText = "Tipo Cargo";
+            this.tipoCargo.Name = "tipoCargo";
+            this.tipoCargo.ReadOnly = true;
             // 
             // btnSalir
             // 
@@ -166,41 +181,13 @@
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
-            // idDictado
-            // 
-            this.idDictado.DataPropertyName = "ID";
-            this.idDictado.HeaderText = "ID Dictado";
-            this.idDictado.Name = "idDictado";
-            this.idDictado.ReadOnly = true;
-            // 
-            // idCurso
-            // 
-            this.idCurso.DataPropertyName = "IDCurso";
-            this.idCurso.HeaderText = "ID Curso";
-            this.idCurso.Name = "idCurso";
-            this.idCurso.ReadOnly = true;
-            // 
-            // idDocente
-            // 
-            this.idDocente.DataPropertyName = "IDDocente";
-            this.idDocente.HeaderText = "ID Docente";
-            this.idDocente.Name = "idDocente";
-            this.idDocente.ReadOnly = true;
-            // 
-            // tipoCargo
-            // 
-            this.tipoCargo.DataPropertyName = "TipoCargo";
-            this.tipoCargo.HeaderText = "Tipo Cargo";
-            this.tipoCargo.Name = "tipoCargo";
-            this.tipoCargo.ReadOnly = true;
-            // 
-            // DocenteCurso
+            // DocentesCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 384);
             this.Controls.Add(this.toolStripContainer1);
-            this.Name = "DocenteCurso";
+            this.Name = "DocentesCursos";
             this.Text = "DocenteCurso";
             this.Load += new System.EventHandler(this.DocenteCurso_Load);
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
@@ -221,7 +208,6 @@
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.TableLayoutPanel tlDocenteCurso;
         private System.Windows.Forms.DataGridView dgvDocenteCurso;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStrip tsDocenteCurso;
         private System.Windows.Forms.ToolStripButton tsbNuevo;

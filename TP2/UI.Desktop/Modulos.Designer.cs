@@ -35,7 +35,6 @@
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ejecuta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsModulos = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
@@ -73,7 +72,6 @@
             this.tlModulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlModulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlModulos.Controls.Add(this.dgvModulos, 0, 0);
-            this.tlModulos.Controls.Add(this.btnActualizar, 0, 1);
             this.tlModulos.Controls.Add(this.btnSalir, 1, 1);
             this.tlModulos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlModulos.Location = new System.Drawing.Point(0, 0);
@@ -120,17 +118,6 @@
             this.ejecuta.HeaderText = "Ejecuta";
             this.ejecuta.Name = "ejecuta";
             this.ejecuta.ReadOnly = true;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(189, 207);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 1;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnSalir
             // 
@@ -187,13 +174,13 @@
             this.tsbEliminar.ToolTipText = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
-            // Modulo
+            // Modulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 258);
             this.Controls.Add(this.tcModulos);
-            this.Name = "Modulo";
+            this.Name = "Modulos";
             this.Text = "Modulos";
             this.Load += new System.EventHandler(this.Modulo_Load);
             this.tcModulos.ContentPanel.ResumeLayout(false);
@@ -214,7 +201,6 @@
         private System.Windows.Forms.ToolStripContainer tcModulos;
         private System.Windows.Forms.TableLayoutPanel tlModulos;
         private System.Windows.Forms.DataGridView dgvModulos;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStrip tsModulos;
         private System.Windows.Forms.ToolStripButton tsbNuevo;

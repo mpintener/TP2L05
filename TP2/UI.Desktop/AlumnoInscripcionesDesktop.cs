@@ -171,14 +171,6 @@ namespace UI.Desktop
             if (DR == DialogResult.Yes) this.Close();
         }          
 
-        private void AlumnoInscripcionesDesktop_Load(object sender, EventArgs e)
-        {
-            mtbIDAlumno.Mask = "00000";
-            mtbNota.Mask = "00";
-            txtCondicion.ReadOnly = true;
-            mtbNota.ReadOnly = true;
-        }
-
         //Metodo que se utiliza en conjunto con la mascara mbNota para validar que el tipo de dato que se ingrese sea entero
 
         private void mtbNota_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -206,8 +198,19 @@ namespace UI.Desktop
             if (p.ID == id)
             {
                 DR = (MessageBox.Show("ID encontrado", "Busqueda Exitosa", MessageBoxButtons.OK, MessageBoxIcon.None));
+                this.mtbNota.Enabled = true;
+                this.txtCondicion.ReadOnly = false;
+                this.btnAceptar.Enabled = true;
+                this.btnCancelar.Enabled = true;
             }
-            else DR = (MessageBox.Show("ID no existe,por favor vuelva a ingresarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            else
+            {
+                DR = (MessageBox.Show("ID no existe,por favor vuelva a ingresarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error));
+                this.mtbNota.Enabled = false;
+                this.txtCondicion.ReadOnly = true;
+                this.btnAceptar.Enabled = false;
+                this.btnCancelar.Enabled = false;
+            }
         }
     }
 }

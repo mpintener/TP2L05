@@ -133,7 +133,7 @@
             // 
             // cbIDComision
             // 
-            this.cbIDComision.DisplayMember = "id_comision";
+            this.cbIDComision.DisplayMember = "desc_comision";
             this.cbIDComision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIDComision.FormattingEnabled = true;
             this.cbIDComision.Location = new System.Drawing.Point(348, 26);

@@ -42,7 +42,6 @@ namespace UI.Desktop
             PlanDesktop PD = new PlanDesktop(AplicationForm.ModoForm.Alta);
             PD.Text = "Alta plan";
             PD.ShowDialog();
-
             this.Listar();
         }
 

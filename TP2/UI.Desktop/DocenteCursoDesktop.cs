@@ -196,8 +196,21 @@ namespace UI.Desktop
             if (p.ID == id)
             {
                 DR = (MessageBox.Show("ID encontrado", "Busqueda Exitosa", MessageBoxButtons.OK, MessageBoxIcon.None));
+
+                this.cbIDCurso.Enabled = true;
+                this.cbTipoCargo.Enabled = true;
+                this.btnAceptar.Enabled = true;
+                this.btnCancelar.Enabled = true;
             }
-            else DR = (MessageBox.Show("ID no existe,por favor vuelva a ingresarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error));
+            else
+            {
+                DR = (MessageBox.Show("ID no existe,por favor vuelva a ingresarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error));
+
+                this.cbIDCurso.Enabled = false;
+                this.cbTipoCargo.Enabled = false;
+                this.btnAceptar.Enabled = false;
+                this.btnCancelar.Enabled = false;
+            }
         }
     }
 }

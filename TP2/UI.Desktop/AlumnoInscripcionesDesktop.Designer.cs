@@ -172,7 +172,6 @@
             this.mtbIDAlumno.Size = new System.Drawing.Size(100, 20);
             this.mtbIDAlumno.TabIndex = 3;
             this.mtbIDAlumno.Tag = "IDAlumno";
-            this.mtbIDAlumno.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             this.mtbIDAlumno.ValidatingType = typeof(int);
             this.mtbIDAlumno.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbIDAlumno_MaskInputRejected);
             // 
@@ -196,7 +195,6 @@
             this.Controls.Add(this.lblID);
             this.Name = "AlumnoInscripcionesDesktop";
             this.Text = "AlumnoInscripcionesDesktop";
-            this.Load += new System.EventHandler(this.AlumnoInscripcionesDesktop_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

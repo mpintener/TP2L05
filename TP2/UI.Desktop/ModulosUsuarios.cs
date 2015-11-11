@@ -22,7 +22,6 @@ namespace UI.Desktop
         public void Listar()
         {
             ModuloUsuarioLogic MUL = new ModuloUsuarioLogic();
-
             List<ModuloUsuario> l = MUL.GetAll();
         }
 
@@ -36,9 +35,7 @@ namespace UI.Desktop
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             ModuloUsuarioDesktop MUD = new ModuloUsuarioDesktop(AplicationForm.ModoForm.Alta);
-
             MUD.ShowDialog();
-
             this.Listar();
         }
 
@@ -46,12 +43,10 @@ namespace UI.Desktop
         {
             if (this.dgvModuloUsuario.SelectedRows.Count != 0)
             {
-
                 int ID = ((ModuloUsuario)this.dgvModuloUsuario.SelectedRows[0].DataBoundItem).ID;
-
                 ModuloUsuarioDesktop MUD = new ModuloUsuarioDesktop(ID, AplicationForm.ModoForm.Modificacion);
-
                 MUD.ShowDialog();
+                this.Listar();
             }
         }
 
@@ -59,12 +54,10 @@ namespace UI.Desktop
         {
             if (this.dgvModuloUsuario.SelectedRows.Count != 0)
             {
-
                 int ID = ((ModuloUsuario)this.dgvModuloUsuario.SelectedRows[0].DataBoundItem).ID;
-
                 ModuloUsuarioDesktop MUD = new ModuloUsuarioDesktop(ID, AplicationForm.ModoForm.Baja);
-
                 MUD.ShowDialog();
+                this.Listar();
             }
         }
 

@@ -22,7 +22,6 @@ namespace UI.Desktop
         public void Listar()
         {
             ComisionLogic CL = new ComisionLogic();
-
             List<Comision> l = CL.GetAll();
         }
 
@@ -34,9 +33,7 @@ namespace UI.Desktop
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             ComisionDesktop CD = new ComisionDesktop(AplicationForm.ModoForm.Alta);
-
             CD.ShowDialog();
-
             this.Listar();
         }
 
@@ -44,12 +41,10 @@ namespace UI.Desktop
         {
             if (this.dgvComisiones.SelectedRows.Count != 0)
             {
-
                 int ID = ((Comision)this.dgvComisiones.SelectedRows[0].DataBoundItem).ID;
-
                 ComisionDesktop CD = new ComisionDesktop(ID, AplicationForm.ModoForm.Modificacion);
-
                 CD.ShowDialog();
+                this.Listar();
             }
         }
 
@@ -58,10 +53,9 @@ namespace UI.Desktop
             if (this.dgvComisiones.SelectedRows.Count != 0)
             {
                 int ID = ((Comision)this.dgvComisiones.SelectedRows[0].DataBoundItem).ID;
-
                 ComisionDesktop CD = new ComisionDesktop(ID, AplicationForm.ModoForm.Baja);
-
                 CD.ShowDialog();
+                this.Listar();
             }
         }
 

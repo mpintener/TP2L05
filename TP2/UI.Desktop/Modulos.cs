@@ -22,7 +22,6 @@ namespace UI.Desktop
         public void Listar()
         {
             ModuloLogic ML = new ModuloLogic();
-
             List<Business.Entities.Modulo> l = ML.GetAll();
         }
 
@@ -34,9 +33,7 @@ namespace UI.Desktop
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             ModuloDesktop MD = new ModuloDesktop(AplicationForm.ModoForm.Alta);
-
             MD.ShowDialog();
-
             this.Listar();
         }
 
@@ -44,12 +41,10 @@ namespace UI.Desktop
         {
             if (this.dgvModulos.SelectedRows.Count != 0)
             {
-
                 int ID = ((Business.Entities.Modulo)this.dgvModulos.SelectedRows[0].DataBoundItem).ID;
-
                 ModuloDesktop UD = new ModuloDesktop(ID, AplicationForm.ModoForm.Modificacion);
-
                 UD.ShowDialog();
+                this.Listar();
             }
         }
 
@@ -57,12 +52,11 @@ namespace UI.Desktop
         {
             if (this.dgvModulos.SelectedRows.Count != 0)
             {
-
                 int ID = ((Business.Entities.Modulo)this.dgvModulos.SelectedRows[0].DataBoundItem).ID;
-
                 ModuloDesktop MD = new ModuloDesktop(ID, AplicationForm.ModoForm.Baja);
-
                 MD.ShowDialog();
+                this.Listar();
+
             }
         }
 

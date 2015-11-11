@@ -6,11 +6,20 @@
     <title>Academia</title>
 </head>
 <body>
+    <ul class="menu">
+        <li><a href="usuarios.aspx">Usuario</a></li>
+        <li><a href="cursos.aspx">Cursos</a></li>
+        <li><a href="comisiones.aspx">Comisiones</a></li>
+        <li><a href="docentescursos.aspx">Docentes Cursos</a></li>
+        <li><a href="especialidades.aspx">Especialidades</a></li>
+        <li><a href="materias.aspx">Materias</a></li>
+        <li><a href="personas.aspx">Personas</a></li>
+        <li><a href="planes.aspx">Planes</a></li>
+        <li><a href="registrosalumnos.aspx">Registrar Alumnos</a></li>
+        <li><a href="salir.aspx">Salir</a></li>
+    </ul>
     <form id="bodyform" runat="server">
-        <asp:Menu runat="server" ID="menu" DataSourceID="SiteMapDataSource">
-        </asp:Menu>
-        <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server"/>
-        <div>
+
         <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
         </asp:ContentPlaceHolder>
     </div>

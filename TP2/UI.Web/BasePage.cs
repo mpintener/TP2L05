@@ -16,6 +16,10 @@ namespace UI.Web
             set { this.ViewState["FormMode"] = value; }
         }
 
+        public void usuarioIngresado()
+        {
+            if (Session["rol_usuario"] == null) { Response.Redirect("/Index.aspx"); }
+        }
  
 
         

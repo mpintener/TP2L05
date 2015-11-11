@@ -38,7 +38,7 @@ namespace Business.Logic
             return ModuloUsuarioData.GetOne(ID);
         }
 
-        public ModuloUsuario GetOneByUsuario(string modulo, int usuario)
+        public List<ModuloUsuario> GetOneByUsuario(string modulo, int usuario)
         {
             return ModuloUsuarioData.GetOneByUsuario(modulo, usuario);
         }

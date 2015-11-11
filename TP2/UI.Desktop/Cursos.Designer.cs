@@ -155,7 +155,7 @@
             this.tsbEliminar});
             this.tsCurso.Location = new System.Drawing.Point(3, 0);
             this.tsCurso.Name = "tsCurso";
-            this.tsCurso.Size = new System.Drawing.Size(81, 25);
+            this.tsCurso.Size = new System.Drawing.Size(112, 25);
             this.tsCurso.TabIndex = 0;
             // 
             // tsbNuevo
@@ -166,6 +166,7 @@
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(23, 22);
             this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Visible = false;
             this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
@@ -176,6 +177,7 @@
             this.tsbEditar.Name = "tsbEditar";
             this.tsbEditar.Size = new System.Drawing.Size(23, 22);
             this.tsbEditar.Text = "Editar";
+            this.tsbEditar.Visible = false;
             this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbEliminar
@@ -186,6 +188,7 @@
             this.tsbEliminar.Name = "tsbEliminar";
             this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
             this.tsbEliminar.Text = "Eliminar";
+            this.tsbEliminar.Visible = false;
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
             // Cursos

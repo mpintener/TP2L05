@@ -99,7 +99,7 @@ namespace Data.Database
 
         public ModuloUsuario GetOneByUsuario(string modulo, int usuario)
         {
-            ModuloUsuario mu = new ModuloUsuario();
+
 
             try
             {
@@ -113,7 +113,7 @@ namespace Data.Database
                 cmdModuloUsuarios.Parameters.Add("@id_usuario", SqlDbType.Int).Value = usuario;
 
                 SqlDataReader drModuloUsuarios = cmdModuloUsuarios.ExecuteReader();
-                drModuloUsuarios.Read();
+                drModuloUsuarios.Read();                 
                     mu.ID = (int)drModuloUsuarios["id_modulo_usuario"];
                     mu.IDModulo = (int)drModuloUsuarios["id_modulo"];
                     mu.IDUsuario = (int)drModuloUsuarios["id_usuario"];
@@ -121,6 +121,7 @@ namespace Data.Database
                     mu.PermiteBaja = (bool)drModuloUsuarios["baja"];
                     mu.PermiteConsulta = (bool)drModuloUsuarios["consulta"];
                     mu.PermiteModificacion = (bool)drModuloUsuarios["modificacion"];
+                   
                 drModuloUsuarios.Close();
             }
             catch (Exception Ex)
@@ -134,6 +135,7 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
+
             return mu;
         }
 

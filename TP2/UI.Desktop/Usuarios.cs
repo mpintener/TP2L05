@@ -49,12 +49,19 @@ namespace UI.Desktop
             try
             {
                 ModuloUsuarioLogic mul = new ModuloUsuarioLogic();
-                ModuloUsuario modusu = new ModuloUsuario();
-                modusu = mul.GetOneByUsuario("usuarios",this.UsuarioActual.ID);
-                alta = modusu.PermiteAlta;
-                baja = modusu.PermiteBaja;
-                modificacion = modusu.PermiteModificacion;
-                consulta = modusu.PermiteConsulta;
+                List<ModuloUsuario> modusu = new List<ModuloUsuario>();
+                modusu = mul.GetOneByUsuario("usuarios", this.UsuarioActual.ID);
+                ModuloUsuario md = new ModuloUsuario();
+                Modulo modulo = new Modulo();
+                modulo.ID = 3;
+                foreach (ModuloUsuario m in modusu)
+                {
+                    if (m.IDModulo == modulo.ID) md = m;
+                }
+                alta = md.PermiteAlta;
+                baja = md.PermiteBaja;
+                modificacion = md.PermiteModificacion;
+                consulta = md.PermiteConsulta;
             }
             catch (Exception ex)
             {

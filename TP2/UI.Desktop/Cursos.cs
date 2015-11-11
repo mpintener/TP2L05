@@ -14,27 +14,74 @@ namespace UI.Desktop
 {
     public partial class Cursos : Form
     {
-       public Cursos()
+        public Cursos(Usuario usr)
             {
-            InitializeComponent();
+                InitializeComponent();
+                this._UsuarioActual = usr;
             }
+
+        private Usuario _UsuarioActual;
+
+        public Usuario UsuarioActual
+        {
+            get { return _UsuarioActual; }
+        }
 
         public void Listar()
             {
-            CursoLogic CL = new CursoLogic();
-            this.dgvCurso.DataSource = CL.GetAll();
+                 CursoLogic CL = new CursoLogic();
+                 this.dgvCurso.DataSource = CL.GetAll();
             }
 
 
         private void Curso_Load(object sender, EventArgs e)
         {
-            Listar();
+            permisos();
         }
 
-      
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void permisos()
         {
-            Listar();
+            bool alta = false;
+            bool baja = false;
+            bool modificacion = false;
+            bool consulta = false;
+            try
+            {
+                ModuloUsuarioLogic mul = new ModuloUsuarioLogic();
+                List<ModuloUsuario> modusu = new List<ModuloUsuario>();
+                modusu = mul.GetOneByUsuario("usuarios", this.UsuarioActual.ID);
+                ModuloUsuario md = new ModuloUsuario();
+                Modulo modulo = new Modulo();
+                modulo.ID = 8;
+                foreach(ModuloUsuario m in modusu)
+                {
+                    if (m.IDModulo == modulo.ID) md = m;
+                }
+                alta = md.PermiteAlta;
+                baja = md.PermiteBaja;
+                modificacion = md.PermiteModificacion;
+                consulta = md.PermiteConsulta;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            if (alta)
+            {
+                this.tsbNuevo.Visible = true;
+            }
+            if (baja)
+            {
+                this.tsbEliminar.Visible = true;
+            }
+            if (modificacion)
+            {
+                this.tsbEditar.Visible = true;
+            }
+            if (consulta)
+            {
+                Listar();
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

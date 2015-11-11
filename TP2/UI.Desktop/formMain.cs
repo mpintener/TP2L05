@@ -131,21 +131,21 @@ namespace UI.Desktop
 
         private void mnuComisiones_Click(object sender, EventArgs e)
         {
-            Comisiones c = new Comisiones();
+            Comisiones c = new Comisiones(this.UsuarioActual);
             c.MdiParent = this;
             c.Show();
         }
 
         private void mnuAlumnosInscripciones_Click(object sender, EventArgs e)
         {
-            AlumnosInscripciones ai = new AlumnosInscripciones();
+            AlumnosInscripciones ai = new AlumnosInscripciones(); //NO HAY QUE PASARLE NADA POR PARAMETRO
             ai.MdiParent = this;
             ai.Show();
         }
 
         private void mnuCursos_Click(object sender, EventArgs e)
         {
-            Cursos c = new Cursos();
+            Cursos c = new Cursos(this.UsuarioActual);
             c.MdiParent = this;
             c.Show();
         }
@@ -170,11 +170,6 @@ namespace UI.Desktop
             m.Show();
         }
 
-        private void mnuModulos_Click(object sender, EventArgs e)
-        {
-            Modulos m = new Modulos();
-            m.ShowDialog();
-        }
 
         private void mnuPersonas_Click(object sender, EventArgs e)
         {

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Comisiones));
             this.tcComisiones = new System.Windows.Forms.ToolStripContainer();
             this.tlComisiones = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvComisiones = new System.Windows.Forms.DataGridView();
+            this.dvgComisiones = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +45,7 @@
             this.tcComisiones.TopToolStripPanel.SuspendLayout();
             this.tcComisiones.SuspendLayout();
             this.tlComisiones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvComisiones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgComisiones)).BeginInit();
             this.tsComisiones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +72,7 @@
             this.tlComisiones.ColumnCount = 2;
             this.tlComisiones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlComisiones.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlComisiones.Controls.Add(this.dgvComisiones, 0, 0);
+            this.tlComisiones.Controls.Add(this.dvgComisiones, 0, 0);
             this.tlComisiones.Controls.Add(this.btnSalir, 1, 1);
             this.tlComisiones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlComisiones.Location = new System.Drawing.Point(0, 0);
@@ -83,22 +83,22 @@
             this.tlComisiones.Size = new System.Drawing.Size(447, 246);
             this.tlComisiones.TabIndex = 0;
             // 
-            // dgvComisiones
+            // dvgComisiones
             // 
-            this.dgvComisiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvComisiones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgComisiones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgComisiones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.idPlan,
             this.descripcion,
             this.anioEspecialidad});
-            this.tlComisiones.SetColumnSpan(this.dgvComisiones, 2);
-            this.dgvComisiones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvComisiones.Location = new System.Drawing.Point(3, 3);
-            this.dgvComisiones.MultiSelect = false;
-            this.dgvComisiones.Name = "dgvComisiones";
-            this.dgvComisiones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvComisiones.Size = new System.Drawing.Size(441, 211);
-            this.dgvComisiones.TabIndex = 0;
+            this.tlComisiones.SetColumnSpan(this.dvgComisiones, 2);
+            this.dvgComisiones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dvgComisiones.Location = new System.Drawing.Point(3, 3);
+            this.dvgComisiones.MultiSelect = false;
+            this.dvgComisiones.Name = "dvgComisiones";
+            this.dvgComisiones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvgComisiones.Size = new System.Drawing.Size(441, 211);
+            this.dvgComisiones.TabIndex = 0;
             // 
             // id
             // 
@@ -147,7 +147,7 @@
             this.tsbEliminar});
             this.tsComisiones.Location = new System.Drawing.Point(3, 0);
             this.tsComisiones.Name = "tsComisiones";
-            this.tsComisiones.Size = new System.Drawing.Size(81, 25);
+            this.tsComisiones.Size = new System.Drawing.Size(111, 25);
             this.tsComisiones.TabIndex = 0;
             // 
             // tsbNuevo
@@ -159,6 +159,7 @@
             this.tsbNuevo.Size = new System.Drawing.Size(23, 22);
             this.tsbNuevo.Text = "toolStripButton1";
             this.tsbNuevo.ToolTipText = "Nuevo";
+            this.tsbNuevo.Visible = false;
             this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
@@ -170,6 +171,7 @@
             this.tsbEditar.Size = new System.Drawing.Size(23, 22);
             this.tsbEditar.Text = "toolStripButton2";
             this.tsbEditar.ToolTipText = "Editar";
+            this.tsbEditar.Visible = false;
             this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbEliminar
@@ -181,6 +183,7 @@
             this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
             this.tsbEliminar.Text = "toolStripButton3";
             this.tsbEliminar.ToolTipText = "Eliminar";
+            this.tsbEliminar.Visible = false;
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
             // Comisiones
@@ -198,7 +201,7 @@
             this.tcComisiones.ResumeLayout(false);
             this.tcComisiones.PerformLayout();
             this.tlComisiones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvComisiones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgComisiones)).EndInit();
             this.tsComisiones.ResumeLayout(false);
             this.tsComisiones.PerformLayout();
             this.ResumeLayout(false);
@@ -209,7 +212,7 @@
 
         private System.Windows.Forms.ToolStripContainer tcComisiones;
         private System.Windows.Forms.TableLayoutPanel tlComisiones;
-        private System.Windows.Forms.DataGridView dgvComisiones;
+        private System.Windows.Forms.DataGridView dvgComisiones;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStrip tsComisiones;
         private System.Windows.Forms.ToolStripButton tsbNuevo;

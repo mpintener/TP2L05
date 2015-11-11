@@ -39,7 +39,6 @@
             this.mnuDocenteCurso = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEspecialidades = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMaterias = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuModulos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPersonas = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPlanes = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,7 +96,6 @@
             this.mnuDocenteCurso,
             this.mnuEspecialidades,
             this.mnuMaterias,
-            this.mnuModulos,
             this.mnuPersonas,
             this.mnuPlanes,
             this.mnuUsuarios,
@@ -153,14 +151,6 @@
             this.mnuMaterias.Text = "Materias";
             this.mnuMaterias.Visible = false;
             this.mnuMaterias.Click += new System.EventHandler(this.mnuMaterias_Click);
-            // 
-            // mnuModulos
-            // 
-            this.mnuModulos.Name = "mnuModulos";
-            this.mnuModulos.Size = new System.Drawing.Size(209, 22);
-            this.mnuModulos.Text = "Modulos";
-            this.mnuModulos.Visible = false;
-            this.mnuModulos.Click += new System.EventHandler(this.mnuModulos_Click);
             // 
             // mnuPersonas
             // 
@@ -254,7 +244,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuDocenteCurso;
         private System.Windows.Forms.ToolStripMenuItem mnuEspecialidades;
         private System.Windows.Forms.ToolStripMenuItem mnuMaterias;
-        private System.Windows.Forms.ToolStripMenuItem mnuModulos;
         private System.Windows.Forms.ToolStripMenuItem mnuPersonas;
         private System.Windows.Forms.ToolStripMenuItem mnuPlanes;
         private System.Windows.Forms.StatusStrip statusStrip;

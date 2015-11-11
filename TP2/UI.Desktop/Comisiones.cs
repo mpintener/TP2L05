@@ -14,20 +14,74 @@ namespace UI.Desktop
 {
     public partial class Comisiones : Form
     {
-        public Comisiones()
+        public Comisiones(Usuario usr)
         {
             InitializeComponent();
+            this._UsuarioActual = usr;
+        }
+
+        private Usuario _UsuarioActual;
+
+        public Usuario UsuarioActual
+        {
+            get { return _UsuarioActual; }
         }
 
         public void Listar()
         {
             ComisionLogic CL = new ComisionLogic();
             List<Comision> l = CL.GetAll();
+            this.dvgComisiones.DataSource = l;
         }
 
         private void Comisiones_Load(object sender, EventArgs e)
         {
-            Listar();
+            permisos();
+        }
+
+        private void permisos()
+        {
+            bool alta = false;
+            bool baja = false;
+            bool modificacion = false;
+            bool consulta = false;
+            try
+            {
+                ModuloUsuarioLogic mul = new ModuloUsuarioLogic();
+                List<ModuloUsuario> modusu = new List<ModuloUsuario>();
+                modusu = mul.GetOneByUsuario("usuarios", this.UsuarioActual.ID);
+                ModuloUsuario md = new ModuloUsuario();
+                Modulo modulo = new Modulo();
+                modulo.ID = 9;
+                foreach (ModuloUsuario m in modusu)
+                {
+                    if (m.IDModulo == modulo.ID) md = m;
+                }
+                alta = md.PermiteAlta;
+                baja = md.PermiteBaja;
+                modificacion = md.PermiteModificacion;
+                consulta = md.PermiteConsulta;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            if (alta)
+            {
+                this.tsbNuevo.Visible = true;
+            }
+            if (baja)
+            {
+                this.tsbEliminar.Visible = true;
+            }
+            if (modificacion)
+            {
+                this.tsbEditar.Visible = true;
+            }
+            if (consulta)
+            {
+                Listar();
+            }
         }
 
         private void tsbNuevo_Click(object sender, EventArgs e)
@@ -39,9 +93,9 @@ namespace UI.Desktop
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
-            if (this.dgvComisiones.SelectedRows.Count != 0)
+            if (this.dvgComisiones.SelectedRows.Count != 0)
             {
-                int ID = ((Comision)this.dgvComisiones.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Comision)this.dvgComisiones.SelectedRows[0].DataBoundItem).ID;
                 ComisionDesktop CD = new ComisionDesktop(ID, AplicationForm.ModoForm.Modificacion);
                 CD.ShowDialog();
                 this.Listar();
@@ -50,9 +104,9 @@ namespace UI.Desktop
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            if (this.dgvComisiones.SelectedRows.Count != 0)
+            if (this.dvgComisiones.SelectedRows.Count != 0)
             {
-                int ID = ((Comision)this.dgvComisiones.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Comision)this.dvgComisiones.SelectedRows[0].DataBoundItem).ID;
                 ComisionDesktop CD = new ComisionDesktop(ID, AplicationForm.ModoForm.Baja);
                 CD.ShowDialog();
                 this.Listar();

@@ -14,7 +14,7 @@ body {
     font-size: 10pt;
     font-weight: bold;
 }
-.Grid {background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; font-family:'Myriad Pro'; color: #474747;}
+.Grid {background-color: #fff; border: solid 1px #525252; border-collapse:collapse; font-family:'Myriad Pro'; color: #474747;}
 .Grid td {
       padding: 2px;
       border: solid 1px #c1c1c1; 
@@ -38,4 +38,26 @@ body {
   font-family: 'Myriad Pro';
   font-size: 10pt;
   font-weight: bold; 
+}
+
+.menu li{
+    display: inline-block;
+    font-family: 'Myriad Pro';
+    font-size: 12pt;
+    font-weight: bold;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.content {
+    padding: 50px;
+}
+
+#bodyContentPlaceHolder_gridAdictionsPanel {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#bodyContentPlaceHolder_gridAdictionsPanel input{
+    margin: 10px;
 }

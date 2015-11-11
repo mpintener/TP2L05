@@ -63,6 +63,9 @@ namespace Data.Database
                         case 3:
                             per.TiposPersona = "Docente";
                             break;
+                        case 4:
+                            per.TiposPersona = "Administrador";
+                            break;
                     }
                     
                     //agrego el objeto con datos a la lista que devuelvo                   
@@ -120,6 +123,9 @@ namespace Data.Database
                             break;
                         case 3:
                             per.TiposPersona = "Docente";
+                            break;
+                        case 4:
+                            per.TiposPersona = "Administrador";
                             break;
                     }
 

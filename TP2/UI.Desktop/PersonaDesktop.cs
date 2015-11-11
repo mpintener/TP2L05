@@ -154,7 +154,9 @@ namespace UI.Desktop
 
           if (this.chkUsuario.Checked)
           {
-              Usuarios u = new Usuarios();
+              Usuario user = new Usuario();
+              user.ID = _PersonaActual.ID;
+              Usuarios u = new Usuarios(user);
               u.ShowDialog();
           }
           

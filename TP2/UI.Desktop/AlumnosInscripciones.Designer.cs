@@ -157,7 +157,7 @@
             this.tsbEliminar});
             this.tsAlumnosInscripciones.Location = new System.Drawing.Point(3, 0);
             this.tsAlumnosInscripciones.Name = "tsAlumnosInscripciones";
-            this.tsAlumnosInscripciones.Size = new System.Drawing.Size(81, 25);
+            this.tsAlumnosInscripciones.Size = new System.Drawing.Size(112, 25);
             this.tsAlumnosInscripciones.TabIndex = 0;
             // 
             // tsbNuevo

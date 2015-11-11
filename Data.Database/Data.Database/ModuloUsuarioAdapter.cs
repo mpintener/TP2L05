@@ -75,12 +75,52 @@ namespace Data.Database
                     mu.ID = (int)drModuloUsuarios["id_modulo_usuario"];
                     mu.IDModulo = (int)drModuloUsuarios["id_modulo"];
                     mu.IDUsuario = (int)drModuloUsuarios["id_usuario"];
-                    mu.PermiteAlta=(bool)drModuloUsuarios["alta"];
+                    mu.PermiteAlta = (bool)drModuloUsuarios["alta"];
                     mu.PermiteBaja = (bool)drModuloUsuarios["baja"];
                     mu.PermiteConsulta = (bool)drModuloUsuarios["consulta"];
                     mu.PermiteModificacion = (bool)drModuloUsuarios["modificacion"];
                 }
 
+                drModuloUsuarios.Close();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar datos de modulo usuarios", Ex);
+
+                throw ExcepcionManejada;
+            }
+
+            finally
+            {
+                this.CloseConnection();
+            }
+            return mu;
+        }
+
+        public ModuloUsuario GetOneByUsuario(string modulo, int usuario)
+        {
+            ModuloUsuario mu = new ModuloUsuario();
+
+            try
+            {
+                this.OpenConnection();
+
+                SqlCommand cmdModuloUsuarios = new SqlCommand("SELECT * from modulos_usuarios mod_usu inner join modulos mod on mod.id_modulo = mod_usu.id_modulo" +
+                "  where id_usuario=@id_usuario" +
+                " and desc_modulo=@desc_modulo", sqlConn);
+
+                cmdModuloUsuarios.Parameters.Add("@desc_modulo", SqlDbType.VarChar).Value = modulo;
+                cmdModuloUsuarios.Parameters.Add("@id_usuario", SqlDbType.Int).Value = usuario;
+
+                SqlDataReader drModuloUsuarios = cmdModuloUsuarios.ExecuteReader();
+                drModuloUsuarios.Read();
+                    mu.ID = (int)drModuloUsuarios["id_modulo_usuario"];
+                    mu.IDModulo = (int)drModuloUsuarios["id_modulo"];
+                    mu.IDUsuario = (int)drModuloUsuarios["id_usuario"];
+                    mu.PermiteAlta = (bool)drModuloUsuarios["alta"];
+                    mu.PermiteBaja = (bool)drModuloUsuarios["baja"];
+                    mu.PermiteConsulta = (bool)drModuloUsuarios["consulta"];
+                    mu.PermiteModificacion = (bool)drModuloUsuarios["modificacion"];
                 drModuloUsuarios.Close();
             }
             catch (Exception Ex)
@@ -202,8 +242,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdModuloUsuarios = new SqlCommand("select * from modulos_usuarios WHERE id_modulo_usuario=@id_modulo_usuario", sqlConn);
-                cmdModuloUsuarios.Parameters.Add("@id_modulo_usuario", SqlDbType.Int).Value = id;
+                SqlCommand cmdModuloUsuarios = new SqlCommand("select * from modulos_usuarios WHERE id_usuario=@id_usuario", sqlConn);
+                cmdModuloUsuarios.Parameters.Add("@id_usuario", SqlDbType.Int).Value = id;
                 SqlDataReader drModuloUsuarios = cmdModuloUsuarios.ExecuteReader();
 
                 while (drModuloUsuarios.Read())

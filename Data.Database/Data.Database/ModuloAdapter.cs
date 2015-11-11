@@ -84,7 +84,6 @@ namespace Data.Database
             return m;
         }
 
-
         public void Delete(int ID)
         {
             try

@@ -35,7 +35,7 @@
         <asp:TextBox ID="apellidoTextBox" required="required" runat="server"></asp:TextBox>
         <br />  
         <asp:Label ID="direccionLabel" runat="server" Text="Direccion: "></asp:Label>
-        <asp:TextBox ID="direccionTextBox" Text="Password" runat="server"></asp:TextBox>
+        <asp:TextBox ID="direccionTextBox" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="emailLabel" runat="server" Text="Email: "></asp:Label>
         <asp:TextBox ID="emailTextBox" type="email" required="required" runat="server"></asp:TextBox>

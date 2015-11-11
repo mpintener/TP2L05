@@ -37,17 +37,6 @@ namespace UI.Desktop
         {
             try
             {
-                mnuAlumnosInscripciones.Visible =
-                mnuComisiones.Visible =
-                mnuCursos.Visible =
-                mnuDocenteCurso.Visible =
-                mnuEspecialidades.Visible =
-                mnuMaterias.Visible =
-                mnuModulos.Visible =
-                mnuPersonas.Visible =
-                mnuPlanes.Visible =
-                mnuUsuarios.Visible = false;
-
                 ModuloUsuarioLogic mul = new ModuloUsuarioLogic();
                 List<ModuloUsuario> modusu = new List<ModuloUsuario>();
                 modusu = mul.GetPermisos(UsuarioActual.ID);
@@ -74,37 +63,37 @@ namespace UI.Desktop
                     ModuloLogic ml = new ModuloLogic();
                     m = ml.GetOne(mu.IDModulo);                    
 
-                    if (m.Descripcion == "Usuarios")
+                    if (m.Descripcion.ToLower() == "usuarios")
                     {
                         if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
                             this.mnuUsuarios.Visible = true;
                     }
-                    else if (m.Descripcion == "Personas")
+                    else if (m.Descripcion == "personas")
                     {
                         if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
                             this.mnuPersonas.Visible = true;
                     }
-                    else if (m.Descripcion == "Planes")
+                    else if (m.Descripcion == "planes")
                     {
                         if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
                             this.mnuPlanes.Visible = true;
                     }
-                    else if (m.Descripcion == "Materias")
+                    else if (m.Descripcion == "materias")
                     {
                         if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
                             this.mnuMaterias.Visible = true;
                     }
-                    else if (m.Descripcion == "Especialidades")
+                    else if (m.Descripcion == "especialidades")
                     {
                         if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
                             this.mnuEspecialidades.Visible = true;
                     }
-                    else if (m.Descripcion == "Cursos")
+                    else if (m.Descripcion == "cursos")
                     {
                         if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
                             this.mnuCursos.Visible = true;
                     }
-                    else if (m.Descripcion == "Comisiones")
+                    else if (m.Descripcion == "comisiones")
                     {
                         if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
                             this.mnuComisiones.Visible = true;
@@ -136,7 +125,7 @@ namespace UI.Desktop
 
         private void mnuUsuarios_Click(object sender, EventArgs e)
         {
-            Usuarios u = new Usuarios();
+            Usuarios u = new Usuarios(this.UsuarioActual);
             u.ShowDialog();
         }
 
@@ -203,7 +192,7 @@ namespace UI.Desktop
 
         private void mnuUsuarios_Click_1(object sender, EventArgs e)
         {
-            Usuarios u = new Usuarios();
+            Usuarios u = new Usuarios(this.UsuarioActual);
             u.MdiParent = this;
             u.Show();
         }

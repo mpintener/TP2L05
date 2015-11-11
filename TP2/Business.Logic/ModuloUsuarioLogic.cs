@@ -38,6 +38,11 @@ namespace Business.Logic
             return ModuloUsuarioData.GetOne(ID);
         }
 
+        public ModuloUsuario GetOneByUsuario(string modulo, int usuario)
+        {
+            return ModuloUsuarioData.GetOneByUsuario(modulo, usuario);
+        }
+
         public void Delete( int ID)
         {
             ModuloUsuarioData.Delete(ID); 

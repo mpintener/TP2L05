@@ -18,19 +18,20 @@ namespace UI.Desktop
         public AlumnosInscripciones()
         {
             InitializeComponent();
+
         }
 
         public void Listar()
             {
-            AlumnoInscripcionLogic AIL = new AlumnoInscripcionLogic();
-            List<AlumnoInscripciones> l = AIL.GetAll();
+                AlumnoInscripcionLogic AIL = new AlumnoInscripcionLogic();
+                List<AlumnoInscripciones> l = AIL.GetAll();
+                this.dgvAlumnoInscripciones.DataSource = l;
             }
 
         private void AlumnoInscripciones_Load( object sender, EventArgs e )
             {
-            Listar();
+                Listar();
             }
-
 
         private void btnSalir_Click( object sender, EventArgs e )
             {    

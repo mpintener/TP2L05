@@ -14,9 +14,10 @@ namespace UI.Desktop
     {
     public partial class Usuarios : Form
         {
-        public Usuarios()
+        public Usuarios(Usuario usr)
             {
             InitializeComponent();
+            this._UsuarioActual = usr;
             }
 
         public void Listar()
@@ -27,9 +28,54 @@ namespace UI.Desktop
             this.dgvUsuarios.DataSource = l;
             }
 
+        private Usuario _UsuarioActual;
+
+        public Usuario UsuarioActual
+        {
+            get { return _UsuarioActual; }
+        }
+
         private void Usuarios_Load(object sender, EventArgs e)
         {
-            Listar();
+            permisos();
+        }
+
+        private void permisos()
+        {
+            bool alta = false;
+            bool baja = false;
+            bool modificacion = false;
+            bool consulta = false;
+            try
+            {
+                ModuloUsuarioLogic mul = new ModuloUsuarioLogic();
+                ModuloUsuario modusu = new ModuloUsuario();
+                modusu = mul.GetOneByUsuario("usuarios",this.UsuarioActual.ID);
+                alta = modusu.PermiteAlta;
+                baja = modusu.PermiteBaja;
+                modificacion = modusu.PermiteModificacion;
+                consulta = modusu.PermiteConsulta;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            if (alta)
+            {
+                this.tsbNuevo.Visible = true;
+            }
+            if (baja)
+            {
+                this.tsbEliminar.Visible = true;
+            }
+            if (modificacion)
+            {
+                this.tsbEditar.Visible = true;
+            }
+            if (consulta)
+            {
+                Listar();
+            }
         }
 
         private void btnSalir_Click( object sender, EventArgs e )

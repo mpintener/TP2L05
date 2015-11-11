@@ -43,11 +43,11 @@
             this.mnuPersonas = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPlanes = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegistrarAlumno = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsbsUsuarios = new System.Windows.Forms.ToolStripStatusLabel();
-            this.mnuRegistrarAlumno = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsPrincipal.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +111,7 @@
             this.mnuAlumnosInscripciones.Name = "mnuAlumnosInscripciones";
             this.mnuAlumnosInscripciones.Size = new System.Drawing.Size(209, 22);
             this.mnuAlumnosInscripciones.Text = "Alumno inscripciones";
+            this.mnuAlumnosInscripciones.Visible = false;
             this.mnuAlumnosInscripciones.Click += new System.EventHandler(this.mnuAlumnosInscripciones_Click);
             // 
             // mnuComisiones
@@ -118,6 +119,7 @@
             this.mnuComisiones.Name = "mnuComisiones";
             this.mnuComisiones.Size = new System.Drawing.Size(209, 22);
             this.mnuComisiones.Text = "Comisiones";
+            this.mnuComisiones.Visible = false;
             this.mnuComisiones.Click += new System.EventHandler(this.mnuComisiones_Click);
             // 
             // mnuCursos
@@ -125,6 +127,7 @@
             this.mnuCursos.Name = "mnuCursos";
             this.mnuCursos.Size = new System.Drawing.Size(209, 22);
             this.mnuCursos.Text = "Cursos";
+            this.mnuCursos.Visible = false;
             this.mnuCursos.Click += new System.EventHandler(this.mnuCursos_Click);
             // 
             // mnuDocenteCurso
@@ -132,6 +135,7 @@
             this.mnuDocenteCurso.Name = "mnuDocenteCurso";
             this.mnuDocenteCurso.Size = new System.Drawing.Size(209, 22);
             this.mnuDocenteCurso.Text = "Docente Curso";
+            this.mnuDocenteCurso.Visible = false;
             this.mnuDocenteCurso.Click += new System.EventHandler(this.docenteCursoToolStripMenuItem_Click);
             // 
             // mnuEspecialidades
@@ -139,6 +143,7 @@
             this.mnuEspecialidades.Name = "mnuEspecialidades";
             this.mnuEspecialidades.Size = new System.Drawing.Size(209, 22);
             this.mnuEspecialidades.Text = "Especialidades";
+            this.mnuEspecialidades.Visible = false;
             this.mnuEspecialidades.Click += new System.EventHandler(this.mnuEspecialidades_Click);
             // 
             // mnuMaterias
@@ -146,6 +151,7 @@
             this.mnuMaterias.Name = "mnuMaterias";
             this.mnuMaterias.Size = new System.Drawing.Size(209, 22);
             this.mnuMaterias.Text = "Materias";
+            this.mnuMaterias.Visible = false;
             this.mnuMaterias.Click += new System.EventHandler(this.mnuMaterias_Click);
             // 
             // mnuModulos
@@ -153,6 +159,7 @@
             this.mnuModulos.Name = "mnuModulos";
             this.mnuModulos.Size = new System.Drawing.Size(209, 22);
             this.mnuModulos.Text = "Modulos";
+            this.mnuModulos.Visible = false;
             this.mnuModulos.Click += new System.EventHandler(this.mnuModulos_Click);
             // 
             // mnuPersonas
@@ -160,6 +167,7 @@
             this.mnuPersonas.Name = "mnuPersonas";
             this.mnuPersonas.Size = new System.Drawing.Size(209, 22);
             this.mnuPersonas.Text = "Personas";
+            this.mnuPersonas.Visible = false;
             this.mnuPersonas.Click += new System.EventHandler(this.mnuPersonas_Click);
             // 
             // mnuPlanes
@@ -167,6 +175,7 @@
             this.mnuPlanes.Name = "mnuPlanes";
             this.mnuPlanes.Size = new System.Drawing.Size(209, 22);
             this.mnuPlanes.Text = "Planes";
+            this.mnuPlanes.Visible = false;
             this.mnuPlanes.Click += new System.EventHandler(this.mnuPlanes_Click);
             // 
             // mnuUsuarios
@@ -174,7 +183,16 @@
             this.mnuUsuarios.Name = "mnuUsuarios";
             this.mnuUsuarios.Size = new System.Drawing.Size(209, 22);
             this.mnuUsuarios.Text = "Usuarios";
+            this.mnuUsuarios.Visible = false;
             this.mnuUsuarios.Click += new System.EventHandler(this.mnuUsuarios_Click);
+            // 
+            // mnuRegistrarAlumno
+            // 
+            this.mnuRegistrarAlumno.Name = "mnuRegistrarAlumno";
+            this.mnuRegistrarAlumno.Size = new System.Drawing.Size(209, 22);
+            this.mnuRegistrarAlumno.Text = "Registrar Alumno a Curso";
+            this.mnuRegistrarAlumno.Visible = false;
+            this.mnuRegistrarAlumno.Click += new System.EventHandler(this.mnuRegistrarAlumno_Click);
             // 
             // mnuAyuda
             // 
@@ -204,13 +222,6 @@
             this.tsbsUsuarios.Name = "tsbsUsuarios";
             this.tsbsUsuarios.Size = new System.Drawing.Size(0, 17);
             // 
-            // mnuRegistrarAlumno
-            // 
-            this.mnuRegistrarAlumno.Name = "mnuRegistrarAlumno";
-            this.mnuRegistrarAlumno.Size = new System.Drawing.Size(209, 22);
-            this.mnuRegistrarAlumno.Text = "Registrar Alumno a Curso";
-            this.mnuRegistrarAlumno.Click += new System.EventHandler(this.mnuRegistrarAlumno_Click);
-            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +234,7 @@
             this.Name = "formMain";
             this.Text = "Academia";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.formMain_Load);
             this.mnsPrincipal.ResumeLayout(false);
             this.mnsPrincipal.PerformLayout();
             this.statusStrip.ResumeLayout(false);

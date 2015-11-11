@@ -230,3 +230,4 @@ C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Debug\UI.Desktop.Usu
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Debug\UI.Desktop.Usuarios.resources
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Debug\UI.Desktop.Properties.Resources.resources
 C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Makigom\Documents\GitHub\TP2L05\TP2\UI.Desktop\obj\Debug\UI.Desktop.RegistrarAlumnoDesktop.resources

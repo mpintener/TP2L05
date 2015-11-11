@@ -36,6 +36,10 @@ namespace Business.Logic
         return AIData.GetOne(ID);
         }
 
+        public void InsertRegistroAlumno(AlumnoInscripciones alumnoInscripciones)
+        {
+            AIData.InsertRegistroAlumno(alumnoInscripciones);
+        }
 
         public void Delete( int ID)
         {

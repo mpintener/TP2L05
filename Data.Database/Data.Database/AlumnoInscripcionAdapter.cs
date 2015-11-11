@@ -166,7 +166,6 @@ namespace Data.Database
             }
         }
 
-
         protected void Insert(AlumnoInscripciones alumnoInscripciones)
         {
             try
@@ -196,6 +195,34 @@ namespace Data.Database
             }
         }
 
+        public void InsertRegistroAlumno(AlumnoInscripciones alumnoInscripciones)
+        {
+            try
+            {
+                this.OpenConnection();
+
+                SqlCommand cmdSave = new SqlCommand(
+                    "insert into alumnos_inscripciones (id_alumno, id_curso, condicion, nota) " +
+                    "values (@id_alumno, @id_curso, @condicion, @nota) " +
+                    "select @@identity", sqlConn);
+
+                cmdSave.Parameters.Add("@id_alumno", SqlDbType.Int).Value = alumnoInscripciones.IDAlumno;
+                cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = alumnoInscripciones.IDCurso;
+                cmdSave.Parameters.Add("@condicion", SqlDbType.VarChar, 50).Value = "Inscripto";
+                cmdSave.Parameters.Add("@nota", SqlDbType.Int).Value = null;
+                alumnoInscripciones.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
+            }
+
+            catch (Exception Ex)
+            {
+                Console.WriteLine(Ex.Message);
+            }
+
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
 
         public void Save(AlumnoInscripciones alumnoInscripcion)
         {

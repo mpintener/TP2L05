@@ -49,14 +49,15 @@ namespace UI.Desktop
                 mnuUsuarios.Visible = false;
 
                 ModuloUsuarioLogic mul = new ModuloUsuarioLogic();
-                UsuarioActual.ModulosUsuarios = mul.GetPermisos(UsuarioActual.ID);
+                List<ModuloUsuario> modusu = new List<ModuloUsuario>();
+                modusu = mul.GetPermisos(UsuarioActual.ID);
                 Persona perUsu = new Persona();
                 PersonasLogic ul = new PersonasLogic();
                 perUsu = ul.GetOne(UsuarioActual.IDPersona);
 
                 if (perUsu.TiposPersona == "Alumno")
                 {
-                    this.mnuAlumnosInscripciones.Visible = true; //inscripcion a cursos, no deberia dejarle tocar ni su nota ni su condicion
+                    this.mnuRegistrarAlumno.Visible = true; 
                 }
                 else if (perUsu.TiposPersona == "Docente")
                 {
@@ -67,7 +68,7 @@ namespace UI.Desktop
                     //this.mnuReportes.Visible = true;
                 }
 
-                foreach (ModuloUsuario mu in UsuarioActual.ModulosUsuarios)
+                foreach (ModuloUsuario mu in modusu)
                 {
                     Modulo m = new Modulo();
                     ModuloLogic ml = new ModuloLogic();
@@ -231,6 +232,14 @@ namespace UI.Desktop
             {
                 this.Close();
             }
+        }
+
+        private void mnuRegistrarAlumno_Click(object sender, EventArgs e)
+        {
+            RegistrarAlumnoDesktop rad = new RegistrarAlumnoDesktop();
+            rad.MdiParent = this;
+            rad.Show();
+
         }
 
 

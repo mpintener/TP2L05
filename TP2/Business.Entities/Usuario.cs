@@ -12,15 +12,7 @@ namespace Business.Entities
         private string _Clave;
         private bool _Habilitado;
         private int _IDPersona;
-        private List<ModuloUsuario> _ModulosUsuarios;
-
-
-        public List<ModuloUsuario> ModulosUsuarios
-        {
-            get { return this._ModulosUsuarios; }
-            set { this._ModulosUsuarios = value; }
-        }
-
+      
         public int IDPersona
         {
             get { return _IDPersona; }

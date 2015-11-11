@@ -25,17 +25,23 @@
     <asp:Panel ID="formPanel" Visible="false" HorizontalAlign="Center" runat="server" Height="159px">
       
        <asp:Label ID="idAlumnoLabel" runat="server" Text="ID Alumno: "></asp:Label>
-        <asp:TextBox ID="idAlumnoTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="idAlumnoTextBox" required="required" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="idCursoLabel" runat="server" Text="ID Curso: "></asp:Label>
-        <asp:TextBox ID="idCursoTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="idCursoTextBox" required="required" runat="server"></asp:TextBox>
         <br />
         
         <asp:Label ID="notaLabel" runat="server" Text="Nota: "></asp:Label>
         <asp:TextBox ID="notaTextBox" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="condicionLabel" runat="server" Text="Condicion: "></asp:Label>
-        <asp:TextBox ID="condicionTextBox" Text="Password" runat="server"></asp:TextBox>   
+        <!-- <asp:TextBox ID="condicionTextBox" required="required" Text="Password" runat="server"></asp:TextBox> --> 
+        <asp:DropDownList ID="condicionddl" required="required" runat="server" >
+            <asp:ListItem Text="Inscripto" Value="Inscripto"></asp:ListItem>
+            <asp:ListItem Text="No inscripto" Value="No inscripto"></asp:ListItem>
+            <asp:ListItem Text="Regular" Value="Regular"></asp:ListItem>
+            <asp:ListItem Text="Aprobado" Value="Aprobado"></asp:ListItem>
+        </asp:DropDownList>   
         <br />
     </asp:Panel>
     <asp:Panel ID="gridAdictionsPanel" runat="server">

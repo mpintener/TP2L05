@@ -77,9 +77,9 @@ namespace UI.Web
             this.nombreTextBox.Text = this.Entity.Nombre.ToString();
             this.apellidoTextBox.Text = this.Entity.Apellido.ToString();
             this.direccionTextBox.Text = this.Entity.Direccion.ToString();
-            this.fechaNacTextBox.Text = this.Entity.FechaNacimiento.ToString();
+            this.fechaNacTextBox.Text = this.Entity.FechaNacimiento.ToString(); // no mete bien la fecha
             this.emailTextBox.Text = this.Entity.Email.ToString();
-            this.tipoPersonaTextBox.Text = this.Entity.TiposPersona.ToString();
+            this.tipoPersonaddl.DataValueField = this.Entity.TiposPersona.ToString();
             this.legajoTextBox.Text = this.Entity.Legajo.ToString();
             this.telefonoTextBox.Text = this.Entity.Telefono.ToString();
             this.idPlanddl.Text = this.Entity.IDPlan.ToString();
@@ -99,7 +99,7 @@ namespace UI.Web
             per.Email = this.emailTextBox.Text;
             per.Telefono = this.telefonoTextBox.Text;
             per.Legajo = Convert.ToInt32(this.legajoTextBox.Text);
-            per.TiposPersona = Convert.ToInt32(this.tipoPersonaTextBox.Text);
+            per.TiposPersona = this.tipoPersonaddl.Text;
             per.IDPlan = Convert.ToInt32(this.idPlanddl.Text);
         }
 
@@ -144,7 +144,7 @@ namespace UI.Web
             this.direccionTextBox.Enabled = enable;
             this.fechaNacTextBox.Enabled = enable;
             this.emailTextBox.Enabled = enable;
-            this.tipoPersonaTextBox.Enabled = enable;
+            this.tipoPersonaddl.Enabled = enable;
             this.legajoTextBox.Enabled = enable;
             this.telefonoTextBox.Enabled = enable;
             this.idPlanddl.Enabled = enable;
@@ -165,7 +165,6 @@ namespace UI.Web
             this.direccionTextBox.Text = string.Empty;
             this.fechaNacTextBox.Text = string.Empty;
             this.emailTextBox.Text = string.Empty;
-            this.tipoPersonaTextBox.Text = string.Empty;
             this.legajoTextBox.Text = string.Empty;
             this.telefonoTextBox.Text = string.Empty;
         }

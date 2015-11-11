@@ -24,13 +24,13 @@
     </asp:Panel>
     <asp:Panel ID="formPanel" Visible="false" HorizontalAlign="Center" runat="server" Height="159px">
         <asp:Label ID="anioCalendarioLabel" runat="server" Text="Anio Calendario: "></asp:Label>
-        <asp:TextBox ID="anioCalendarioTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="anioCalendarioTextBox" type="number" required="required" runat="server"></asp:TextBox>
         <br />
         <!--!
         <asp:TextBox ID="idComisionTextBox" runat="server"></asp:TextBox>
         <br />   -->
         <asp:Label ID="cupoLabel" runat="server" Text="Cupo: "></asp:Label>
-        <asp:TextBox ID="cupoTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="cupoTextBox" type="number" required="required" min="5" max="30" runat="server"></asp:TextBox>
         <br />  
         <asp:Label ID="idComisionLabel" runat="server" Text="Comision: "></asp:Label> 
         <asp:DropDownList ID="idComisionddl" runat="server" DataTextField="Descripcion" DataValueField="ID">

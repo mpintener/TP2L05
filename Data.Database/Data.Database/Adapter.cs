@@ -11,7 +11,7 @@ namespace Data.Database
     {
         //Clave por defecto a utilizar en la cadena de conexión
 
-        const string consKeyDefaultCnnString = "ConnStringLocal";
+        const string consKeyDefaultCnnString = "ConexionMaki";
 
         private SqlConnection _sqlConn;
 

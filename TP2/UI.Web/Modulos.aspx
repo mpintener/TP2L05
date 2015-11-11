@@ -22,10 +22,10 @@
     </asp:Panel>
     <asp:Panel ID="formPanel" Visible="false" HorizontalAlign="Center" runat="server" Height="159px">
         <asp:Label ID="descripcionLabel" runat="server" Text="Descripcion: "></asp:Label>
-        <asp:TextBox ID="descripcionTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="descripcionTextBox" required="required" runat="server"></asp:TextBox>
         <br />   
         <asp:Label ID="ejecutaLabel" runat="server" Text="Ejecuta: "></asp:Label>
-        <asp:TextBox ID="ejecutaTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="ejecutaTextBox" required="required" runat="server"></asp:TextBox>
         <br /> 
     </asp:Panel>
    <asp:Panel ID="gridAdictionsPanel" runat="server">

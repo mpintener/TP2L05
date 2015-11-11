@@ -24,13 +24,13 @@
     </asp:Panel>
     <asp:Panel ID="formPanel" Visible="false" HorizontalAlign="Center" runat="server" Height="159px">
         <asp:Label ID="descripcionLabel" runat="server" Text="Descripcion: "></asp:Label>
-        <asp:TextBox ID="descripcionTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="descripcionTextBox" required="required" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="hsSemanalesLabel" runat="server" Text="Horas Semanales: "></asp:Label>
-        <asp:TextBox ID="hsSemanalesTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="hsSemanalesTextBox" type="number" required="required" min="1" max="8" runat="server"></asp:TextBox>
         <br />    
          <asp:Label ID="hsTotalesLabel" runat="server" Text="Horas Totales: "></asp:Label>
-        <asp:TextBox ID="hsTotalesTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="hsTotalesTextBox" type="number" required="required" min="10" max="100" runat="server"></asp:TextBox>
         <br /> 
         <asp:Label ID="idPlanLabel" runat="server" Text="Plan: "></asp:Label> 
         <asp:DropDownList ID="idPlanddl" runat="server" DataTextField="Descripcion" DataValueField="ID">

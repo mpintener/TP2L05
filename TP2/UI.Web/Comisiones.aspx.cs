@@ -30,6 +30,9 @@ namespace UI.Web
         {
             this.GridView1.DataSource = this.Logic.GetAll();
             this.GridView1.DataBind();
+            PlanLogic pl = new PlanLogic();
+            this.descPlanddl.DataSource = pl.GetAll();
+            this.descPlanddl.DataBind();
         }
         protected int SelectedID
         {
@@ -71,7 +74,7 @@ namespace UI.Web
         private void LoadForm(int id)
         {
             this.Entity = this.Logic.GetOne(id);
-            this.idPlanTextbox.Text = this.Entity.IDPlan.ToString();
+            this.descPlanddl.Text = this.Entity.IDPlan.ToString();
             this.anioEspecialidadTextBox.Text = this.Entity.AnioEspecialidad.ToString();
             this.descripcionTextBox.Text = this.Entity.Descripcion.ToString();
         }
@@ -86,7 +89,7 @@ namespace UI.Web
 
             com.AnioEspecialidad = Convert.ToInt32(this.anioEspecialidadTextBox.Text);
             com.Descripcion = this.descripcionTextBox.Text;
-            com.IDPlan = Convert.ToInt32(this.idPlanTextbox.Text);
+            com.IDPlan = Convert.ToInt32(this.descPlanddl.Text);
 
         }
 
@@ -126,7 +129,7 @@ namespace UI.Web
 
         private void EnableForm(bool enable)
         {
-            this.idPlanTextbox.Enabled = enable;
+            this.descPlanddl.Enabled = enable;
             this.descripcionTextBox.Enabled = enable;
             this.anioEspecialidadTextBox.Enabled = enable;
         }
@@ -143,7 +146,6 @@ namespace UI.Web
         {
             this.anioEspecialidadTextBox.Text = string.Empty;
             this.descripcionTextBox.Text = string.Empty;
-            this.idPlanTextbox.Text = string.Empty;
             
         }
 

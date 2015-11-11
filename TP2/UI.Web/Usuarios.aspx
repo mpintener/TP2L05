@@ -25,26 +25,20 @@
         <asp:Label ID="idPersonaLabel" runat="server" Text="ID Persona: "></asp:Label>
         <asp:TextBox ID="idPersonaTextBox" runat="server"></asp:TextBox>
         <br />
-       
-       <!-- <asp:Label ID="idUsuarioLabel" runat="server" Text="ID Usuario: "></asp:Label>
-        <asp:TextBox ID="idUsuarioTextBox" runat="server"></asp:TextBox>
-        <br />-->
         <asp:Label ID="usuarioLabel" runat="server" Text="Usuario: "></asp:Label>
-        <asp:TextBox ID="usuarioTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="usuarioTextBox" required="required" runat="server"></asp:TextBox>
         <br />
         
         <asp:Label ID="habilitadoLabel" runat="server" Text="Habilitado: "></asp:Label>
-        <asp:CheckBox ID="habilitadoCheckBox" runat="server" />
+        <asp:CheckBox ID="habilitadoCheckBox" required="required" runat="server" />
         <br />
         <asp:Label ID="claveLabel" runat="server" Text="Clave: "></asp:Label>
-        <asp:TextBox ID="claveTextBox" TextMode="Password" runat="server"></asp:TextBox>
+        <asp:TextBox ID="claveTextBox" required="required" type="password" TextMode="Password" runat="server"></asp:TextBox>
         <br />
-        
         <asp:Label ID="repetirClaveLabel" runat="server" Text="Repetir Clave: ">
         </asp:Label>
-        <asp:TextBox ID="repetirClaveTextBox" TextMode="Password" runat="server">
+        <asp:TextBox ID="repetirClaveTextBox" type="password" TextMode="Password" runat="server">
         </asp:TextBox>
-       
         <br />
     </asp:Panel>
     <asp:Panel ID="gridAdictionsPanel" runat="server">

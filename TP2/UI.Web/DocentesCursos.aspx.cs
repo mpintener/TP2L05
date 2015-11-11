@@ -30,6 +30,12 @@ namespace UI.Web
         {
             this.GridView1.DataSource = this.Logic.GetAll();
             this.GridView1.DataBind();
+            PersonasLogic pl = new PersonasLogic();
+            this.idDocenteddl.DataSource = pl.GetDocentes();
+            this.idDocenteddl.DataBind();
+            CursoLogic cl = new CursoLogic();
+            this.idCursoddl.DataSource = cl.GetAll();
+            this.idCursoddl.DataBind();
         }
         protected int SelectedID
         {
@@ -71,9 +77,9 @@ namespace UI.Web
         private void LoadForm(int id)
         {
             this.Entity = this.Logic.GetOne(id);
-            this.idDocenteTextBox.Text = this.Entity.IDDocente.ToString();
-            this.idCursoTextBox.Text = this.Entity.IDCurso.ToString();
-            this.tipoCargoTextBox.Text = this.Entity.TipoCargo.ToString();
+            this.idDocenteddl.Text = this.Entity.IDDocente.ToString();
+            this.idCursoddl.Text = this.Entity.IDCurso.ToString();
+            this.tipoCargoddl.Text = this.Entity.TipoCargo.ToString();
         }
 
         protected void editarLinkButton_Click(object sender, EventArgs e)
@@ -83,9 +89,9 @@ namespace UI.Web
 
         private void LoadEntity(DocenteCurso dc)
         {
-            dc.IDDocente = Convert.ToInt32(this.idDocenteTextBox.Text);
-            dc.IDCurso = Convert.ToInt32(this.idCursoTextBox.Text);
-            dc.TipoCargo = Convert.ToInt32(this.tipoCargoTextBox.Text);
+            dc.IDDocente = Convert.ToInt32(this.idDocenteddl.Text);
+            dc.IDCurso = Convert.ToInt32(this.idCursoddl.Text);
+            dc.TipoCargo = this.tipoCargoddl.Text;
         }
 
         private void SaveEntity(DocenteCurso dc)
@@ -124,9 +130,9 @@ namespace UI.Web
 
         private void EnableForm(bool enable)
         {
-            this.idCursoTextBox.Enabled = enable;
-            this.idDocenteTextBox.Enabled = enable;
-            this.tipoCargoTextBox.Enabled = enable;
+            this.idCursoddl.Enabled = enable;
+            this.idDocenteddl.Enabled = enable;
+            this.tipoCargoddl.Enabled = enable;
         }
 
         protected void btnNuevo_Click(object sender, EventArgs e)
@@ -139,9 +145,6 @@ namespace UI.Web
 
         private void ClearForm()
         {
-            this.idCursoTextBox.Text = string.Empty;
-            this.idDocenteTextBox.Text = string.Empty;
-            this.tipoCargoTextBox.Text = string.Empty;
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)

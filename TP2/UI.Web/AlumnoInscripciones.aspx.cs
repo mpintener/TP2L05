@@ -74,7 +74,7 @@ namespace UI.Web
             this.idAlumnoTextBox.Text = this.Entity.IDAlumno.ToString();
             this.idCursoTextBox.Text = this.Entity.IDCurso.ToString();
             this.notaTextBox.Text = this.Entity.Nota.ToString();
-            this.condicionTextBox.Text = this.Entity.Condicion;
+            this.condicionddl.Text = this.Entity.Condicion;
         }
 
         protected void editarLinkButton_Click(object sender, EventArgs e)
@@ -87,8 +87,8 @@ namespace UI.Web
 
             aluIns.IDAlumno = Convert.ToInt32(this.idAlumnoTextBox.Text);
             aluIns.IDCurso = Convert.ToInt32(this.idCursoTextBox.Text);
-            aluIns.Nota = Convert.ToInt32(this.notaTextBox.Text);
-            aluIns.Condicion = this.condicionTextBox.Text;
+            if (!string.IsNullOrEmpty(notaTextBox.Text)) aluIns.Nota = Convert.ToInt32(this.notaTextBox.Text);
+            aluIns.Condicion = this.condicionddl.Text;
            
         }
 
@@ -131,7 +131,7 @@ namespace UI.Web
             this.idAlumnoTextBox.Enabled = enable;
             this.idCursoTextBox.Enabled = enable;
             this.notaTextBox.Enabled = enable;
-            this.condicionTextBox.Visible = enable;
+            this.condicionddl.Visible = enable;
         }
 
         protected void btnNuevo_Click(object sender, EventArgs e)
@@ -147,7 +147,7 @@ namespace UI.Web
             this.idAlumnoTextBox.Text = string.Empty;
             this.idCursoTextBox.Text = string.Empty;
             this.notaTextBox.Text = string.Empty;
-            this.condicionTextBox.Text = string.Empty;
+            //this.condicionTextBox.Text = string.Empty;
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)

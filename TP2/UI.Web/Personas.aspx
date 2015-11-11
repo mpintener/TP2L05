@@ -29,28 +29,32 @@
     </asp:Panel>
     <asp:Panel ID="formPanel" Visible="false" HorizontalAlign="Center" runat="server" Height="159px">
         <asp:Label ID="nombreLabel" runat="server" Text="Nombre: "></asp:Label>
-        <asp:TextBox ID="nombreTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="nombreTextBox" required="required" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="apellidoLabel" runat="server" Text="Apellido: "></asp:Label>
-        <asp:TextBox ID="apellidoTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="apellidoTextBox" required="required" runat="server"></asp:TextBox>
         <br />  
         <asp:Label ID="direccionLabel" runat="server" Text="Direccion: "></asp:Label>
         <asp:TextBox ID="direccionTextBox" Text="Password" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="emailLabel" runat="server" Text="Email: "></asp:Label>
-        <asp:TextBox ID="emailTextBox" TextMode="Email" runat="server"></asp:TextBox>
+        <asp:TextBox ID="emailTextBox" type="email" required="required" runat="server"></asp:TextBox>
         <br />       
         <asp:Label ID="telefonoLabel" runat="server" Text="Telefono: "> </asp:Label>
-        <asp:TextBox ID="telefonoTextBox" runat="server">  </asp:TextBox>      
+        <asp:TextBox ID="telefonoTextBox" type="tel" runat="server">  </asp:TextBox>      
         <br />
         <asp:Label ID="fechaNacLabel" runat="server" Text="Fecha de Nacimiento: "></asp:Label>
-        <asp:TextBox ID="fechaNacTextBox" runat="server">  </asp:TextBox>
+        <asp:TextBox ID="fechaNacTextBox" type="date" required="required" runat="server">  </asp:TextBox>
         <br />
         <asp:Label ID="legajoLabel" runat="server" Text="Legajo: "></asp:Label>
-        <asp:TextBox ID="legajoTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="legajoTextBox" required="required" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="tipoPersonaLabel" runat="server" Text="Tipo Persona: "></asp:Label>
-        <asp:TextBox ID="tipoPersonaTextBox" runat="server">  </asp:TextBox>
+        <asp:DropDownList ID="tipoPersonaddl" required="required" runat="server" >
+            <asp:ListItem Text="No docente" Value="No docente"></asp:ListItem>
+            <asp:ListItem Text="Docente" Value="Docente"></asp:ListItem>
+            <asp:ListItem Text="Alumno" Value="Alumno"></asp:ListItem>
+        </asp:DropDownList> 
         <br />
         <asp:Label ID="idPlanLabel" runat="server" Text="ID Plan: "></asp:Label>
         <asp:DropDownList ID="idPlanddl" runat="server" DataValueField="ID" DataTextField="Descripcion"></asp:DropDownList>

@@ -131,7 +131,7 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE modulos_usuarios SET id_modulo=@id_modulo, id_usuario=@id_usuario, alta=@alta, baja=@baja" +
+                    "UPDATE modulos_usuarios SET id_modulo=@id_modulo, id_usuario=@id_usuario, alta=@alta, baja=@baja," +
                     "consulta=@consulta, modificacion=@modificacion " +
                     "WHERE id_modulo_usuario=@id_modulo_usuario", sqlConn);
 
@@ -192,6 +192,48 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
+        }
+
+        public List<ModuloUsuario> GetPermisos(int id)
+        {
+            List<ModuloUsuario> modulosUsuarios = new List<ModuloUsuario>();
+
+            try
+            {
+                this.OpenConnection();
+
+                SqlCommand cmdModuloUsuarios = new SqlCommand("select * from modulos_usuarios WHERE id_modulo_usuario=@id_modulo_usuario", sqlConn);
+                cmdModuloUsuarios.Parameters.Add("@id_modulo_usuario", SqlDbType.Int).Value = id;
+                SqlDataReader drModuloUsuarios = cmdModuloUsuarios.ExecuteReader();
+
+                while (drModuloUsuarios.Read())
+                {
+                    ModuloUsuario mu = new ModuloUsuario();
+
+                    mu.ID = (int)drModuloUsuarios["id_modulo_usuario"];
+                    mu.IDModulo = (int)drModuloUsuarios["id_modulo"];
+                    mu.IDUsuario = (int)drModuloUsuarios["id_usuario"];
+                    mu.PermiteAlta = (bool)drModuloUsuarios["alta"];
+                    mu.PermiteBaja = (bool)drModuloUsuarios["baja"];
+                    mu.PermiteConsulta = (bool)drModuloUsuarios["consulta"];
+                    mu.PermiteModificacion = (bool)drModuloUsuarios["modificacion"];
+
+                    modulosUsuarios.Add(mu);
+                }
+                drModuloUsuarios.Close();
+
+            }
+
+            catch (Exception Ex)
+            {
+                Console.Write(Ex.Message);
+            }
+
+            finally
+            {
+                this.CloseConnection();
+            }
+            return modulosUsuarios;
         }
 
         public void Save(ModuloUsuario moduloUsuario)

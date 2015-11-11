@@ -58,24 +58,6 @@ namespace UI.Web {
         protected global::System.Web.UI.WebControls.TextBox idPersonaTextBox;
         
         /// <summary>
-        /// Control idUsuarioLabel.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idUsuarioLabel;
-        
-        /// <summary>
-        /// Control idUsuarioTextBox.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idUsuarioTextBox;
-        
-        /// <summary>
         /// Control usuarioLabel.
         /// </summary>
         /// <remarks>

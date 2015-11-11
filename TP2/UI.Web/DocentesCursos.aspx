@@ -23,13 +23,19 @@
     </asp:Panel>
     <asp:Panel ID="formPanel" Visible="false" HorizontalAlign="Center" runat="server" Height="159px">
         <asp:Label ID="idDocenteLabel" runat="server" Text="ID Docente: "></asp:Label>
-        <asp:TextBox ID="idDocenteTextBox" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="idDocenteddl" runat="server" DataValueField="ID" DataTextField="Apellido" >      
+        </asp:DropDownList>
         <br />
         <asp:Label ID="idCursoLabel" runat="server" Text="ID Curso: "></asp:Label>
-        <asp:TextBox ID="idCursoTextBox" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="idCursoddl" runat="server" DataValueField="ID" DataTextField="ID">      
+        </asp:DropDownList>
         <br />  
-         <asp:Label ID="tipoCargoLabel" runat="server" Text="Tipo Cargo: "></asp:Label>
-        <asp:TextBox ID="tipoCargoTextBox" runat="server"></asp:TextBox>
+        <asp:Label ID="tipoCargoLabel" runat="server" Text="Tipo Cargo: "></asp:Label>
+        <asp:DropDownList ID="tipoCargoddl" runat="server" >
+            <asp:ListItem Text="Titular" Value="Titular"></asp:ListItem>
+            <asp:ListItem Text="Auxiliar" Value="Auxiliar"></asp:ListItem>
+            <asp:ListItem Text="Ayudante" Value="Ayudante"></asp:ListItem>
+        </asp:DropDownList>
         <br />
         <!--!
         <asp:TextBox ID="idComisionTextBox" runat="server"></asp:TextBox>

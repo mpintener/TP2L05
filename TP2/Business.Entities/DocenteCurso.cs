@@ -8,14 +8,14 @@ namespace Business.Entities
     {
     public class DocenteCurso : BusinessEntity
         {
-        private int _TipoCargo;
+        private string _TipoCargo;
 
         private int _IDCurso;
         
         private int _IDDocente;
 
 
-        public int TipoCargo
+        public string TipoCargo
         {
             get
             {

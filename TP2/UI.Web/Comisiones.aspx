@@ -23,13 +23,14 @@
     </asp:Panel>
     <asp:Panel ID="formPanel" Visible="false" HorizontalAlign="Center" runat="server" Height="159px">
         <asp:Label ID="anioEspecialidadLabel" runat="server" Text="Anio Especialidad: "></asp:Label>
-        <asp:TextBox ID="anioEspecialidadTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="anioEspecialidadTextBox" type="number" required="required" runat="server"></asp:TextBox>
         <br />
         <asp:Label ID="descripcionLabel" runat="server" Text="Descripcion: "></asp:Label>
-        <asp:TextBox ID="descripcionTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="descripcionTextBox" type="number" required="required" runat="server"></asp:TextBox>
         <br />    
-        <asp:Label ID="idPlanLabel" runat="server" Text="Id Plan: "></asp:Label>
-        <asp:TextBox ID="idPlanTextbox" runat="server" ></asp:TextBox>
+        <asp:Label ID="descPlanLabel" runat="server" Text="Plan: "></asp:Label>
+        <asp:DropDownList ID="descPlanddl" runat="server" DataValueField="ID" DataTextField="Descripcion">
+        </asp:DropDownList>
         <br />
 
     </asp:Panel>

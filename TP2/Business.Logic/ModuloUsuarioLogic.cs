@@ -28,6 +28,11 @@ namespace Business.Logic
             return ModuloUsuarioData.GetAll();
         }
 
+        public List<ModuloUsuario> GetPermisos(int id)
+        {
+            return ModuloUsuarioData.GetPermisos(id);
+        }
+
         public ModuloUsuario GetOne(int ID)    
         {
             return ModuloUsuarioData.GetOne(ID);

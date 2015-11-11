@@ -7,14 +7,115 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business.Entities;
+using Business.Logic;
 
 namespace UI.Desktop
 {
     public partial class formMain : Form
     {
-        public formMain()
+        public formMain(Usuario usr)
         {
             InitializeComponent();
+            this._UsuarioActual = usr;
+        }
+
+        private Usuario _UsuarioActual;
+
+        public Usuario UsuarioActual
+        {
+            get { return _UsuarioActual; }
+        }
+
+        private void formMain_Load(object sender,EventArgs e)
+        {
+            this.tsbsUsuarios.Text = this.UsuarioActual.NombreUsuario;
+            this.permisos();
+        }
+
+        private void permisos()
+        {
+            try
+            {
+                mnuAlumnosInscripciones.Visible =
+                mnuComisiones.Visible =
+                mnuCursos.Visible =
+                mnuDocenteCurso.Visible =
+                mnuEspecialidades.Visible =
+                mnuMaterias.Visible =
+                mnuModulos.Visible =
+                mnuPersonas.Visible =
+                mnuPlanes.Visible =
+                mnuUsuarios.Visible = false;
+
+                ModuloUsuarioLogic mul = new ModuloUsuarioLogic();
+                UsuarioActual.ModulosUsuarios = mul.GetPermisos(UsuarioActual.ID);
+                Persona perUsu = new Persona();
+                PersonasLogic ul = new PersonasLogic();
+                perUsu = ul.GetOne(UsuarioActual.IDPersona);
+
+                if (perUsu.TiposPersona == "Alumno")
+                {
+                    this.mnuAlumnosInscripciones.Visible = true; //inscripcion a cursos, no deberia dejarle tocar ni su nota ni su condicion
+                }
+                else if (perUsu.TiposPersona == "Docente")
+                {
+                    this.mnuAlumnosInscripciones.Visible = true;
+                }
+                else if (perUsu.TiposPersona == "No docente")
+                {
+                    //this.mnuReportes.Visible = true;
+                }
+
+                foreach (ModuloUsuario mu in UsuarioActual.ModulosUsuarios)
+                {
+                    Modulo m = new Modulo();
+                    ModuloLogic ml = new ModuloLogic();
+                    m = ml.GetOne(mu.IDModulo);                    
+
+                    if (m.Descripcion == "Usuarios")
+                    {
+                        if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
+                            this.mnuUsuarios.Visible = true;
+                    }
+                    else if (m.Descripcion == "Personas")
+                    {
+                        if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
+                            this.mnuPersonas.Visible = true;
+                    }
+                    else if (m.Descripcion == "Planes")
+                    {
+                        if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
+                            this.mnuPlanes.Visible = true;
+                    }
+                    else if (m.Descripcion == "Materias")
+                    {
+                        if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
+                            this.mnuMaterias.Visible = true;
+                    }
+                    else if (m.Descripcion == "Especialidades")
+                    {
+                        if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
+                            this.mnuEspecialidades.Visible = true;
+                    }
+                    else if (m.Descripcion == "Cursos")
+                    {
+                        if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
+                            this.mnuCursos.Visible = true;
+                    }
+                    else if (m.Descripcion == "Comisiones")
+                    {
+                        if (mu.PermiteAlta || mu.PermiteBaja || mu.PermiteConsulta || mu.PermiteModificacion)
+                            this.mnuComisiones.Visible = true;
+                    }
+                }
+
+            } 
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+           
         }
 
         private void mnuSalir_Click(object sender, EventArgs e)
@@ -22,7 +123,7 @@ namespace UI.Desktop
             this.Dispose();
         }
 
-        private void formMain_Shown(object sender, EventArgs e)
+       /* private void formMain_Shown(object sender, EventArgs e)
         {
             Login appLogin = new Login();
             if (appLogin.ShowDialog() != DialogResult.OK)
@@ -30,30 +131,33 @@ namespace UI.Desktop
                 this.Dispose();
             }
 
-        }
+        }*/
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuUsuarios_Click(object sender, EventArgs e)
         {
             Usuarios u = new Usuarios();
             u.ShowDialog();
         }
 
-        private void comisionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuComisiones_Click(object sender, EventArgs e)
         {
             Comisiones c = new Comisiones();
-            c.ShowDialog();
+            c.MdiParent = this;
+            c.Show();
         }
 
-        private void alumnoInscripcionesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuAlumnosInscripciones_Click(object sender, EventArgs e)
         {
             AlumnosInscripciones ai = new AlumnosInscripciones();
-            ai.ShowDialog();
+            ai.MdiParent = this;
+            ai.Show();
         }
 
-        private void cursoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuCursos_Click(object sender, EventArgs e)
         {
             Cursos c = new Cursos();
-            c.ShowDialog();
+            c.MdiParent = this;
+            c.Show();
         }
 
         private void docenteCursoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,40 +166,73 @@ namespace UI.Desktop
             dc.ShowDialog();
         }
 
-        private void especialidadToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuEspecialidades_Click(object sender, EventArgs e)
         {
             Especialidades esp = new Especialidades();
-            esp.ShowDialog();
+            esp.MdiParent = this;
+            esp.Show();
         }
 
-        private void materiaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuMaterias_Click(object sender, EventArgs e)
         {
             Materias m = new Materias();
-            m.ShowDialog();
+            m.MdiParent = this;
+            m.Show();
         }
 
-        private void modulosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuModulos_Click(object sender, EventArgs e)
         {
             Modulos m = new Modulos();
             m.ShowDialog();
         }
 
-        private void personasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuPersonas_Click(object sender, EventArgs e)
         {
             Personas p = new Personas();
-            p.ShowDialog();
+            p.MdiParent = this;
+            p.Show();
         }
 
-        private void planesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuPlanes_Click(object sender, EventArgs e)
         {
             Planes p = new Planes();
-            p.ShowDialog();
+            p.MdiParent = this;
+            p.Show();
         }
 
-        private void usuariosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void mnuUsuarios_Click_1(object sender, EventArgs e)
         {
             Usuarios u = new Usuarios();
-            u.ShowDialog();
+            u.MdiParent = this;
+            u.Show();
         }
+
+        private void mnuArchivo_Click(object sender, EventArgs e)
+        {
+            //se puso sin querer, no va
+        }
+
+        private void mnuCerrarSesion_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Dispose();
+            }
+            this.Visible = false;
+            Login login = new Login();
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                this._UsuarioActual = login.UsuarioActual;
+                this.permisos();
+                this.Visible = true;
+                this.tsbsUsuarios.Text = this._UsuarioActual.NombreUsuario;
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+
     }
 }

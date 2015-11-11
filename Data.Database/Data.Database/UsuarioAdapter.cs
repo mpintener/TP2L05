@@ -193,6 +193,45 @@ namespace Data.Database
             }
         }
 
+        public Usuario GetUsuarioForLogin(string user,string pass)
+        {
+            //instanciamos el objeto lista a retornar
+
+            Usuario usr = new Usuario();
+
+            try
+            {
+                this.OpenConnection();
+
+                SqlCommand cmdUsuario = new SqlCommand("select * from usuarios WHERE clave=@clave and nombre_usuario=@nombre_usuario ", sqlConn);
+                cmdUsuario.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = pass;
+                cmdUsuario.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = user;
+                SqlDataReader drUsuarios = cmdUsuario.ExecuteReader();
+
+                while (drUsuarios.Read())
+                {                 
+                    usr.ID = (int)drUsuarios["id_usuario"];
+                    usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
+                    usr.Clave = (string)drUsuarios["clave"];
+                    usr.Habilitado = (bool)drUsuarios["habilitado"];
+                    usr.IDPersona = (int)drUsuarios["id_persona"];
+                }
+                //cerramos el datareader y la conexion a la BD
+                drUsuarios.Close();
+            }
+
+            catch (Exception Ex)
+            {
+                Console.WriteLine(Ex.Message);
+            }
+
+            finally
+            {
+                this.CloseConnection();
+            }
+            return usr;
+        }
+
 
         public void Save(Usuario usuario)
         {

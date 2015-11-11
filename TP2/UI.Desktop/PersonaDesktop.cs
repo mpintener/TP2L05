@@ -94,7 +94,7 @@ namespace UI.Desktop
                     this.PersonaActual.Direccion = this.txtDireccion.Text;
                     this.PersonaActual.Telefono = this.mtbTelefono.Text;
                     this.PersonaActual.Email = this.txtEmail.Text;
-                    this.PersonaActual.TiposPersona = Convert.ToInt32(this.txtTipoPersona.Text);
+                    this.PersonaActual.TiposPersona = this.txtTipoPersona.Text;
                     this.PersonaActual.FechaNacimiento = Convert.ToDateTime(this.mtbFechaNacimiento.Text);
                 }
                     
@@ -108,7 +108,7 @@ namespace UI.Desktop
                     this.PersonaActual.IDPlan = ((Plan)cbIDPlan.SelectedValue).ID;
                     this.PersonaActual.Telefono = this.mtbTelefono.Text;
                     this.PersonaActual.Email = this.txtEmail.Text;
-                    this.PersonaActual.TiposPersona = Convert.ToInt32(this.txtTipoPersona.Text);
+                    this.PersonaActual.TiposPersona = this.txtTipoPersona.Text;
                     this.PersonaActual.FechaNacimiento = Convert.ToDateTime(this.mtbFechaNacimiento.Text);
                 }
             }

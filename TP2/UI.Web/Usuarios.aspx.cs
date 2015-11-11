@@ -73,7 +73,6 @@ namespace UI.Web
         {
             this.Entity = this.Logic.GetOne(id);
             this.idPersonaTextBox.Text = this.Entity.IDPersona.ToString();
-            this.idUsuarioTextBox.Text = this.Entity.ID.ToString();
             this.habilitadoCheckBox.Text = this.Entity.Habilitado.ToString();
             this.usuarioTextBox.Text = this.Entity.NombreUsuario;
         }
@@ -96,7 +95,7 @@ namespace UI.Web
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            switch (this.FormMode)
+            switch (this.FormMode) //si repetir clave tiene algo, es porque en modificar quiere cambiar su clave
             {
                 case FormModes.Alta:
                     this.Entity = new Usuario();
@@ -126,12 +125,12 @@ namespace UI.Web
         private void EnableForm (bool enable)
         {
             this.idPersonaTextBox.Enabled = enable;
-            this.idUsuarioTextBox.Enabled = enable;
             this.usuarioTextBox.Enabled = enable;
+            this.habilitadoCheckBox.Enabled = enable;
             this.claveTextBox.Visible = enable;
-            this.claveLabel.Visible = enable;
+            //this.claveLabel.Visible = enable;
             this.repetirClaveTextBox.Visible = enable;
-            this.repetirClaveLabel.Visible = enable;
+            //this.repetirClaveLabel.Visible = enable;
         }
 
         protected void btnNuevo_Click(object sender, EventArgs e)
@@ -145,9 +144,10 @@ namespace UI.Web
         private void ClearForm()
         {
             this.idPersonaTextBox.Text = string.Empty;
-            this.idUsuarioTextBox.Text = string.Empty;
             this.usuarioTextBox.Text = string.Empty;
             this.habilitadoCheckBox.Checked = false;
+            this.claveTextBox.Text = string.Empty;
+            this.repetirClaveLabel.Text = string.Empty;
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)

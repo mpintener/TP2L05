@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business.Entities;
+using Business.Logic;
 
 namespace UI.Desktop
 {
@@ -17,20 +19,32 @@ namespace UI.Desktop
             InitializeComponent();
         }
 
+        private Usuario _UsuarioActual;
+        public Usuario UsuarioActual
+        {
+            get { return _UsuarioActual; }
+        }
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            /* El codigo utilizado en el handler del evento click de btnIngresar debe ser
-             * remplazado por un método que solicite a la capa de negocio recupere del usuario
-             * con nombre igual al ingresado en el txtUsuario y si existe invocar a un método
-             * que valide si su contraseña coincide con la de txtPass*/
-            if (this.txtUsuario.Text == "Admin" && this.txtPass.Text == "admin")
+            UsuarioLogic user = new UsuarioLogic();
+            try
             {
-                this.DialogResult = DialogResult.OK;
+                _UsuarioActual = user.GetUsuarioForLogin(txtUsuario.Text, txtPass.Text);
+                if (_UsuarioActual.ID != 0)
+                {
+                    if (_UsuarioActual.Habilitado) this.DialogResult = DialogResult.OK;
+                    else MessageBox.Show("El usuario no está habilitado", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contrasenia incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.txtPass.Clear();
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Usuario y/o contraseña incorrectos", "Login"
-                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

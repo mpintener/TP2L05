@@ -46,7 +46,18 @@ namespace Data.Database
 
                     dc.IDCurso = (int)drDocenteCurso["id_curso"];
                     dc.IDDocente = (int)drDocenteCurso["id_docente"];
-                    dc.TipoCargo = (int)drDocenteCurso["cargo"];
+                    switch ((int)drDocenteCurso["cargo"])
+                    {
+                        case 1:
+                            dc.TipoCargo = "Titular";
+                            break;
+                        case 2:
+                            dc.TipoCargo = "Auxiliar";
+                            break;
+                        case 3:
+                            dc.TipoCargo = "Ayudante";
+                            break;
+                    }
                     dc.ID = (int)drDocenteCurso["id_dictado"];
 
                     //agrego el objeto con datos a la lista que devuelvo
@@ -87,7 +98,18 @@ namespace Data.Database
                 {
                     dc.IDCurso = (int)drDocenteCurso["id_curso"];
                     dc.IDDocente = (int)drDocenteCurso["id_docente"];
-                    dc.TipoCargo = (int)drDocenteCurso["cargo"];
+                    switch ((int)drDocenteCurso["cargo"])
+                    {
+                        case 1:
+                            dc.TipoCargo = "Titular";
+                            break;
+                        case 2:
+                            dc.TipoCargo = "Auxiliar";
+                            break;
+                        case 3:
+                            dc.TipoCargo = "Ayudante";
+                            break;
+                    }
                     dc.ID = (int)drDocenteCurso["id_dictado"];
                 }
 
@@ -143,7 +165,18 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@id_dictado", SqlDbType.Int).Value = docenteCurso.ID;
                 cmdSave.Parameters.Add("@id_docente", SqlDbType.Int).Value = docenteCurso.IDDocente;
                 cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = docenteCurso.IDCurso;
-                cmdSave.Parameters.Add("@cargo", SqlDbType.VarChar, 50).Value = docenteCurso.TipoCargo;
+                switch (docenteCurso.TipoCargo)
+                {
+                    case "Titular":
+                        cmdSave.Parameters.Add("@cargo", SqlDbType.Int).Value = 1;
+                        break;
+                    case "Auxiliar":
+                        cmdSave.Parameters.Add("@cargo", SqlDbType.Int).Value = 2;
+                        break;
+                    case "Ayudante":
+                        cmdSave.Parameters.Add("@cargo", SqlDbType.Int).Value = 3;
+                        break;
+                }
                 cmdSave.ExecuteNonQuery();
             }
 
@@ -167,12 +200,23 @@ namespace Data.Database
 
                 SqlCommand cmdSave = new SqlCommand(
                     "insert into docentes_cursos (id_docente, id_curso, cargo) " +
-                    "values (@id_docente, @id_curso, @cargo)" +
+                    "values (@id_docente, @id_curso, @cargo) " +
                     "select @@identity", sqlConn);
 
                 cmdSave.Parameters.Add("@id_docente", SqlDbType.Int).Value = docenteCurso.IDDocente;
                 cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = docenteCurso.IDCurso;
-                cmdSave.Parameters.Add("@cargo", SqlDbType.Int).Value = docenteCurso.TipoCargo;
+                switch (docenteCurso.TipoCargo)
+                {
+                    case "Titular":
+                        cmdSave.Parameters.Add("@cargo", SqlDbType.Int).Value = 1;
+                        break;
+                    case "Auxiliar":
+                        cmdSave.Parameters.Add("@cargo", SqlDbType.Int).Value = 2;
+                        break;
+                    case "Ayudante":
+                        cmdSave.Parameters.Add("@cargo", SqlDbType.Int).Value = 3;
+                        break;
+                }
                 docenteCurso.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
             }
 

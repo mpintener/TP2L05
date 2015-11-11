@@ -117,7 +117,7 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdDelete = new SqlCommand("delete usuarios where id_inscripcion=@id_inscripcion", sqlConn);
+                SqlCommand cmdDelete = new SqlCommand("delete alumnos_inscripciones where id_inscripcion=@id_inscripcion", sqlConn);
 
                 cmdDelete.Parameters.Add("@id_inscripcion", SqlDbType.Int).Value = ID;
                 
@@ -174,7 +174,7 @@ namespace Data.Database
                 this.OpenConnection();
         
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into usuarios (id_alumno, id_curso, condicion, nota) " +
+                    "insert into alumnos_inscripciones (id_alumno, id_curso, condicion, nota) " +
                     "values (@id_alumno, @id_curso, @condicion, @nota) " +
                     "select @@identity", sqlConn);
                 

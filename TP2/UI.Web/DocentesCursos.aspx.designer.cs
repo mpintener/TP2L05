@@ -49,13 +49,13 @@ namespace UI.Web {
         protected global::System.Web.UI.WebControls.Label idDocenteLabel;
         
         /// <summary>
-        /// Control idDocenteTextBox.
+        /// Control idDocenteddl.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idDocenteTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList idDocenteddl;
         
         /// <summary>
         /// Control idCursoLabel.
@@ -67,13 +67,13 @@ namespace UI.Web {
         protected global::System.Web.UI.WebControls.Label idCursoLabel;
         
         /// <summary>
-        /// Control idCursoTextBox.
+        /// Control idCursoddl.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox idCursoTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList idCursoddl;
         
         /// <summary>
         /// Control tipoCargoLabel.
@@ -85,13 +85,13 @@ namespace UI.Web {
         protected global::System.Web.UI.WebControls.Label tipoCargoLabel;
         
         /// <summary>
-        /// Control tipoCargoTextBox.
+        /// Control tipoCargoddl.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tipoCargoTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList tipoCargoddl;
         
         /// <summary>
         /// Control idComisionTextBox.

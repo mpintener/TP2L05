@@ -16,18 +16,9 @@ namespace UI.Desktop
             {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formMain());
-            //Application.Run(new Especialidades()); //OK
-            //Application.Run(new Planes()); //OK
-            //Application.Run(new Personas()); //OK //cuando se da aceptar, preguntar si queire crearse usuario, y de ahi abrir un formulario de usuarioDesktop
-            //Application.Run(new Materias()); //OK
-            //Application.Run(new Usuarios());           
-            //Application.Run(new AlumnosInscripciones());
-            //Application.Run(new Modulos());
-            //Application.Run(new ModulosUsuarios());
-            //Application.Run(new Comisiones());
-            //Application.Run(new Cursos());
-            //Application.Run(new DocentesCursos());
+            Login login = new Login();
+            if (login.ShowDialog() == DialogResult.OK) Application.Run(new formMain(login.UsuarioActual));
+            else Application.Exit();           
             }
         }
     }
